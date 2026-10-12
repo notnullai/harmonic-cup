@@ -1,0 +1,12 @@
+name: healthy_soak
+description: >
+  Thirty minutes of a healthy machine, for the false-positive budget
+  (HARM-S3-T05, HARM-S6-T02). The target is zero WARNING-or-above events:
+  a predictive maintenance system that cries wolf gets switched off.
+seed: 4242
+duration_s: 1800
+dt: 1.0
+time_scale: 1.0
+faults: []
+expect:
+  - {state: OK, by_wall_s: 1800}

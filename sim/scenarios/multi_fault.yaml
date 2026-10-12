@@ -1,0 +1,22 @@
+name: multi_fault
+description: >
+  Misalignment that later causes bearing wear — the classic progression, and
+  a genuinely multi-label case. Class neurons are independent (AGENTS.md
+  constraint 5), so both should fire and the knowledge graph must handle an
+  event carrying two failure modes.
+seed: 31337
+duration_s: 120
+dt: 1.0
+time_scale: 300.0
+faults:
+  - mode: misalignment
+    severity: 0.7
+    onset_s: 3000
+  - mode: bearing_wear
+    severity: 0.9
+    onset_s: 18000
+    ramp_hours: 5.0
+expect:
+  - {state: OK,       by_wall_s: 8}
+  - {state: WATCH,    by_wall_s: 30, fault: misalignment}
+  - {state: WARNING,  by_wall_s: 90, fault: bearing_wear}

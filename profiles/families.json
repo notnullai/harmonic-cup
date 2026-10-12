@@ -1,0 +1,252 @@
+{
+  "_about": [
+    "Machine families: what a trained network's class neurons mean, and where",
+    "the network is built. A machine names its family; the console, the",
+    "diagnosis and the reports read class names from here, never from a",
+    "pump-shaped constant. Class 0 is always healthy. Networks are build",
+    "artefacts: python scripts/build_brain.py --family <name>.",
+    "tests/test_families.py checks each list against its simulator's fault modes.",
+    "wizard: what the commissioning wizard asks for a machine of the family, and the feature lines it writes into the machine's profile; {teeth}, {teeth2} (twice the teeth) and the bearing's own defect orders {ftf}, {bpfo}, {bpfi}, {bsf}, {bsf2} (all derived from the machine's bearing geometry) are filled in per machine.",
+    "derived: numbers computed from the machine's own (its parameters, rpm and the bearing's defect orders ftf/bpfo/bpfi/bsf/bsf2) with + - * / only, for the order templates; demo: the family's simulated reference machine in the console.",
+    "step (optional, default 1): the spacing of a parameter's sensible values (a motor's poles come in pairs), used only when try mode moves an assumed value to fit the visitor's speed. public_label (optional): the name the public Try-it page shows instead of label; wizard parameters not given there take their default, and the report lists them as assumed."
+  ],
+  "families": {
+    "pump": {
+      "label": "Centrifugal pump",
+      "classes": [
+        "healthy",
+        "bearing_wear",
+        "misalignment",
+        "cavitation",
+        "seal_leak"
+      ],
+      "network": "sim/artifacts/trained.harmonic",
+      "brain": "sim/artifacts/pump_p101.harmonic",
+      "profile": "profiles/pump_p101.profile",
+      "simulator": "sim.pump_sim",
+      "manuals": [
+        "P-101-OM"
+      ],
+      "alarm_response": "P-101-OM-5.12",
+      "wizard": {
+        "parameters": [],
+        "unit": "mm/s",
+        "components": [
+          "bearing",
+          "shaft",
+          "foundation",
+          "motor",
+          "coupling"
+        ]
+      }
+    },
+    "gearbox": {
+      "label": "Gearbox, single stage",
+      "classes": [
+        "healthy",
+        "tooth_wear",
+        "broken_tooth",
+        "misalignment",
+        "bearing_wear"
+      ],
+      "network": "sim/artifacts/gearbox_trained.harmonic",
+      "brain": "sim/artifacts/gearbox.harmonic",
+      "profile": "profiles/example_gearbox.profile",
+      "simulator": "sim.gearbox_sim",
+      "manuals": [
+        "GB-201-OM"
+      ],
+      "alarm_response": "GB-201-OM-5.9",
+      "wizard": {
+        "parameters": [
+          {
+            "key": "teeth",
+            "label": "Input pinion teeth",
+            "default": 37,
+            "min": 5,
+            "max": 300
+          }
+        ],
+        "unit": "g",
+        "components": [
+          "gear",
+          "bearing",
+          "shaft",
+          "coupling",
+          "foundation"
+        ],
+        "orders": {
+          "gear_mesh": "{teeth} spectrum",
+          "mesh_sb": "{teeth} spectrum sidebands 1",
+          "mesh_2x": "{teeth2} spectrum",
+          "cage": "{ftf:.3f} envelope"
+        },
+        "process": {
+          "oil_temp": "0 degC 30 1.5"
+        },
+        "features": "VIB_RMS VIB_PEAK VIB_KURTOSIS VIB_CREST VIB_HARM_1X VIB_HARM_2X VIB_BPFO gear_mesh mesh_sb mesh_2x cage oil_temp",
+        "derived": {
+          "teeth2": "2*teeth"
+        }
+      },
+      "demo": {
+        "key": "simulated_gearbox",
+        "label": "Simulated gearbox GB-201",
+        "equipment_id": "GB-201",
+        "iso_class": "10816-3-G2-rigid",
+        "vib_unit": "g",
+        "name": "GearboxSimulator — synthetic single-stage gearbox GB-201",
+        "detail": "Signal model (sim/gearbox_sim.py): a 37-tooth pinion at 1480 rpm, its gear mesh and sidebands, a 6207 input bearing and the oil temperature, with four gearbox faults injected on demand. A second machine family, trained and diagnosed with no engine change. Not recorded from a real machine."
+      }
+    },
+    "motor": {
+      "label": "Induction motor",
+      "classes": [
+        "healthy",
+        "bearing_wear",
+        "rotor_bar",
+        "stator_winding",
+        "unbalance"
+      ],
+      "network": "sim/artifacts/motor_trained.harmonic",
+      "brain": "sim/artifacts/motor.harmonic",
+      "profile": "profiles/motor_m301.profile",
+      "simulator": "sim.motor_sim",
+      "manuals": [
+        "M-301-OM"
+      ],
+      "alarm_response": "M-301-OM-5.9",
+      "wizard": {
+        "parameters": [
+          {
+            "key": "poles",
+            "label": "Poles",
+            "default": 4,
+            "min": 2,
+            "max": 24,
+            "step": 2
+          },
+          {
+            "key": "line_hz",
+            "label": "Supply frequency, Hz",
+            "default": 60,
+            "min": 25,
+            "max": 400
+          }
+        ],
+        "unit": "g",
+        "components": [
+          "bearing",
+          "rotor",
+          "stator",
+          "shaft",
+          "foundation"
+        ],
+        "derived": {
+          "line2x": "2*line_hz*60/rpm",
+          "pole_pass": "(120*line_hz - poles*rpm)/rpm"
+        },
+        "orders": {
+          "line2x": "{line2x:.4f} spectrum",
+          "rotor_sb": "1 spectrum sidebands {pole_pass:.4f}",
+          "cage": "{ftf:.3f} envelope"
+        },
+        "process": {
+          "winding_temp": "0 degC 60 1.5",
+          "current": "1 A 20 0.3"
+        },
+        "features": "VIB_RMS VIB_PEAK VIB_KURTOSIS VIB_CREST VIB_HARM_1X VIB_HARM_2X VIB_BPFO line2x rotor_sb cage winding_temp current"
+      },
+      "demo": {
+        "key": "simulated_motor",
+        "label": "Simulated motor M-301",
+        "equipment_id": "M-301",
+        "iso_class": "10816-1-I",
+        "vib_unit": "g",
+        "name": "MotorSimulator — synthetic induction motor M-301",
+        "detail": "Signal model (sim/motor_sim.py): a 4-pole induction motor on 60 Hz at 1710 rpm, its twice-line-frequency tone and pole-pass sidebands, an SKF 6205 drive-end bearing, the winding temperature and the current, with four motor faults injected on demand. Not recorded from a real machine."
+      }
+    },
+    "fan": {
+      "label": "Centrifugal fan",
+      "classes": [
+        "healthy",
+        "unbalance",
+        "blade_damage",
+        "looseness",
+        "bearing_wear"
+      ],
+      "network": "sim/artifacts/fan_trained.harmonic",
+      "brain": "sim/artifacts/fan.harmonic",
+      "profile": "profiles/fan_f401.profile",
+      "simulator": "sim.fan_sim",
+      "manuals": [
+        "F-401-OM"
+      ],
+      "alarm_response": "F-401-OM-5.9",
+      "wizard": {
+        "parameters": [
+          {
+            "key": "blades",
+            "label": "Fan blades",
+            "default": 8,
+            "min": 2,
+            "max": 64
+          }
+        ],
+        "unit": "g",
+        "components": [
+          "bearing",
+          "impeller",
+          "shaft",
+          "foundation"
+        ],
+        "derived": {},
+        "orders": {
+          "bpf": "{blades} spectrum",
+          "bpf_sb": "{blades} spectrum sidebands 1",
+          "x3": "3 spectrum",
+          "half": "0.5 spectrum"
+        },
+        "process": {
+          "airflow": "0 m3/s 8 0.05",
+          "bearing_temp": "1 degC 40 1.0"
+        },
+        "features": "VIB_RMS VIB_KURTOSIS VIB_CREST VIB_HARM_1X VIB_HARM_2X VIB_BPFO bpf bpf_sb x3 half airflow bearing_temp"
+      },
+      "demo": {
+        "key": "simulated_fan",
+        "label": "Simulated fan F-401",
+        "equipment_id": "F-401",
+        "iso_class": "10816-3-G2-flexible",
+        "vib_unit": "g",
+        "name": "FanSimulator — synthetic centrifugal fan F-401",
+        "detail": "Signal model (sim/fan_sim.py): an 8-blade direct-driven centrifugal fan at 1180 rpm, its blade pass and sidebands, an LDK UER204 bearing, the airflow and the bearing temperature, with four fan faults injected on demand. Not recorded from a real machine."
+      }
+    },
+    "generic": {
+      "label": "Other / unlisted — watches for change only",
+      "public_label": "Other or unsure — watch for any change only",
+      "classes": [
+        "healthy"
+      ],
+      "network": "sim/artifacts/generic_trained.harmonic",
+      "brain": "sim/artifacts/generic.harmonic",
+      "profile": "profiles/generic_machine.profile",
+      "simulator": "sim.generic_sim",
+      "manuals": [
+        "HARMONIC-GEN"
+      ],
+      "alarm_response": "HARMONIC-GEN-1",
+      "wizard": {
+        "parameters": [],
+        "unit": "g",
+        "components": [
+          "bearing",
+          "shaft",
+          "foundation"
+        ]
+      }
+    }
+  }
+}

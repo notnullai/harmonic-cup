@@ -1,0 +1,900 @@
+{
+ "family": "fan",
+ "about": "Centrifugal fan F-401: wheel, blade, mounting and bearing faults.",
+ "manual": "F-401-OM",
+ "classes": {
+  "unbalance": "fan.fm.wheel_unbalance",
+  "blade_damage": "fan.fm.blade_damage",
+  "looseness": "fan.fm.mechanical_looseness",
+  "bearing_wear": "fan.fm.bearing_outer_race"
+ },
+ "aliases": {
+  "fan.fm.wheel_unbalance": [
+   "unbalance",
+   "imbalance",
+   "out of balance"
+  ],
+  "fan.fm.blade_damage": [
+   "blade damage",
+   "cracked blade",
+   "fouled blade",
+   "eroded blade",
+   "bent blade"
+  ],
+  "fan.fm.mechanical_looseness": [
+   "mechanical looseness",
+   "loose base",
+   "looseness"
+  ],
+  "fan.fm.bearing_outer_race": [
+   "outer-race wear",
+   "outer-race spalling",
+   "outer race"
+  ],
+  "fan.act.clean_wheel": [
+   "wheel cleaning"
+  ],
+  "fan.act.balance_wheel": [
+   "balancing"
+  ]
+ },
+ "nodes": {
+  "Equipment": [
+   {
+    "id": "F-401",
+    "model": "direct_drive_centrifugal_fan",
+    "serial": "F401 (simulated)",
+    "nominal_rpm": 1180,
+    "iso_class": "10816-3-G2-flexible",
+    "family": "fan",
+    "manuals": "F-401-OM"
+   }
+  ],
+  "Component": [
+   {
+    "id": "F-401.impeller",
+    "kind": "impeller",
+    "position": "wheel"
+   },
+   {
+    "id": "F-401.bearing",
+    "kind": "bearing",
+    "position": "drive_end"
+   },
+   {
+    "id": "F-401.shaft",
+    "kind": "shaft",
+    "position": "drive_end"
+   },
+   {
+    "id": "F-401.foundation",
+    "kind": "foundation",
+    "position": "base"
+   }
+  ],
+  "Sensor": [
+   {
+    "id": "F-401.vib.brg.rms",
+    "kind": "HARMONIC_FEAT_VIB_RMS",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.kurtosis",
+    "kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.crest",
+    "kind": "HARMONIC_FEAT_VIB_CREST",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.1x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.2x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.bpfo",
+    "kind": "HARMONIC_FEAT_VIB_BPFO",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.bpf",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:bpf",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.bpf_sb",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:bpf_sb",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.x3",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:x3",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.vib.brg.half",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:half",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "F-401.flow.air",
+    "kind": "HARMONIC_FEAT_PROCESS:airflow",
+    "unit": "m3/s",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "F-401.temp.bearing",
+    "kind": "HARMONIC_FEAT_PROCESS:bearing_temp",
+    "unit": "degC",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   }
+  ],
+  "Symptom": [
+   {
+    "id": "fan.sym.rms.high",
+    "description": "Raised overall vibration",
+    "feature_kind": "HARMONIC_FEAT_VIB_RMS",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.kurtosis.high",
+    "description": "Impulsive vibration: kurtosis rising",
+    "feature_kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.crest.high",
+    "description": "Impulsive vibration: crest factor rising",
+    "feature_kind": "HARMONIC_FEAT_VIB_CREST",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.1x.high",
+    "description": "Raised amplitude at running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.2x.high",
+    "description": "Raised amplitude at twice running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.bpfo.high",
+    "description": "Elevated envelope amplitude at the bearing's outer-race frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_BPFO",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.bpf.high",
+    "description": "Raised amplitude at the blade-pass frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:bpf",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.bpf_sb.high",
+    "description": "Sidebands around blade pass at running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:bpf_sb",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.x3.high",
+    "description": "Raised amplitude at three times running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:x3",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.half.high",
+    "description": "A subharmonic at half running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:half",
+    "direction": "up"
+   },
+   {
+    "id": "fan.sym.airflow.low",
+    "description": "Airflow below its baseline",
+    "feature_kind": "HARMONIC_FEAT_PROCESS:airflow",
+    "direction": "down"
+   },
+   {
+    "id": "fan.sym.bearing_temp.high",
+    "description": "Bearing temperature above its baseline",
+    "feature_kind": "HARMONIC_FEAT_PROCESS:bearing_temp",
+    "direction": "up"
+   }
+  ],
+  "FailureMode": [
+   {
+    "id": "fan.fm.wheel_unbalance",
+    "description": "Unbalance of the fan wheel from build-up or erosion",
+    "iso_code": "ISO 14694",
+    "severity": 3,
+    "family": "fan"
+   },
+   {
+    "id": "fan.fm.blade_damage",
+    "description": "A cracked, eroded or fouled blade",
+    "iso_code": "ISO 14694",
+    "severity": 4,
+    "family": "fan"
+   },
+   {
+    "id": "fan.fm.mechanical_looseness",
+    "description": "Mechanical looseness of the bearing housing or base",
+    "iso_code": "ISO 10816-3",
+    "severity": 3,
+    "family": "fan"
+   },
+   {
+    "id": "fan.fm.bearing_outer_race",
+    "description": "Outer-race wear of the fan bearing",
+    "iso_code": "ISO 15243",
+    "severity": 4,
+    "family": "fan"
+   }
+  ],
+  "Cause": [
+   {
+    "id": "fan.cause.dirt_buildup",
+    "description": "Dust or product built up on the wheel",
+    "category": "process"
+   },
+   {
+    "id": "fan.cause.erosion",
+    "description": "Abrasive dust eroding the blades",
+    "category": "process"
+   },
+   {
+    "id": "fan.cause.loose_bolts",
+    "description": "Bearing-housing or base bolts loosened by vibration",
+    "category": "installation"
+   },
+   {
+    "id": "fan.cause.base_deterioration",
+    "description": "A cracked or deteriorated base or grout",
+    "category": "wear"
+   },
+   {
+    "id": "fan.cause.grease_degraded",
+    "description": "Bearing grease degraded or past its interval",
+    "category": "lubrication"
+   }
+  ],
+  "Action": [
+   {
+    "id": "fan.act.confirm_reading",
+    "description": "Confirm the reading: sensor secure, damper setting and airflow steady",
+    "tool": "none",
+    "duration_min": 10,
+    "skill_level": "operator"
+   },
+   {
+    "id": "fan.act.clean_wheel",
+    "description": "Clean the fan wheel",
+    "tool": "scraper, brushes, wash",
+    "duration_min": 120,
+    "skill_level": "technician"
+   },
+   {
+    "id": "fan.act.inspect_wheel",
+    "description": "Inspect the wheel and blades for cracks, erosion and fouling",
+    "tool": "torch, dye penetrant",
+    "duration_min": 60,
+    "skill_level": "technician"
+   },
+   {
+    "id": "fan.act.balance_wheel",
+    "description": "Balance the fan wheel in place",
+    "tool": "balancing analyser",
+    "duration_min": 180,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "fan.act.service_bearing",
+    "description": "Regrease the bearing, or replace it when worn",
+    "tool": "grease gun, bearing puller",
+    "duration_min": 180,
+    "skill_level": "technician"
+   },
+   {
+    "id": "fan.act.tighten_base",
+    "description": "Check and torque the bearing-housing and base bolts; inspect the base",
+    "tool": "torque wrench",
+    "duration_min": 60,
+    "skill_level": "technician"
+   },
+   {
+    "id": "fan.act.check_clearance",
+    "description": "Check the inlet cone clearance to the wheel",
+    "tool": "feeler gauges",
+    "duration_min": 45,
+    "skill_level": "technician"
+   },
+   {
+    "id": "fan.act.check_airflow_path",
+    "description": "Check the dampers and filters in the airflow path",
+    "tool": "none",
+    "duration_min": 30,
+    "skill_level": "operator"
+   }
+  ],
+  "Standard": [
+   {
+    "id": "iso-14694",
+    "name": "ISO 14694",
+    "clause": "Industrial fans - balance quality and vibration levels"
+   }
+  ]
+ },
+ "relations": {
+  "HAS_COMPONENT": [
+   [
+    "F-401",
+    "F-401.impeller"
+   ],
+   [
+    "F-401",
+    "F-401.bearing"
+   ],
+   [
+    "F-401",
+    "F-401.shaft"
+   ],
+   [
+    "F-401",
+    "F-401.foundation"
+   ]
+  ],
+  "MONITORED_BY": [
+   [
+    "F-401.bearing",
+    "F-401.vib.brg.rms"
+   ],
+   [
+    "F-401.bearing",
+    "F-401.vib.brg.kurtosis"
+   ],
+   [
+    "F-401.bearing",
+    "F-401.vib.brg.crest"
+   ],
+   [
+    "F-401.impeller",
+    "F-401.vib.brg.1x"
+   ],
+   [
+    "F-401.foundation",
+    "F-401.vib.brg.2x"
+   ],
+   [
+    "F-401.bearing",
+    "F-401.vib.brg.bpfo"
+   ],
+   [
+    "F-401.impeller",
+    "F-401.vib.brg.bpf"
+   ],
+   [
+    "F-401.impeller",
+    "F-401.vib.brg.bpf_sb"
+   ],
+   [
+    "F-401.foundation",
+    "F-401.vib.brg.x3"
+   ],
+   [
+    "F-401.foundation",
+    "F-401.vib.brg.half"
+   ],
+   [
+    "F-401.impeller",
+    "F-401.flow.air"
+   ],
+   [
+    "F-401.bearing",
+    "F-401.temp.bearing"
+   ]
+  ],
+  "DETECTS": [
+   [
+    "F-401.vib.brg.rms",
+    "fan.sym.rms.high"
+   ],
+   [
+    "F-401.vib.brg.kurtosis",
+    "fan.sym.kurtosis.high"
+   ],
+   [
+    "F-401.vib.brg.crest",
+    "fan.sym.crest.high"
+   ],
+   [
+    "F-401.vib.brg.1x",
+    "fan.sym.1x.high"
+   ],
+   [
+    "F-401.vib.brg.2x",
+    "fan.sym.2x.high"
+   ],
+   [
+    "F-401.vib.brg.bpfo",
+    "fan.sym.bpfo.high"
+   ],
+   [
+    "F-401.vib.brg.bpf",
+    "fan.sym.bpf.high"
+   ],
+   [
+    "F-401.vib.brg.bpf_sb",
+    "fan.sym.bpf_sb.high"
+   ],
+   [
+    "F-401.vib.brg.x3",
+    "fan.sym.x3.high"
+   ],
+   [
+    "F-401.vib.brg.half",
+    "fan.sym.half.high"
+   ],
+   [
+    "F-401.flow.air",
+    "fan.sym.airflow.low"
+   ],
+   [
+    "F-401.temp.bearing",
+    "fan.sym.bearing_temp.high"
+   ]
+  ],
+  "INDICATES": [
+   [
+    "fan.sym.1x.high",
+    "fan.fm.wheel_unbalance",
+    {
+     "confidence": 0.8
+    }
+   ],
+   [
+    "fan.sym.rms.high",
+    "fan.fm.wheel_unbalance",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "fan.sym.bpf_sb.high",
+    "fan.fm.blade_damage",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "fan.sym.bpf.high",
+    "fan.fm.blade_damage",
+    {
+     "confidence": 0.5
+    }
+   ],
+   [
+    "fan.sym.airflow.low",
+    "fan.fm.blade_damage",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "fan.sym.1x.high",
+    "fan.fm.blade_damage",
+    {
+     "confidence": 0.2
+    }
+   ],
+   [
+    "fan.sym.x3.high",
+    "fan.fm.mechanical_looseness",
+    {
+     "confidence": 0.8
+    }
+   ],
+   [
+    "fan.sym.half.high",
+    "fan.fm.mechanical_looseness",
+    {
+     "confidence": 0.8
+    }
+   ],
+   [
+    "fan.sym.2x.high",
+    "fan.fm.mechanical_looseness",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "fan.sym.1x.high",
+    "fan.fm.mechanical_looseness",
+    {
+     "confidence": 0.2
+    }
+   ],
+   [
+    "fan.sym.bpfo.high",
+    "fan.fm.bearing_outer_race",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "fan.sym.kurtosis.high",
+    "fan.fm.bearing_outer_race",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "fan.sym.crest.high",
+    "fan.fm.bearing_outer_race",
+    {
+     "confidence": 0.5
+    }
+   ],
+   [
+    "fan.sym.bearing_temp.high",
+    "fan.fm.bearing_outer_race",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "fan.sym.bearing_temp.high",
+    "fan.fm.mechanical_looseness",
+    {
+     "confidence": 0.2
+    }
+   ]
+  ],
+  "CAUSES": [
+   [
+    "fan.cause.dirt_buildup",
+    "fan.fm.wheel_unbalance",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "fan.cause.dirt_buildup",
+    "fan.fm.blade_damage",
+    {
+     "likelihood": 0.4
+    }
+   ],
+   [
+    "fan.cause.erosion",
+    "fan.fm.blade_damage",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "fan.cause.erosion",
+    "fan.fm.wheel_unbalance",
+    {
+     "likelihood": 0.4
+    }
+   ],
+   [
+    "fan.cause.loose_bolts",
+    "fan.fm.mechanical_looseness",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "fan.cause.base_deterioration",
+    "fan.fm.mechanical_looseness",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "fan.cause.grease_degraded",
+    "fan.fm.bearing_outer_race",
+    {
+     "likelihood": 0.7
+    }
+   ]
+  ],
+  "MITIGATED_BY": [
+   [
+    "fan.fm.wheel_unbalance",
+    "fan.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fan.fm.wheel_unbalance",
+    "fan.act.clean_wheel",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fan.fm.wheel_unbalance",
+    "fan.act.balance_wheel",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fan.fm.blade_damage",
+    "fan.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fan.fm.blade_damage",
+    "fan.act.inspect_wheel",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fan.fm.blade_damage",
+    "fan.act.clean_wheel",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fan.fm.blade_damage",
+    "fan.act.check_airflow_path",
+    {
+     "priority": 4
+    }
+   ],
+   [
+    "fan.fm.mechanical_looseness",
+    "fan.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fan.fm.mechanical_looseness",
+    "fan.act.tighten_base",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fan.fm.mechanical_looseness",
+    "fan.act.check_clearance",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fan.fm.bearing_outer_race",
+    "fan.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fan.fm.bearing_outer_race",
+    "fan.act.service_bearing",
+    {
+     "priority": 2
+    }
+   ]
+  ],
+  "DOCUMENTED_IN": [
+   [
+    "fan.act.confirm_reading",
+    "F-401-OM-5.9"
+   ],
+   [
+    "fan.act.clean_wheel",
+    "F-401-OM-4.1"
+   ],
+   [
+    "fan.act.inspect_wheel",
+    "F-401-OM-4.2"
+   ],
+   [
+    "fan.act.balance_wheel",
+    "F-401-OM-4.3"
+   ],
+   [
+    "fan.act.service_bearing",
+    "F-401-OM-4.4"
+   ],
+   [
+    "fan.act.tighten_base",
+    "F-401-OM-4.5"
+   ],
+   [
+    "fan.act.check_clearance",
+    "F-401-OM-4.6"
+   ],
+   [
+    "fan.act.check_airflow_path",
+    "F-401-OM-3.2"
+   ],
+   [
+    "fan.cause.dirt_buildup",
+    "F-401-OM-4.1"
+   ],
+   [
+    "fan.cause.loose_bolts",
+    "F-401-OM-4.5"
+   ],
+   [
+    "fan.cause.grease_degraded",
+    "F-401-OM-4.4"
+   ],
+   [
+    "fan.cause.erosion",
+    "F-401-OM-4.2"
+   ],
+   [
+    "fan.sym.bpf.high",
+    "F-401-OM-5.2"
+   ],
+   [
+    "fan.sym.bpf_sb.high",
+    "F-401-OM-5.4"
+   ],
+   [
+    "fan.sym.1x.high",
+    "F-401-OM-5.3"
+   ],
+   [
+    "fan.sym.x3.high",
+    "F-401-OM-5.5"
+   ],
+   [
+    "fan.sym.half.high",
+    "F-401-OM-5.5"
+   ],
+   [
+    "fan.sym.bpfo.high",
+    "F-401-OM-5.6"
+   ],
+   [
+    "fan.sym.airflow.low",
+    "F-401-OM-5.7"
+   ],
+   [
+    "fan.sym.bearing_temp.high",
+    "F-401-OM-5.8"
+   ]
+  ],
+  "SAFEGUARDED_BY": [
+   [
+    "fan.act.clean_wheel",
+    "F-401-OM-2.1"
+   ],
+   [
+    "fan.act.clean_wheel",
+    "F-401-OM-2.3"
+   ],
+   [
+    "fan.act.inspect_wheel",
+    "F-401-OM-2.1"
+   ],
+   [
+    "fan.act.inspect_wheel",
+    "F-401-OM-2.3"
+   ],
+   [
+    "fan.act.balance_wheel",
+    "F-401-OM-2.2"
+   ],
+   [
+    "fan.act.service_bearing",
+    "F-401-OM-2.1"
+   ],
+   [
+    "fan.act.tighten_base",
+    "F-401-OM-2.1"
+   ],
+   [
+    "fan.act.check_clearance",
+    "F-401-OM-2.1"
+   ],
+   [
+    "fan.act.check_clearance",
+    "F-401-OM-2.3"
+   ]
+  ],
+  "DESCRIBED_IN": [
+   [
+    "fan.fm.wheel_unbalance",
+    "F-401-OM-5.3"
+   ],
+   [
+    "fan.fm.blade_damage",
+    "F-401-OM-5.4"
+   ],
+   [
+    "fan.fm.mechanical_looseness",
+    "F-401-OM-5.5"
+   ],
+   [
+    "fan.fm.bearing_outer_race",
+    "F-401-OM-5.6"
+   ]
+  ],
+  "GOVERNED_BY": [
+   [
+    "fan.fm.wheel_unbalance",
+    "iso-14694"
+   ],
+   [
+    "fan.fm.blade_damage",
+    "iso-14694"
+   ],
+   [
+    "fan.fm.bearing_outer_race",
+    "iso-15243"
+   ],
+   [
+    "fan.fm.wheel_unbalance",
+    "iso-21940-11"
+   ]
+  ],
+  "AFFECTS": [
+   [
+    "fan.fm.wheel_unbalance",
+    "F-401.impeller"
+   ],
+   [
+    "fan.fm.blade_damage",
+    "F-401.impeller"
+   ],
+   [
+    "fan.fm.mechanical_looseness",
+    "F-401.foundation"
+   ],
+   [
+    "fan.fm.mechanical_looseness",
+    "F-401.bearing"
+   ],
+   [
+    "fan.fm.bearing_outer_race",
+    "F-401.bearing"
+   ]
+  ]
+ }
+}

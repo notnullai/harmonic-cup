@@ -1,0 +1,1298 @@
+{
+ "runs": [
+  {
+   "dataset": "IMS",
+   "run": "test 2, bearing 1",
+   "failed": "outer race failure",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 241
+   },
+   "detection": {
+    "state": "WATCH",
+    "hours": 107.67,
+    "lead_hours": 56.2
+   },
+   "diagnosis": {
+    "expected": "fm.outer_race_wear",
+    "granularity": "per_alarmed_snapshot",
+    "right": 338,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 338
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 85.33,
+     "lead_hours": 78.5
+    },
+    "sustained": {
+     "hours": 89.0,
+     "lead_hours": 74.8
+    }
+   }
+  },
+  {
+   "dataset": "IMS",
+   "run": "test 1, bearing 3 (x)",
+   "failed": "inner race defect",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 442
+   },
+   "detection": {
+    "state": "WATCH",
+    "hours": 747.84,
+    "lead_hours": 79.7
+   },
+   "diagnosis": {
+    "expected": "fm.inner_race_wear",
+    "granularity": "per_alarmed_snapshot",
+    "right": 8,
+    "wrong": 319,
+    "names": {
+     "fm.outer_race_wear": 309,
+     "none": 7,
+     "fm.inner_race_wear": 8,
+     "fm.rolling_element_wear": 3
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 756.18,
+     "lead_hours": 71.4
+    },
+    "sustained": {
+     "hours": 782.42,
+     "lead_hours": 45.1
+    }
+   }
+  },
+  {
+   "dataset": "IMS",
+   "run": "test 1, bearing 4 (x)",
+   "failed": "roller element defect",
+   "commission": {
+    "false_alarms": 106,
+    "warm": 442
+   },
+   "detection": {
+    "state": "WATCH",
+    "hours": 227.59,
+    "lead_hours": 600.0
+   },
+   "diagnosis": {
+    "expected": "fm.rolling_element_wear",
+    "granularity": "per_alarmed_snapshot",
+    "right": 8,
+    "wrong": 1034,
+    "names": {
+     "fm.outer_race_wear": 1011,
+     "none": 5,
+     "fm.rolling_element_wear": 8,
+     "fm.looseness": 1,
+     "fm.inner_race_wear": 17
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 701.96,
+     "lead_hours": 125.6
+    },
+    "sustained": {
+     "hours": 704.21,
+     "lead_hours": 123.3
+    }
+   }
+  },
+  {
+   "dataset": "IMS",
+   "run": "test 3, bearing 3",
+   "failed": "outer race failure",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 242
+   },
+   "detection": {
+    "state": "WATCH",
+    "hours": 1045.09,
+    "lead_hours": 28.2
+   },
+   "diagnosis": {
+    "expected": "fm.outer_race_wear",
+    "granularity": "per_alarmed_snapshot",
+    "right": 168,
+    "wrong": 2,
+    "names": {
+     "fm.outer_race_wear": 168,
+     "fm.inner_race_wear": 2
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 572.57,
+     "lead_hours": 500.7
+    },
+    "sustained": {
+     "hours": 1014.25,
+     "lead_hours": 59.0
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "1_1",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 66
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 1.0833,
+    "lead_hours": 0.95,
+    "channel": "vertical"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 103,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 103
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 1.1833,
+     "lead_hours": 0.85
+    },
+    "sustained": {
+     "hours": 1.2167,
+     "lead_hours": 0.8167
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "1_2",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 90
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 0.95,
+    "lead_hours": 1.7167,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 208,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 208
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 0.8333,
+     "lead_hours": 1.8333
+    },
+    "sustained": {
+     "hours": 0.8667,
+     "lead_hours": 1.8
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "1_3",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 88
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 0.9667,
+    "lead_hours": 1.65,
+    "channel": "vertical"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 195,
+    "wrong": 1,
+    "names": {
+     "fm.outer_race_wear": 195,
+     "fm.rolling_element_wear": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 0.9667,
+     "lead_hours": 1.65
+    },
+    "sustained": {
+     "hours": 1.0,
+     "lead_hours": 1.6167
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "1_4",
+   "failed": "cage",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 66
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 1.3833,
+    "lead_hours": 0.6333,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [],
+    "granularity": "per_alarmed_snapshot",
+    "right": 0,
+    "wrong": 17,
+    "names": {
+     "fm.inner_race_wear": 4,
+     "fm.outer_race_wear": 12,
+     "none": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 1.2667,
+     "lead_hours": 0.75
+    },
+    "sustained": {
+     "hours": 1.3667,
+     "lead_hours": 0.65
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "1_5",
+   "failed": "inner race+outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 24
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 0.5667,
+    "lead_hours": 0.2833,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.inner_race_wear",
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 36,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 36
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 0.4833,
+     "lead_hours": 0.3667
+    },
+    "sustained": {
+     "hours": 0.5167,
+     "lead_hours": 0.3333
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "2_1",
+   "failed": "inner race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 288
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 7.55,
+    "lead_hours": 0.6167,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.inner_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 1,
+    "wrong": 74,
+    "names": {
+     "fm.outer_race_wear": 73,
+     "fm.rolling_element_wear": 1,
+     "fm.inner_race_wear": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 7.5333,
+     "lead_hours": 0.6333
+    },
+    "sustained": {
+     "hours": 7.5667,
+     "lead_hours": 0.6
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "2_2",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 90
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 0.8333,
+    "lead_hours": 1.8333,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 219,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 219
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 0.8,
+     "lead_hours": 1.8667
+    },
+    "sustained": {
+     "hours": 0.8333,
+     "lead_hours": 1.8333
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "2_3",
+   "failed": "cage",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 312
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 2.7833,
+    "lead_hours": 6.0833,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [],
+    "granularity": "per_alarmed_snapshot",
+    "right": 0,
+    "wrong": 414,
+    "names": {
+     "fm.looseness": 87,
+     "fm.outer_race_wear": 327
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 2.8167,
+     "lead_hours": 6.05
+    },
+    "sustained": {
+     "hours": 4.2833,
+     "lead_hours": 4.5833
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "2_4",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 18
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 0.5,
+    "lead_hours": 0.1833,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 24,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 24
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 0.3167,
+     "lead_hours": 0.3667
+    },
+    "sustained": {
+     "hours": 0.35,
+     "lead_hours": 0.3333
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "2_5",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 196
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 2.4333,
+    "lead_hours": 3.2,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 368,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 368
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 2.0167,
+     "lead_hours": 3.6167
+    },
+    "sustained": {
+     "hours": 2.05,
+     "lead_hours": 3.5833
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "3_1",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 1514
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 16.9833,
+    "lead_hours": 25.3,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 279,
+    "wrong": 38,
+    "names": {
+     "fm.inner_race_wear": 6,
+     "fm.looseness": 7,
+     "fm.outer_race_wear": 279,
+     "fm.rolling_element_wear": 4,
+     "none": 21
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 36.05,
+     "lead_hours": 6.2333
+    },
+    "sustained": {
+     "hours": 38.95,
+     "lead_hours": 3.3333
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "3_2",
+   "failed": "inner race+rolling element+cage+outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 1490
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 37.0333,
+    "lead_hours": 4.55,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.inner_race_wear",
+     "fm.outer_race_wear",
+     "fm.rolling_element_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 24,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 24
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 15.45,
+     "lead_hours": 26.1333
+    },
+    "sustained": {
+     "hours": 20.55,
+     "lead_hours": 21.0333
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "3_3",
+   "failed": "inner race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 216
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 5.6667,
+    "lead_hours": 0.5,
+    "channel": "horizontal"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.inner_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 25,
+    "wrong": 36,
+    "names": {
+     "fm.inner_race_wear": 25,
+     "fm.outer_race_wear": 35,
+     "fm.rolling_element_wear": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 5.6833,
+     "lead_hours": 0.4833
+    },
+    "sustained": {
+     "hours": 5.7167,
+     "lead_hours": 0.45
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "3_4",
+   "failed": "inner race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 902
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 16.95,
+    "lead_hours": 8.2833,
+    "channel": "vertical"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.inner_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 39,
+    "wrong": 199,
+    "names": {
+     "fm.inner_race_wear": 39,
+     "fm.looseness": 6,
+     "fm.outer_race_wear": 176,
+     "fm.rolling_element_wear": 6,
+     "none": 11
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 15.9833,
+     "lead_hours": 9.25
+    },
+    "sustained": {
+     "hours": 16.7667,
+     "lead_hours": 8.4667
+    }
+   }
+  },
+  {
+   "dataset": "XJTU-SY",
+   "run": "3_5",
+   "failed": "outer race",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 62
+   },
+   "detection": {
+    "state": "not_ok",
+    "hours": 0.8667,
+    "lead_hours": 1.0167,
+    "channel": "vertical"
+   },
+   "diagnosis": {
+    "expected": [
+     "fm.outer_race_wear"
+    ],
+    "granularity": "per_alarmed_snapshot",
+    "right": 31,
+    "wrong": 0,
+    "names": {
+     "fm.outer_race_wear": 31
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": null,
+    "no_sustain": {
+     "hours": 1.2,
+     "lead_hours": 0.6833
+    },
+    "sustained": {
+     "hours": 1.2333,
+     "lead_hours": 0.65
+    }
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "100 (held out)",
+   "failed": "normal, 3 hp (held out)",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": null,
+   "diagnosis": null,
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "105",
+   "failed": "inner race, 0.007 in",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 18.3333
+   },
+   "diagnosis": {
+    "expected": "mtr.fm.de_bearing_outer_race",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "mtr.fm.de_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": {
+     "hours": 47.6667,
+     "lead_hours": 19.0
+    },
+    "sustained": {
+     "hours": 48.0,
+     "lead_hours": 18.6667
+    }
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "118",
+   "failed": "ball, 0.007 in",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 18.5
+   },
+   "diagnosis": {
+    "expected": "mtr.fm.de_bearing_outer_race",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "mtr.fm.de_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": {
+     "hours": 47.6667,
+     "lead_hours": 19.1667
+    },
+    "sustained": {
+     "hours": 48.0,
+     "lead_hours": 18.8333
+    }
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "130",
+   "failed": "outer race @6, 0.007 in",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 1.0,
+    "lead_hours": 18.1667
+   },
+   "diagnosis": {
+    "expected": "mtr.fm.de_bearing_outer_race",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "mtr.fm.de_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": {
+     "hours": 47.6667,
+     "lead_hours": 19.1667
+    },
+    "sustained": {
+     "hours": 48.0,
+     "lead_hours": 18.8333
+    }
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "209",
+   "failed": "inner race, 0.021 in",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 18.5
+   },
+   "diagnosis": {
+    "expected": "mtr.fm.de_bearing_outer_race",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "mtr.fm.de_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": {
+     "hours": 47.6667,
+     "lead_hours": 19.1667
+    },
+    "sustained": {
+     "hours": 48.0,
+     "lead_hours": 18.8333
+    }
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "222",
+   "failed": "ball, 0.021 in",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 2.0,
+    "lead_hours": 17.1667
+   },
+   "diagnosis": {
+    "expected": "mtr.fm.de_bearing_outer_race",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "mtr.fm.de_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": {
+     "hours": 47.6667,
+     "lead_hours": 19.1667
+    },
+    "sustained": {
+     "hours": 48.0,
+     "lead_hours": 18.8333
+    }
+   }
+  },
+  {
+   "dataset": "CWRU",
+   "run": "234",
+   "failed": "outer race @6, 0.021 in",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 227
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 18.5
+   },
+   "diagnosis": {
+    "expected": "mtr.fm.de_bearing_outer_race",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "mtr.fm.de_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 0.076784,
+    "no_sustain": {
+     "hours": 47.6667,
+     "lead_hours": 19.1667
+    },
+    "sustained": {
+     "hours": 48.0,
+     "lead_hours": 18.8333
+    }
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "healthy 10% (held out)",
+   "failed": "healthy, held-out load",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": null,
+   "diagnosis": null,
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "healthy 30% (held out)",
+   "failed": "healthy, held-out load",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": null,
+   "diagnosis": null,
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "healthy 50% (held out)",
+   "failed": "healthy, held-out load",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": null,
+   "diagnosis": null,
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "healthy 70% (held out)",
+   "failed": "healthy, held-out load",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": null,
+   "diagnosis": null,
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "healthy 90% (held out)",
+   "failed": "healthy, held-out load",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": null,
+   "diagnosis": null,
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 0%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 13.0
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 0,
+    "wrong": 1,
+    "names": {
+     "gbx.fm.tooth_wear": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 20%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 17.1667
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 0,
+    "wrong": 1,
+    "names": {
+     "gbx.fm.input_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 40%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 14.0
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 0,
+    "wrong": 1,
+    "names": {
+     "gbx.fm.tooth_wear": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 60%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 14.1667
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 0,
+    "wrong": 1,
+    "names": {
+     "gbx.fm.input_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 80%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 1.0,
+    "lead_hours": 16.1667
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "gbx.fm.tooth_breakage": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 10%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 16.8333
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 0,
+    "wrong": 1,
+    "names": {
+     "gbx.fm.tooth_wear": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 30%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 2.1667,
+    "lead_hours": 11.6667
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 0,
+    "wrong": 1,
+    "names": {
+     "gbx.fm.input_bearing_outer_race": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 50%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 0.6667,
+    "lead_hours": 14.0
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "gbx.fm.tooth_breakage": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 70%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 2.5,
+    "lead_hours": 13.1667
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "gbx.fm.tooth_breakage": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  },
+  {
+   "dataset": "real gearbox",
+   "run": "broken tooth 90%",
+   "failed": "broken tooth",
+   "commission": {
+    "false_alarms": 0,
+    "warm": 410
+   },
+   "detection": {
+    "state": "WARNING+",
+    "hours": 1.6667,
+    "lead_hours": 14.8333
+   },
+   "diagnosis": {
+    "expected": "gbx.fm.tooth_breakage",
+    "granularity": "last_alarmed_reading",
+    "right": 1,
+    "wrong": 0,
+    "names": {
+     "gbx.fm.tooth_breakage": 1
+    }
+   },
+   "comparator_3sigma": {
+    "threshold": 10.170889,
+    "no_sustain": null,
+    "sustained": null
+   }
+  }
+ ]
+}

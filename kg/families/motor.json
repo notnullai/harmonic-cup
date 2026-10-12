@@ -1,0 +1,962 @@
+{
+ "family": "motor",
+ "about": "Induction motor M-301: rotor, stator and drive-end bearing faults.",
+ "manual": "M-301-OM",
+ "classes": {
+  "bearing_wear": "mtr.fm.de_bearing_outer_race",
+  "rotor_bar": "mtr.fm.broken_rotor_bar",
+  "stator_winding": "mtr.fm.stator_winding",
+  "unbalance": "mtr.fm.rotor_unbalance"
+ },
+ "aliases": {
+  "mtr.fm.de_bearing_outer_race": [
+   "outer-race wear",
+   "outer-race spalling",
+   "outer race"
+  ],
+  "mtr.fm.broken_rotor_bar": [
+   "broken rotor bars",
+   "broken rotor bar",
+   "cracked rotor bar"
+  ],
+  "mtr.fm.stator_winding": [
+   "stator winding fault",
+   "shorted turns",
+   "shorted turn",
+   "winding fault"
+  ],
+  "mtr.fm.rotor_unbalance": [
+   "unbalance",
+   "imbalance",
+   "out of balance"
+  ],
+  "mtr.act.regrease_bearing": [
+   "regrease"
+  ],
+  "mtr.act.insulation_test": [
+   "insulation resistance"
+  ],
+  "mtr.act.check_alignment": [
+   "soft foot"
+  ]
+ },
+ "nodes": {
+  "Equipment": [
+   {
+    "id": "M-301",
+    "model": "four_pole_induction_motor_60hz",
+    "serial": "M301 (simulated)",
+    "nominal_rpm": 1710,
+    "iso_class": "10816-1-I",
+    "family": "motor",
+    "manuals": "M-301-OM"
+   }
+  ],
+  "Component": [
+   {
+    "id": "M-301.bearing.de",
+    "kind": "bearing",
+    "position": "drive_end"
+   },
+   {
+    "id": "M-301.rotor",
+    "kind": "rotor",
+    "position": "rotor"
+   },
+   {
+    "id": "M-301.stator",
+    "kind": "stator",
+    "position": "stator"
+   },
+   {
+    "id": "M-301.shaft",
+    "kind": "shaft",
+    "position": "drive_end"
+   },
+   {
+    "id": "M-301.foundation",
+    "kind": "foundation",
+    "position": "base"
+   }
+  ],
+  "Sensor": [
+   {
+    "id": "M-301.vib.de.rms",
+    "kind": "HARMONIC_FEAT_VIB_RMS",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.peak",
+    "kind": "HARMONIC_FEAT_VIB_PEAK",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.kurtosis",
+    "kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.crest",
+    "kind": "HARMONIC_FEAT_VIB_CREST",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.1x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.2x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.bpfo",
+    "kind": "HARMONIC_FEAT_VIB_BPFO",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.line2x",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:line2x",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.rotor_sb",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:rotor_sb",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.vib.de.cage",
+    "kind": "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "M-301.temp.winding",
+    "kind": "HARMONIC_FEAT_PROCESS:winding_temp",
+    "unit": "degC",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "M-301.elec.current",
+    "kind": "HARMONIC_FEAT_PROCESS:current",
+    "unit": "A",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   }
+  ],
+  "Symptom": [
+   {
+    "id": "mtr.sym.rms.high",
+    "description": "Raised overall vibration",
+    "feature_kind": "HARMONIC_FEAT_VIB_RMS",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.peak.high",
+    "description": "Raised vibration peak",
+    "feature_kind": "HARMONIC_FEAT_VIB_PEAK",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.kurtosis.high",
+    "description": "Impulsive vibration: kurtosis rising",
+    "feature_kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.crest.high",
+    "description": "Impulsive vibration: crest factor rising",
+    "feature_kind": "HARMONIC_FEAT_VIB_CREST",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.1x.high",
+    "description": "Raised amplitude at running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.2x.high",
+    "description": "Raised amplitude at twice running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.bpfo.high",
+    "description": "Elevated envelope amplitude at the drive-end bearing's outer-race frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_BPFO",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.line2x.high",
+    "description": "Raised vibration at twice line frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:line2x",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.rotor_sb.high",
+    "description": "Sidebands around running speed at the pole-pass frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:rotor_sb",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.cage.high",
+    "description": "Cage-frequency modulation in the envelope",
+    "feature_kind": "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.winding_temp.high",
+    "description": "Winding temperature above its baseline",
+    "feature_kind": "HARMONIC_FEAT_PROCESS:winding_temp",
+    "direction": "up"
+   },
+   {
+    "id": "mtr.sym.current.high",
+    "description": "Phase current above its baseline",
+    "feature_kind": "HARMONIC_FEAT_PROCESS:current",
+    "direction": "up"
+   }
+  ],
+  "FailureMode": [
+   {
+    "id": "mtr.fm.de_bearing_outer_race",
+    "description": "Outer-race wear of the drive-end bearing",
+    "iso_code": "ISO 15243",
+    "severity": 4,
+    "family": "motor"
+   },
+   {
+    "id": "mtr.fm.broken_rotor_bar",
+    "description": "Broken or cracked rotor bars",
+    "iso_code": "ISO 20958",
+    "severity": 4,
+    "family": "motor"
+   },
+   {
+    "id": "mtr.fm.stator_winding",
+    "description": "A stator winding fault: shorted turns or an unbalanced supply",
+    "iso_code": "ISO 20958",
+    "severity": 5,
+    "family": "motor"
+   },
+   {
+    "id": "mtr.fm.rotor_unbalance",
+    "description": "Mass unbalance of the rotor",
+    "iso_code": "ISO 21940-11",
+    "severity": 2,
+    "family": "motor"
+   }
+  ],
+  "Cause": [
+   {
+    "id": "mtr.cause.grease_degraded",
+    "description": "Bearing grease degraded or past its regreasing interval",
+    "category": "lubrication"
+   },
+   {
+    "id": "mtr.cause.shaft_currents",
+    "description": "Shaft currents through the bearing, from a variable-speed drive",
+    "category": "electrical"
+   },
+   {
+    "id": "mtr.cause.frequent_starts",
+    "description": "Frequent or heavy starts fatiguing the rotor bars",
+    "category": "process"
+   },
+   {
+    "id": "mtr.cause.supply_unbalance",
+    "description": "Unbalanced supply voltage between phases",
+    "category": "electrical"
+   },
+   {
+    "id": "mtr.cause.insulation_ageing",
+    "description": "Winding insulation aged by heat or contamination",
+    "category": "electrical"
+   },
+   {
+    "id": "mtr.cause.blocked_cooling",
+    "description": "Cooling fan, cowl or fins blocked",
+    "category": "contamination"
+   },
+   {
+    "id": "mtr.cause.mass_change",
+    "description": "A lost balance weight or build-up on the rotor or its fan",
+    "category": "wear"
+   }
+  ],
+  "Action": [
+   {
+    "id": "mtr.act.confirm_reading",
+    "description": "Confirm the reading: sensor secure, load steady, supply normal",
+    "tool": "none",
+    "duration_min": 10,
+    "skill_level": "operator"
+   },
+   {
+    "id": "mtr.act.regrease_bearing",
+    "description": "Regrease the drive-end bearing with the specified grease and quantity",
+    "tool": "grease gun",
+    "duration_min": 20,
+    "skill_level": "technician"
+   },
+   {
+    "id": "mtr.act.replace_de_bearing",
+    "description": "Replace the drive-end bearing",
+    "tool": "bearing puller, induction heater",
+    "duration_min": 240,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "mtr.act.rotor_bar_test",
+    "description": "Test the rotor: current signature at the pole-pass frequency, then a growler test with the rotor out",
+    "tool": "current clamp, growler",
+    "duration_min": 120,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "mtr.act.check_supply",
+    "description": "Measure the phase voltages and currents for unbalance",
+    "tool": "power analyser",
+    "duration_min": 30,
+    "skill_level": "technician"
+   },
+   {
+    "id": "mtr.act.insulation_test",
+    "description": "Test the winding insulation resistance and polarisation index",
+    "tool": "insulation tester",
+    "duration_min": 45,
+    "skill_level": "technician"
+   },
+   {
+    "id": "mtr.act.check_cooling",
+    "description": "Clean the cooling fan, cowl and fins",
+    "tool": "brush, compressed air",
+    "duration_min": 30,
+    "skill_level": "operator"
+   },
+   {
+    "id": "mtr.act.repair_winding",
+    "description": "Rewind or repair the stator winding",
+    "tool": "motor workshop",
+    "duration_min": 2880,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "mtr.act.balance_rotor",
+    "description": "Balance the rotor in place or in the workshop",
+    "tool": "balancing analyser",
+    "duration_min": 180,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "mtr.act.check_alignment",
+    "description": "Check soft foot and the alignment to the driven machine",
+    "tool": "feeler gauges, laser alignment",
+    "duration_min": 90,
+    "skill_level": "technician"
+   }
+  ],
+  "Standard": [
+   {
+    "id": "iso-20958",
+    "name": "ISO 20958",
+    "clause": "Electrical signature analysis of three-phase induction motors"
+   },
+   {
+    "id": "iso-21940-11",
+    "name": "ISO 21940-11",
+    "clause": "Balancing of rotors with rigid behaviour"
+   }
+  ]
+ },
+ "relations": {
+  "HAS_COMPONENT": [
+   [
+    "M-301",
+    "M-301.bearing.de"
+   ],
+   [
+    "M-301",
+    "M-301.rotor"
+   ],
+   [
+    "M-301",
+    "M-301.stator"
+   ],
+   [
+    "M-301",
+    "M-301.shaft"
+   ],
+   [
+    "M-301",
+    "M-301.foundation"
+   ]
+  ],
+  "MONITORED_BY": [
+   [
+    "M-301.bearing.de",
+    "M-301.vib.de.rms"
+   ],
+   [
+    "M-301.bearing.de",
+    "M-301.vib.de.peak"
+   ],
+   [
+    "M-301.bearing.de",
+    "M-301.vib.de.kurtosis"
+   ],
+   [
+    "M-301.bearing.de",
+    "M-301.vib.de.crest"
+   ],
+   [
+    "M-301.rotor",
+    "M-301.vib.de.1x"
+   ],
+   [
+    "M-301.shaft",
+    "M-301.vib.de.2x"
+   ],
+   [
+    "M-301.bearing.de",
+    "M-301.vib.de.bpfo"
+   ],
+   [
+    "M-301.stator",
+    "M-301.vib.de.line2x"
+   ],
+   [
+    "M-301.rotor",
+    "M-301.vib.de.rotor_sb"
+   ],
+   [
+    "M-301.bearing.de",
+    "M-301.vib.de.cage"
+   ],
+   [
+    "M-301.stator",
+    "M-301.temp.winding"
+   ],
+   [
+    "M-301.stator",
+    "M-301.elec.current"
+   ]
+  ],
+  "DETECTS": [
+   [
+    "M-301.vib.de.rms",
+    "mtr.sym.rms.high"
+   ],
+   [
+    "M-301.vib.de.peak",
+    "mtr.sym.peak.high"
+   ],
+   [
+    "M-301.vib.de.kurtosis",
+    "mtr.sym.kurtosis.high"
+   ],
+   [
+    "M-301.vib.de.crest",
+    "mtr.sym.crest.high"
+   ],
+   [
+    "M-301.vib.de.1x",
+    "mtr.sym.1x.high"
+   ],
+   [
+    "M-301.vib.de.2x",
+    "mtr.sym.2x.high"
+   ],
+   [
+    "M-301.vib.de.bpfo",
+    "mtr.sym.bpfo.high"
+   ],
+   [
+    "M-301.vib.de.line2x",
+    "mtr.sym.line2x.high"
+   ],
+   [
+    "M-301.vib.de.rotor_sb",
+    "mtr.sym.rotor_sb.high"
+   ],
+   [
+    "M-301.vib.de.cage",
+    "mtr.sym.cage.high"
+   ],
+   [
+    "M-301.temp.winding",
+    "mtr.sym.winding_temp.high"
+   ],
+   [
+    "M-301.elec.current",
+    "mtr.sym.current.high"
+   ]
+  ],
+  "INDICATES": [
+   [
+    "mtr.sym.bpfo.high",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "mtr.sym.cage.high",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "mtr.sym.kurtosis.high",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "mtr.sym.crest.high",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "confidence": 0.5
+    }
+   ],
+   [
+    "mtr.sym.peak.high",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "confidence": 0.5
+    }
+   ],
+   [
+    "mtr.sym.rms.high",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "confidence": 0.2
+    }
+   ],
+   [
+    "mtr.sym.rotor_sb.high",
+    "mtr.fm.broken_rotor_bar",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "mtr.sym.current.high",
+    "mtr.fm.broken_rotor_bar",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "mtr.sym.1x.high",
+    "mtr.fm.broken_rotor_bar",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "mtr.sym.winding_temp.high",
+    "mtr.fm.broken_rotor_bar",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "mtr.sym.line2x.high",
+    "mtr.fm.stator_winding",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "mtr.sym.winding_temp.high",
+    "mtr.fm.stator_winding",
+    {
+     "confidence": 0.8
+    }
+   ],
+   [
+    "mtr.sym.current.high",
+    "mtr.fm.stator_winding",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "mtr.sym.1x.high",
+    "mtr.fm.rotor_unbalance",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "mtr.sym.rms.high",
+    "mtr.fm.rotor_unbalance",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "mtr.sym.2x.high",
+    "mtr.fm.rotor_unbalance",
+    {
+     "confidence": 0.2
+    }
+   ]
+  ],
+  "CAUSES": [
+   [
+    "mtr.cause.grease_degraded",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "mtr.cause.shaft_currents",
+    "mtr.fm.de_bearing_outer_race",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "mtr.cause.frequent_starts",
+    "mtr.fm.broken_rotor_bar",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "mtr.cause.supply_unbalance",
+    "mtr.fm.stator_winding",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "mtr.cause.insulation_ageing",
+    "mtr.fm.stator_winding",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "mtr.cause.blocked_cooling",
+    "mtr.fm.stator_winding",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "mtr.cause.mass_change",
+    "mtr.fm.rotor_unbalance",
+    {
+     "likelihood": 0.7
+    }
+   ]
+  ],
+  "MITIGATED_BY": [
+   [
+    "mtr.fm.de_bearing_outer_race",
+    "mtr.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "mtr.fm.de_bearing_outer_race",
+    "mtr.act.regrease_bearing",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "mtr.fm.de_bearing_outer_race",
+    "mtr.act.replace_de_bearing",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "mtr.fm.broken_rotor_bar",
+    "mtr.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "mtr.fm.broken_rotor_bar",
+    "mtr.act.rotor_bar_test",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "mtr.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "mtr.act.check_supply",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "mtr.act.insulation_test",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "mtr.act.check_cooling",
+    {
+     "priority": 4
+    }
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "mtr.act.repair_winding",
+    {
+     "priority": 5
+    }
+   ],
+   [
+    "mtr.fm.rotor_unbalance",
+    "mtr.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "mtr.fm.rotor_unbalance",
+    "mtr.act.check_alignment",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "mtr.fm.rotor_unbalance",
+    "mtr.act.balance_rotor",
+    {
+     "priority": 3
+    }
+   ]
+  ],
+  "DOCUMENTED_IN": [
+   [
+    "mtr.act.confirm_reading",
+    "M-301-OM-5.9"
+   ],
+   [
+    "mtr.act.regrease_bearing",
+    "M-301-OM-4.1"
+   ],
+   [
+    "mtr.act.replace_de_bearing",
+    "M-301-OM-4.2"
+   ],
+   [
+    "mtr.act.rotor_bar_test",
+    "M-301-OM-4.3"
+   ],
+   [
+    "mtr.act.check_supply",
+    "M-301-OM-3.1"
+   ],
+   [
+    "mtr.act.insulation_test",
+    "M-301-OM-3.2"
+   ],
+   [
+    "mtr.act.check_cooling",
+    "M-301-OM-3.3"
+   ],
+   [
+    "mtr.act.repair_winding",
+    "M-301-OM-4.6"
+   ],
+   [
+    "mtr.act.balance_rotor",
+    "M-301-OM-4.4"
+   ],
+   [
+    "mtr.act.check_alignment",
+    "M-301-OM-4.5"
+   ],
+   [
+    "mtr.cause.grease_degraded",
+    "M-301-OM-4.1"
+   ],
+   [
+    "mtr.cause.supply_unbalance",
+    "M-301-OM-3.1"
+   ],
+   [
+    "mtr.cause.insulation_ageing",
+    "M-301-OM-3.2"
+   ],
+   [
+    "mtr.cause.blocked_cooling",
+    "M-301-OM-3.3"
+   ],
+   [
+    "mtr.cause.frequent_starts",
+    "M-301-OM-6.1"
+   ],
+   [
+    "mtr.sym.rotor_sb.high",
+    "M-301-OM-5.4"
+   ],
+   [
+    "mtr.sym.line2x.high",
+    "M-301-OM-5.3"
+   ],
+   [
+    "mtr.sym.bpfo.high",
+    "M-301-OM-5.7"
+   ],
+   [
+    "mtr.sym.winding_temp.high",
+    "M-301-OM-5.8"
+   ],
+   [
+    "mtr.sym.current.high",
+    "M-301-OM-5.8"
+   ],
+   [
+    "mtr.sym.1x.high",
+    "M-301-OM-5.6"
+   ]
+  ],
+  "SAFEGUARDED_BY": [
+   [
+    "mtr.act.replace_de_bearing",
+    "M-301-OM-2.1"
+   ],
+   [
+    "mtr.act.replace_de_bearing",
+    "M-301-OM-2.3"
+   ],
+   [
+    "mtr.act.rotor_bar_test",
+    "M-301-OM-2.1"
+   ],
+   [
+    "mtr.act.insulation_test",
+    "M-301-OM-2.1"
+   ],
+   [
+    "mtr.act.repair_winding",
+    "M-301-OM-2.1"
+   ],
+   [
+    "mtr.act.repair_winding",
+    "M-301-OM-2.3"
+   ],
+   [
+    "mtr.act.balance_rotor",
+    "M-301-OM-2.2"
+   ],
+   [
+    "mtr.act.check_alignment",
+    "M-301-OM-2.1"
+   ],
+   [
+    "mtr.act.regrease_bearing",
+    "M-301-OM-2.2"
+   ],
+   [
+    "mtr.act.check_cooling",
+    "M-301-OM-2.1"
+   ]
+  ],
+  "DESCRIBED_IN": [
+   [
+    "mtr.fm.de_bearing_outer_race",
+    "M-301-OM-5.7"
+   ],
+   [
+    "mtr.fm.broken_rotor_bar",
+    "M-301-OM-5.4"
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "M-301-OM-5.5"
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "M-301-OM-3.3"
+   ],
+   [
+    "mtr.fm.rotor_unbalance",
+    "M-301-OM-5.6"
+   ]
+  ],
+  "GOVERNED_BY": [
+   [
+    "mtr.fm.de_bearing_outer_race",
+    "iso-15243"
+   ],
+   [
+    "mtr.fm.broken_rotor_bar",
+    "iso-20958"
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "iso-20958"
+   ],
+   [
+    "mtr.fm.rotor_unbalance",
+    "iso-21940-11"
+   ]
+  ],
+  "AFFECTS": [
+   [
+    "mtr.fm.de_bearing_outer_race",
+    "M-301.bearing.de"
+   ],
+   [
+    "mtr.fm.broken_rotor_bar",
+    "M-301.rotor"
+   ],
+   [
+    "mtr.fm.stator_winding",
+    "M-301.stator"
+   ],
+   [
+    "mtr.fm.rotor_unbalance",
+    "M-301.rotor"
+   ]
+  ]
+ }
+}

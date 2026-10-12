@@ -1,0 +1,19 @@
+# What the Docker build context leaves out; kept the same as .gcloudignore.
+.git/
+.venv/
+datasets/
+var/
+build/
+build-*/
+sim/artifacts/
+web/node_modules/
+web/dist/
+**/__pycache__/
+*.hframe
+.chroma/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+for refactor/
+rag/audit/
+harmonic.egg-info/

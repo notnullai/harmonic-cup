@@ -1,0 +1,12 @@
+# One line ending in the repository, whatever the editor or OS that wrote the
+# file. Windows tooling wrote CRLF into 34 files before this existed.
+* text=auto eol=lf
+*.harmonic binary
+*.hframe binary
+*.npy binary
+*.npz binary
+*.pdf binary
+*.png binary
+*.woff2 binary
+*.7z binary
+*.rar binary

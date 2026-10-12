@@ -1,0 +1,87 @@
+services:
+  neo4j:
+    image: neo4j:5-community
+    container_name: harmonic-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/harmonic-dev
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"   # browser
+      - "7687:7687"   # bolt
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    networks: [harmonic]
+
+  chroma:
+    image: chromadb/chroma:0.5.23
+    container_name: harmonic-chroma
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/api/v1/heartbeat || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    networks: [harmonic]
+
+  mqtt:
+    # Live sensors publish here (api/adapters/mqtt.py); scripts/mqtt_publish.py
+    # plays a simulated machine or a recording into it.
+    image: eclipse-mosquitto:2
+    container_name: harmonic-mqtt
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./deploy/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    networks: [harmonic]
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: harmonic-api
+    ports:
+      - "8000:8000"
+    environment:
+      HARMONIC_NEO4J_URI: bolt://neo4j:7687
+      HARMONIC_NEO4J_USER: neo4j
+      HARMONIC_NEO4J_PASSWORD: harmonic-dev
+      HARMONIC_CHROMA_URL: http://chroma:8000
+      # Built into the image, outside the source tree.
+      HARMONIC_RIG_LIB: /usr/local/lib/libharmonic_rig.so
+      # Neo4j is up in compose, so use it; the NetworkX fallback is for a
+      # checkout with no Docker.
+      HARMONIC_KG_BACKEND: auto
+      # Set GEMINI_API_KEY in the environment (or a .env file) to use a model.
+      # Absent, the diagnosis layer uses the knowledge-graph composer and says
+      # so in every response.
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+    depends_on:
+      neo4j: {condition: service_healthy}
+      chroma: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    networks: [harmonic]
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  chroma_data:
+
+networks:
+  harmonic:
+    driver: bridge

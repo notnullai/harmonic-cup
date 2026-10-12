@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Try Harmonic on a recording from your own machine — no sign-up. See when it would have alarmed, and what it would have said." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Try Harmonic on your own data</title>
+    <script>
+      try {
+        const t = localStorage.getItem("harmonic-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/try/main.tsx"></script>
+  </body>
+</html>

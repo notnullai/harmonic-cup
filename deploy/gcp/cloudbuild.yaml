@@ -1,0 +1,24 @@
+# Cloud Build: the API image — engine, both machine families' brains, the
+# console — built and pushed to Artifact Registry (HARM-S8-G04).
+#
+#   gcloud builds submit --config deploy/gcp/cloudbuild.yaml \
+#       --substitutions _REGION=us-central1,_REPO=harmonic .
+#
+# The build trains both brains with the real trainer (a few minutes), so it
+# runs on a larger machine.
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-f", "api/Dockerfile",
+           "-t", "${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/harmonic:${_TAG}",
+           "-t", "${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/harmonic:latest", "."]
+images:
+  - "${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/harmonic:${_TAG}"
+  - "${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/harmonic:latest"
+substitutions:
+  _REGION: us-central1
+  _REPO: harmonic
+  _TAG: manual
+options:
+  machineType: E2_HIGHCPU_8
+  logging: CLOUD_LOGGING_ONLY
+timeout: 3600s

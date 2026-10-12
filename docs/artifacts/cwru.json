@@ -1,0 +1,114 @@
+{
+ "baseline": {
+  "readings": 286,
+  "false_alarms": 0,
+  "checked": 227
+ },
+ "holdout_3hp": {
+  "readings": 115,
+  "alarmed": 0,
+  "first_alarm": null,
+  "engine_lead": {},
+  "diagnosis": null,
+  "features": [],
+  "unrecognised": 0
+ },
+ "faults": {
+  "105": {
+   "readings": 115,
+   "alarmed": 109,
+   "first_alarm": 6,
+   "engine_lead": {
+    "bearing_wear": 109
+   },
+   "diagnosis": "mtr.fm.de_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_BPFO",
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage"
+   ],
+   "unrecognised": 4,
+   "fault": "inner race, 0.007 in"
+  },
+  "118": {
+   "readings": 116,
+   "alarmed": 104,
+   "first_alarm": 12,
+   "engine_lead": {
+    "bearing_wear": 104
+   },
+   "diagnosis": "mtr.fm.de_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "HARMONIC_FEAT_VIB_BPFO",
+    "HARMONIC_FEAT_VIB_ORDER:line2x"
+   ],
+   "unrecognised": 0,
+   "fault": "ball, 0.007 in"
+  },
+  "130": {
+   "readings": 116,
+   "alarmed": 110,
+   "first_alarm": 6,
+   "engine_lead": {
+    "bearing_wear": 110
+   },
+   "diagnosis": "mtr.fm.de_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_BPFO",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "HARMONIC_FEAT_VIB_KURTOSIS"
+   ],
+   "unrecognised": 4,
+   "fault": "outer race @6, 0.007 in"
+  },
+  "209": {
+   "readings": 116,
+   "alarmed": 110,
+   "first_alarm": 6,
+   "engine_lead": {
+    "bearing_wear": 110
+   },
+   "diagnosis": "mtr.fm.de_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_PEAK",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage"
+   ],
+   "unrecognised": 4,
+   "fault": "inner race, 0.021 in"
+  },
+  "222": {
+   "readings": 116,
+   "alarmed": 104,
+   "first_alarm": 12,
+   "engine_lead": {
+    "bearing_wear": 104
+   },
+   "diagnosis": "mtr.fm.de_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_BPFO",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "HARMONIC_FEAT_VIB_ORDER:line2x"
+   ],
+   "unrecognised": 0,
+   "fault": "ball, 0.021 in"
+  },
+  "234": {
+   "readings": 116,
+   "alarmed": 110,
+   "first_alarm": 6,
+   "engine_lead": {
+    "bearing_wear": 110
+   },
+   "diagnosis": "mtr.fm.de_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_BPFO",
+    "HARMONIC_FEAT_VIB_CREST"
+   ],
+   "unrecognised": 3,
+   "fault": "outer race @6, 0.021 in"
+  }
+ }
+}

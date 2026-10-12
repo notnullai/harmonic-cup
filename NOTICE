@@ -1,0 +1,11 @@
+Harmonic
+Copyright 2026 KHALM LLC
+
+This product includes software developed by KHALM LLC
+and its contributors.
+
+The code in this repository is licensed under the Apache License, Version 2.0.
+
+The machine-family library (kg/families/, rag/manuals/, profiles/ and sim/)
+is not: see LICENSE-FAMILY-LIBRARY.md. The edge detector is proprietary and
+is not part of this repository.

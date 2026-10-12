@@ -1,0 +1,1033 @@
+{
+ "family": "gearbox",
+ "about": "Single-stage parallel-shaft gearbox GB-201.",
+ "manual": "GB-201-OM",
+ "classes": {
+  "tooth_wear": "gbx.fm.tooth_wear",
+  "broken_tooth": "gbx.fm.tooth_breakage",
+  "misalignment": "gbx.fm.shaft_misalignment",
+  "bearing_wear": "gbx.fm.input_bearing_outer_race"
+ },
+ "aliases": {
+  "gbx.fm.shaft_misalignment": [
+   "shaft misalignment",
+   "misalignment",
+   "misaligned"
+  ],
+  "gbx.fm.tooth_wear": [
+   "tooth wear",
+   "distributed wear",
+   "wear of the tooth flanks",
+   "tooth flank wear",
+   "pitting"
+  ],
+  "gbx.fm.tooth_breakage": [
+   "broken tooth",
+   "cracked tooth",
+   "tooth breakage",
+   "root crack"
+  ],
+  "gbx.fm.input_bearing_outer_race": [
+   "outer-race wear",
+   "outer-race spalling",
+   "outer-race defect",
+   "outer race"
+  ]
+ },
+ "nodes": {
+  "Equipment": [
+   {
+    "id": "GB-201",
+    "model": "single_stage_parallel_shaft_gearbox",
+    "serial": "GB201 (simulated)",
+    "nominal_rpm": 1480,
+    "iso_class": "10816-3-G2-rigid",
+    "family": "gearbox",
+    "manuals": "GB-201-OM"
+   }
+  ],
+  "Component": [
+   {
+    "id": "GB-201.gear.pinion",
+    "kind": "gear",
+    "position": "input"
+   },
+   {
+    "id": "GB-201.gear.wheel",
+    "kind": "gear",
+    "position": "output"
+   },
+   {
+    "id": "GB-201.bearing.input",
+    "kind": "bearing",
+    "position": "input_drive_end"
+   },
+   {
+    "id": "GB-201.shaft.input",
+    "kind": "shaft",
+    "position": "input"
+   },
+   {
+    "id": "GB-201.coupling",
+    "kind": "coupling",
+    "position": "input"
+   },
+   {
+    "id": "GB-201.foundation",
+    "kind": "foundation",
+    "position": "base"
+   }
+  ],
+  "Sensor": [
+   {
+    "id": "GB-201.vib.input.mesh",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:gear_mesh",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.mesh_sb",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:mesh_sb",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.mesh_2x",
+    "kind": "HARMONIC_FEAT_VIB_ORDER:mesh_2x",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.bpfo",
+    "kind": "HARMONIC_FEAT_VIB_BPFO",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.cage",
+    "kind": "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.kurtosis",
+    "kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.crest",
+    "kind": "HARMONIC_FEAT_VIB_CREST",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.peak",
+    "kind": "HARMONIC_FEAT_VIB_PEAK",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.1x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.2x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.vib.input.rms",
+    "kind": "HARMONIC_FEAT_VIB_RMS",
+    "unit": "g",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "GB-201.temp.oil",
+    "kind": "HARMONIC_FEAT_PROCESS:oil_temp",
+    "unit": "degC",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   }
+  ],
+  "Symptom": [
+   {
+    "id": "gbx.sym.mesh.high",
+    "description": "Raised amplitude at the gear mesh frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:gear_mesh",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.mesh_2x.high",
+    "description": "Raised amplitude at twice the gear mesh frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:mesh_2x",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.sidebands.high",
+    "description": "Raised sidebands at the mesh frequency plus and minus shaft speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_ORDER:mesh_sb",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.kurtosis.high",
+    "description": "Kurtosis rising: an impulsive signal",
+    "feature_kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.crest.high",
+    "description": "Crest factor rising: short high-amplitude events",
+    "feature_kind": "HARMONIC_FEAT_VIB_CREST",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.peak.high",
+    "description": "Raised peak acceleration with impulsive character",
+    "feature_kind": "HARMONIC_FEAT_VIB_PEAK",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.1x.high",
+    "description": "Raised amplitude at input shaft speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.2x.high",
+    "description": "Raised amplitude at twice input shaft speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.bpfo.high",
+    "description": "Elevated envelope amplitude at the input bearing's outer-race frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_BPFO",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.cage.high",
+    "description": "Envelope modulation at the input bearing's cage frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.rms.high",
+    "description": "Overall vibration above the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_VIB_RMS",
+    "direction": "up"
+   },
+   {
+    "id": "gbx.sym.oil_temp.high",
+    "description": "Oil sump temperature above the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_PROCESS:oil_temp",
+    "direction": "up"
+   }
+  ],
+  "FailureMode": [
+   {
+    "id": "gbx.fm.tooth_wear",
+    "description": "Distributed wear of the gear tooth flanks",
+    "iso_code": "ISO 10825",
+    "severity": 3,
+    "family": "gearbox"
+   },
+   {
+    "id": "gbx.fm.tooth_breakage",
+    "description": "A cracked or broken pinion tooth",
+    "iso_code": "ISO 10825",
+    "severity": 5,
+    "family": "gearbox"
+   },
+   {
+    "id": "gbx.fm.shaft_misalignment",
+    "description": "Misalignment between the motor and the gearbox input shaft",
+    "iso_code": "ISO 10816-3",
+    "severity": 3,
+    "family": "gearbox"
+   },
+   {
+    "id": "gbx.fm.input_bearing_outer_race",
+    "description": "Outer race spalling in the input shaft bearing",
+    "iso_code": "ISO 15243 5.2",
+    "severity": 4,
+    "family": "gearbox"
+   }
+  ],
+  "Cause": [
+   {
+    "id": "gbx.cause.oil_degraded",
+    "description": "Gear oil degraded or past its change interval",
+    "category": "lubrication"
+   },
+   {
+    "id": "gbx.cause.oil_contaminated",
+    "description": "Wear particles or water in the gear oil",
+    "category": "contamination"
+   },
+   {
+    "id": "gbx.cause.overload",
+    "description": "Shock load or sustained overload on the gear set",
+    "category": "process"
+   },
+   {
+    "id": "gbx.cause.tooth_fatigue",
+    "description": "Root fatigue crack grown from a stress raiser",
+    "category": "wear"
+   },
+   {
+    "id": "gbx.cause.soft_foot",
+    "description": "Soft foot under a gearbox or motor hold-down",
+    "category": "installation"
+   },
+   {
+    "id": "gbx.cause.coupling_hardened",
+    "description": "Hardened or cracked coupling element",
+    "category": "wear"
+   }
+  ],
+  "Action": [
+   {
+    "id": "gbx.act.confirm_reading",
+    "description": "Confirm the reading: sensor secure, regime steady, oil level correct",
+    "tool": "none",
+    "duration_min": 10,
+    "skill_level": "operator"
+   },
+   {
+    "id": "gbx.act.oil_sample",
+    "description": "Take an oil sample for particle count and analysis",
+    "tool": "sample bottle, drain valve key",
+    "duration_min": 15,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.inspect_mesh",
+    "description": "Inspect the gear teeth and record the contact pattern",
+    "tool": "marking compound, torch",
+    "duration_min": 60,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.check_backlash",
+    "description": "Measure gear backlash against the specified range",
+    "tool": "dial indicator",
+    "duration_min": 30,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.replace_gear_set",
+    "description": "Replace the pinion and wheel as a set",
+    "tool": "hydraulic puller, lifting gear",
+    "duration_min": 480,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "gbx.act.change_oil",
+    "description": "Drain and refill with fresh ISO VG 220 gear oil",
+    "tool": "drain pan, filter cart",
+    "duration_min": 60,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.laser_align",
+    "description": "Laser-align the motor to the gearbox input shaft",
+    "tool": "laser alignment system, shims",
+    "duration_min": 120,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.soft_foot_check",
+    "description": "Check every hold-down for soft foot",
+    "tool": "feeler gauges, dial indicator",
+    "duration_min": 30,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.replace_coupling_element",
+    "description": "Replace the elastomer coupling element",
+    "tool": "hand tools",
+    "duration_min": 45,
+    "skill_level": "technician"
+   },
+   {
+    "id": "gbx.act.replace_input_bearing",
+    "description": "Replace the input shaft bearing",
+    "tool": "bearing puller, induction heater",
+    "duration_min": 240,
+    "skill_level": "specialist"
+   }
+  ],
+  "Standard": [
+   {
+    "id": "iso-10825",
+    "name": "ISO 10825",
+    "clause": "Gears — wear and damage to gear teeth"
+   },
+   {
+    "id": "iso-10816-3",
+    "name": "ISO 10816-3",
+    "clause": "Group 2, rigid foundation"
+   }
+  ]
+ },
+ "relations": {
+  "HAS_COMPONENT": [
+   [
+    "GB-201",
+    "GB-201.gear.pinion"
+   ],
+   [
+    "GB-201",
+    "GB-201.gear.wheel"
+   ],
+   [
+    "GB-201",
+    "GB-201.bearing.input"
+   ],
+   [
+    "GB-201",
+    "GB-201.shaft.input"
+   ],
+   [
+    "GB-201",
+    "GB-201.coupling"
+   ],
+   [
+    "GB-201",
+    "GB-201.foundation"
+   ]
+  ],
+  "MONITORED_BY": [
+   [
+    "GB-201.gear.pinion",
+    "GB-201.vib.input.mesh"
+   ],
+   [
+    "GB-201.gear.pinion",
+    "GB-201.vib.input.mesh_sb"
+   ],
+   [
+    "GB-201.gear.pinion",
+    "GB-201.vib.input.mesh_2x"
+   ],
+   [
+    "GB-201.bearing.input",
+    "GB-201.vib.input.bpfo"
+   ],
+   [
+    "GB-201.bearing.input",
+    "GB-201.vib.input.cage"
+   ],
+   [
+    "GB-201.gear.pinion",
+    "GB-201.vib.input.kurtosis"
+   ],
+   [
+    "GB-201.gear.pinion",
+    "GB-201.vib.input.crest"
+   ],
+   [
+    "GB-201.gear.pinion",
+    "GB-201.vib.input.peak"
+   ],
+   [
+    "GB-201.shaft.input",
+    "GB-201.vib.input.1x"
+   ],
+   [
+    "GB-201.shaft.input",
+    "GB-201.vib.input.2x"
+   ],
+   [
+    "GB-201.shaft.input",
+    "GB-201.vib.input.rms"
+   ],
+   [
+    "GB-201.gear.wheel",
+    "GB-201.temp.oil"
+   ]
+  ],
+  "DETECTS": [
+   [
+    "GB-201.vib.input.mesh",
+    "gbx.sym.mesh.high"
+   ],
+   [
+    "GB-201.vib.input.mesh_2x",
+    "gbx.sym.mesh_2x.high"
+   ],
+   [
+    "GB-201.vib.input.mesh_sb",
+    "gbx.sym.sidebands.high"
+   ],
+   [
+    "GB-201.vib.input.kurtosis",
+    "gbx.sym.kurtosis.high"
+   ],
+   [
+    "GB-201.vib.input.crest",
+    "gbx.sym.crest.high"
+   ],
+   [
+    "GB-201.vib.input.peak",
+    "gbx.sym.peak.high"
+   ],
+   [
+    "GB-201.vib.input.1x",
+    "gbx.sym.1x.high"
+   ],
+   [
+    "GB-201.vib.input.2x",
+    "gbx.sym.2x.high"
+   ],
+   [
+    "GB-201.vib.input.bpfo",
+    "gbx.sym.bpfo.high"
+   ],
+   [
+    "GB-201.vib.input.cage",
+    "gbx.sym.cage.high"
+   ],
+   [
+    "GB-201.vib.input.rms",
+    "gbx.sym.rms.high"
+   ],
+   [
+    "GB-201.temp.oil",
+    "gbx.sym.oil_temp.high"
+   ]
+  ],
+  "INDICATES": [
+   [
+    "gbx.sym.mesh.high",
+    "gbx.fm.tooth_wear",
+    {
+     "confidence": 0.75
+    }
+   ],
+   [
+    "gbx.sym.mesh_2x.high",
+    "gbx.fm.tooth_wear",
+    {
+     "confidence": 0.85
+    }
+   ],
+   [
+    "gbx.sym.sidebands.high",
+    "gbx.fm.tooth_breakage",
+    {
+     "confidence": 0.85
+    }
+   ],
+   [
+    "gbx.sym.sidebands.high",
+    "gbx.fm.tooth_wear",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "gbx.sym.kurtosis.high",
+    "gbx.fm.tooth_breakage",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "gbx.sym.kurtosis.high",
+    "gbx.fm.input_bearing_outer_race",
+    {
+     "confidence": 0.45
+    }
+   ],
+   [
+    "gbx.sym.crest.high",
+    "gbx.fm.tooth_breakage",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "gbx.sym.crest.high",
+    "gbx.fm.input_bearing_outer_race",
+    {
+     "confidence": 0.35
+    }
+   ],
+   [
+    "gbx.sym.peak.high",
+    "gbx.fm.tooth_breakage",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "gbx.sym.1x.high",
+    "gbx.fm.shaft_misalignment",
+    {
+     "confidence": 0.45
+    }
+   ],
+   [
+    "gbx.sym.2x.high",
+    "gbx.fm.shaft_misalignment",
+    {
+     "confidence": 0.85
+    }
+   ],
+   [
+    "gbx.sym.bpfo.high",
+    "gbx.fm.input_bearing_outer_race",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "gbx.sym.cage.high",
+    "gbx.fm.input_bearing_outer_race",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "gbx.sym.rms.high",
+    "gbx.fm.tooth_wear",
+    {
+     "confidence": 0.25
+    }
+   ],
+   [
+    "gbx.sym.rms.high",
+    "gbx.fm.shaft_misalignment",
+    {
+     "confidence": 0.2
+    }
+   ],
+   [
+    "gbx.sym.oil_temp.high",
+    "gbx.fm.input_bearing_outer_race",
+    {
+     "confidence": 0.45
+    }
+   ],
+   [
+    "gbx.sym.oil_temp.high",
+    "gbx.fm.tooth_wear",
+    {
+     "confidence": 0.4
+    }
+   ],
+   [
+    "gbx.sym.oil_temp.high",
+    "gbx.fm.shaft_misalignment",
+    {
+     "confidence": 0.25
+    }
+   ]
+  ],
+  "CAUSES": [
+   [
+    "gbx.cause.oil_degraded",
+    "gbx.fm.tooth_wear",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "gbx.cause.oil_contaminated",
+    "gbx.fm.tooth_wear",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "gbx.cause.oil_contaminated",
+    "gbx.fm.input_bearing_outer_race",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "gbx.cause.overload",
+    "gbx.fm.tooth_breakage",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "gbx.cause.tooth_fatigue",
+    "gbx.fm.tooth_breakage",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "gbx.cause.soft_foot",
+    "gbx.fm.shaft_misalignment",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "gbx.cause.coupling_hardened",
+    "gbx.fm.shaft_misalignment",
+    {
+     "likelihood": 0.5
+    }
+   ]
+  ],
+  "MITIGATED_BY": [
+   [
+    "gbx.fm.tooth_wear",
+    "gbx.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "gbx.fm.tooth_wear",
+    "gbx.act.oil_sample",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "gbx.fm.tooth_wear",
+    "gbx.act.check_backlash",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "gbx.fm.tooth_wear",
+    "gbx.act.change_oil",
+    {
+     "priority": 4
+    }
+   ],
+   [
+    "gbx.fm.tooth_wear",
+    "gbx.act.replace_gear_set",
+    {
+     "priority": 5
+    }
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "gbx.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "gbx.act.inspect_mesh",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "gbx.act.replace_gear_set",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "gbx.act.soft_foot_check",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "gbx.act.replace_coupling_element",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "gbx.act.laser_align",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "gbx.fm.input_bearing_outer_race",
+    "gbx.act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "gbx.fm.input_bearing_outer_race",
+    "gbx.act.oil_sample",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "gbx.fm.input_bearing_outer_race",
+    "gbx.act.replace_input_bearing",
+    {
+     "priority": 3
+    }
+   ]
+  ],
+  "DOCUMENTED_IN": [
+   [
+    "gbx.act.confirm_reading",
+    "GB-201-OM-5.9"
+   ],
+   [
+    "gbx.act.oil_sample",
+    "GB-201-OM-3.2"
+   ],
+   [
+    "gbx.act.inspect_mesh",
+    "GB-201-OM-4.1"
+   ],
+   [
+    "gbx.act.check_backlash",
+    "GB-201-OM-4.6"
+   ],
+   [
+    "gbx.act.replace_gear_set",
+    "GB-201-OM-4.2"
+   ],
+   [
+    "gbx.act.change_oil",
+    "GB-201-OM-3.1"
+   ],
+   [
+    "gbx.act.laser_align",
+    "GB-201-OM-4.4"
+   ],
+   [
+    "gbx.act.soft_foot_check",
+    "GB-201-OM-4.4"
+   ],
+   [
+    "gbx.act.replace_coupling_element",
+    "GB-201-OM-4.5"
+   ],
+   [
+    "gbx.act.replace_input_bearing",
+    "GB-201-OM-4.3"
+   ],
+   [
+    "gbx.cause.oil_degraded",
+    "GB-201-OM-3.1"
+   ],
+   [
+    "gbx.cause.oil_contaminated",
+    "GB-201-OM-3.2"
+   ],
+   [
+    "gbx.cause.soft_foot",
+    "GB-201-OM-4.4"
+   ],
+   [
+    "gbx.cause.coupling_hardened",
+    "GB-201-OM-4.5"
+   ],
+   [
+    "gbx.sym.mesh.high",
+    "GB-201-OM-5.2"
+   ],
+   [
+    "gbx.sym.mesh_2x.high",
+    "GB-201-OM-5.2"
+   ],
+   [
+    "gbx.sym.sidebands.high",
+    "GB-201-OM-5.3"
+   ],
+   [
+    "gbx.sym.kurtosis.high",
+    "GB-201-OM-5.5"
+   ],
+   [
+    "gbx.sym.crest.high",
+    "GB-201-OM-5.5"
+   ],
+   [
+    "gbx.sym.peak.high",
+    "GB-201-OM-5.5"
+   ],
+   [
+    "gbx.sym.1x.high",
+    "GB-201-OM-5.6"
+   ],
+   [
+    "gbx.sym.2x.high",
+    "GB-201-OM-5.6"
+   ],
+   [
+    "gbx.sym.bpfo.high",
+    "GB-201-OM-5.7"
+   ],
+   [
+    "gbx.sym.cage.high",
+    "GB-201-OM-5.7"
+   ],
+   [
+    "gbx.sym.rms.high",
+    "GB-201-OM-5.1"
+   ],
+   [
+    "gbx.sym.oil_temp.high",
+    "GB-201-OM-5.8"
+   ]
+  ],
+  "SAFEGUARDED_BY": [
+   [
+    "gbx.act.inspect_mesh",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.inspect_mesh",
+    "GB-201-OM-2.2"
+   ],
+   [
+    "gbx.act.check_backlash",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.replace_gear_set",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.replace_gear_set",
+    "GB-201-OM-2.2"
+   ],
+   [
+    "gbx.act.replace_gear_set",
+    "GB-201-OM-2.3"
+   ],
+   [
+    "gbx.act.change_oil",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.change_oil",
+    "GB-201-OM-2.2"
+   ],
+   [
+    "gbx.act.oil_sample",
+    "GB-201-OM-2.2"
+   ],
+   [
+    "gbx.act.laser_align",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.soft_foot_check",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.replace_coupling_element",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.replace_input_bearing",
+    "GB-201-OM-2.1"
+   ],
+   [
+    "gbx.act.replace_input_bearing",
+    "GB-201-OM-2.2"
+   ],
+   [
+    "gbx.act.replace_input_bearing",
+    "GB-201-OM-2.3"
+   ]
+  ],
+  "DESCRIBED_IN": [
+   [
+    "gbx.fm.tooth_wear",
+    "GB-201-OM-5.4"
+   ],
+   [
+    "gbx.fm.tooth_wear",
+    "GB-201-OM-5.2"
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "GB-201-OM-5.5"
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "GB-201-OM-5.3"
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "GB-201-OM-5.6"
+   ],
+   [
+    "gbx.fm.input_bearing_outer_race",
+    "GB-201-OM-5.7"
+   ]
+  ],
+  "GOVERNED_BY": [
+   [
+    "gbx.fm.tooth_wear",
+    "iso-10825"
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "iso-10825"
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "iso-10816-3"
+   ],
+   [
+    "gbx.fm.input_bearing_outer_race",
+    "iso-15243"
+   ]
+  ],
+  "AFFECTS": [
+   [
+    "gbx.fm.tooth_wear",
+    "GB-201.gear.pinion"
+   ],
+   [
+    "gbx.fm.tooth_wear",
+    "GB-201.gear.wheel"
+   ],
+   [
+    "gbx.fm.tooth_breakage",
+    "GB-201.gear.pinion"
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "GB-201.coupling"
+   ],
+   [
+    "gbx.fm.shaft_misalignment",
+    "GB-201.shaft.input"
+   ],
+   [
+    "gbx.fm.input_bearing_outer_race",
+    "GB-201.bearing.input"
+   ]
+  ]
+ }
+}

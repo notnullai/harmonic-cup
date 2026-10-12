@@ -1,0 +1,59 @@
+{
+  "_about": [
+    "Vibration severity zones, RMS velocity in mm/s over 10-1000 Hz.",
+    "bounds = A/B, B/C, C/D and the top of zone D. The standards stop at C/D;",
+    "the fourth number is 2.5 x C/D, where the engine reports FAILED.",
+    "An accelerometer is integrated to velocity by the engine, so every class",
+    "applies to either sensor type.",
+    "ISO 10816-7 (rotodynamic pumps) is not included: its tables could not be",
+    "checked against a published source, and a limit nobody can check is worse",
+    "than none. ISO 10816-1 class III is the stand-in for P-101."
+  ],
+  "classes": {
+    "none": {
+      "label": "No zones — the learned baseline alone raises the state",
+      "short": "no ISO velocity zones",
+      "bounds": null
+    },
+    "10816-1-I": {
+      "label": "ISO 10816-1 class I — small machines, up to 15 kW",
+      "short": "ISO 10816-1 class I",
+      "bounds": [0.71, 1.8, 4.5, 11.2]
+    },
+    "10816-1-II": {
+      "label": "ISO 10816-1 class II — medium machines, 15-75 kW",
+      "short": "ISO 10816-1 class II",
+      "bounds": [1.12, 2.8, 7.1, 18.0]
+    },
+    "10816-1-III": {
+      "label": "ISO 10816-1 class III — large machines, rigid foundation",
+      "short": "ISO 10816-1 class III",
+      "bounds": [1.8, 4.5, 11.2, 28.0]
+    },
+    "10816-1-IV": {
+      "label": "ISO 10816-1 class IV — large machines, soft foundation",
+      "short": "ISO 10816-1 class IV",
+      "bounds": [2.8, 7.1, 18.0, 45.0]
+    },
+    "10816-3-G2-rigid": {
+      "label": "ISO 10816-3 group 2 — 15-300 kW, rigid foundation",
+      "short": "ISO 10816-3 group 2, rigid",
+      "bounds": [1.4, 2.8, 4.5, 11.2]
+    },
+    "10816-3-G2-flexible": {
+      "label": "ISO 10816-3 group 2 — 15-300 kW, flexible foundation",
+      "short": "ISO 10816-3 group 2, flexible",
+      "bounds": [2.3, 4.5, 7.1, 18.0]
+    },
+    "10816-3-G1-rigid": {
+      "label": "ISO 10816-3 group 1 — 300 kW-50 MW, rigid foundation",
+      "short": "ISO 10816-3 group 1, rigid",
+      "bounds": [2.3, 4.5, 7.1, 18.0]
+    },
+    "10816-3-G1-flexible": {
+      "label": "ISO 10816-3 group 1 — 300 kW-50 MW, flexible foundation",
+      "short": "ISO 10816-3 group 1, flexible",
+      "bounds": [3.5, 7.1, 11.0, 28.0]
+    }
+  }
+}

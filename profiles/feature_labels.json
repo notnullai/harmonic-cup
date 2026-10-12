@@ -1,0 +1,43 @@
+{
+  "about": "Plain names for the engine's features, for the console's evidence. 'common' serves every family; a family's own block names its order and process features and may override a common name. Keys are feature kinds without the HARMONIC_FEAT_ prefix, with ':label' for an order or process feature. What a feature points to comes from the knowledge graph, not from here.",
+  "common": {
+    "VIB_RMS": "Overall vibration level",
+    "VIB_PEAK": "Vibration peaks",
+    "VIB_KURTOSIS": "Impacts in the vibration (kurtosis)",
+    "VIB_CREST": "Sharp spikes in the vibration (crest factor)",
+    "VIB_HARM_1X": "Vibration once per turn (1× speed)",
+    "VIB_HARM_2X": "Vibration twice per turn (2× speed)",
+    "VIB_HARM_3X": "Vibration three times per turn (3× speed)",
+    "VIB_BPFO": "Bearing outer-race tone",
+    "VIB_BPFI": "Bearing inner-race tone",
+    "VIB_BSF": "Bearing ball tone",
+    "TEMP_BEARING": "Bearing temperature",
+    "TEMP_MOTOR": "Motor temperature",
+    "PRESS_SUCTION": "Suction pressure",
+    "PRESS_DISCHARGE": "Discharge pressure",
+    "FLOW": "Flow",
+    "CURRENT": "Motor current"
+  },
+  "gearbox": {
+    "VIB_ORDER:gear_mesh": "Gear-mesh tone (teeth meshing)",
+    "VIB_ORDER:mesh_2x": "Gear-mesh tone, second harmonic",
+    "VIB_ORDER:mesh_sb": "Gear-mesh tone pulsing once per turn",
+    "VIB_ENV_ORDER:cage": "Bearing cage rhythm",
+    "PROCESS:oil_temp": "Oil temperature"
+  },
+  "motor": {
+    "VIB_ORDER:line2x": "Magnetic hum (2× line frequency)",
+    "VIB_ORDER:rotor_sb": "Running-speed vibration pulsing at pole-pass frequency",
+    "VIB_ENV_ORDER:cage": "Bearing cage rhythm",
+    "PROCESS:winding_temp": "Winding temperature",
+    "PROCESS:current": "Phase current"
+  },
+  "fan": {
+    "VIB_ORDER:bpf": "Blade-pass tone",
+    "VIB_ORDER:bpf_sb": "Blade-pass tone pulsing once per turn",
+    "VIB_ORDER:x3": "Vibration three times per turn (3× speed)",
+    "VIB_ORDER:half": "Vibration every other turn (½× speed)",
+    "PROCESS:airflow": "Airflow",
+    "PROCESS:bearing_temp": "Bearing temperature"
+  }
+}

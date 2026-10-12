@@ -1,0 +1,9 @@
+{
+  "family": "generic",
+  "about": "The 'any rotating machine' family (HARM-S10-T01): no fault modes, so no curated failure-mode graph. A machine commissioned under this family alarms only through the unrecognised-change (novelty) path, never a named class, so there is nothing here for the diagnosis to draw on beyond that honesty.",
+  "manual": "",
+  "classes": {},
+  "aliases": {},
+  "nodes": {},
+  "relations": {}
+}

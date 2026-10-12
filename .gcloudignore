@@ -1,0 +1,22 @@
+# What Cloud Build does not upload (deploy/gcp/deploy.sh). The image is built
+# from source; data, caches and local builds stay on the PC. Root-only entries
+# start with "/": this file follows .gitignore rules, where "datasets/" would
+# also drop sim/datasets/.
+.git/
+.venv/
+/datasets/
+/var/
+/build/
+/build-*/
+sim/artifacts/
+web/node_modules/
+web/dist/
+**/__pycache__/
+*.hframe
+.chroma/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+/for refactor/
+rag/audit/
+harmonic.egg-info/

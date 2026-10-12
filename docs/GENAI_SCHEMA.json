@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/notnullai/harmonic/docs/GENAI_SCHEMA.json",
+  "title": "Harmonic diagnosis response",
+  "description": "The structured answer the GenAI layer must return for a machine-health event. Enforced as a Vertex response_schema and re-validated on arrival, because a schema the provider applied is not evidence the content is grounded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["diagnosis", "confidence", "root_causes", "actions", "safety", "references", "rul_hours"],
+  "properties": {
+    "diagnosis": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 600,
+      "description": "What is wrong with the machine, in one or two sentences a maintenance engineer can act on."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Confidence in the diagnosis. Below 0.4 the pipeline discards the answer and returns 'insufficient evidence - recommend manual inspection' instead: a confident-sounding guess is worse than an admission of ignorance."
+    },
+    "root_causes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {"type": "string", "minLength": 5, "maxLength": 300},
+      "description": "Why the failure mode arose, ordered most to least likely. Drawn from the graph's Cause nodes, not invented."
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "description": "Ordered work steps. This is the deliverable: free text is not actionable.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step", "tool", "duration_min"],
+        "properties": {
+          "step": {"type": "string", "minLength": 5, "maxLength": 400},
+          "tool": {"type": "string", "maxLength": 200},
+          "duration_min": {"type": "number", "minimum": 0, "maximum": 10080},
+          "skill_level": {"type": "string", "enum": ["operator", "technician", "specialist"]}
+        }
+      }
+    },
+    "safety": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {"type": "string", "minLength": 5, "maxLength": 300},
+      "description": "Precautions before the work starts. Never empty: at minimum the lockout/tagout requirement. Harmonic is advisory, so the safety text is the whole of its contribution to the engineer's safety."
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+      "description": "ManualSection ids backing the answer. Must be a SUBSET of the chunk ids retrieved for this event; rag/guard.py rejects anything else. This is the anti-hallucination boundary."
+    },
+    "rul_hours": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Remaining useful life in hours. A heuristic from the health-index slope, not a physics model, and labelled as such wherever it is shown."
+    },
+    "failure_mode_id": {
+      "type": "string",
+      "description": "The FailureMode node id this diagnosis corresponds to, when one applies. Lets the dashboard highlight the graph path.",
+      "pattern": "^[A-Za-z0-9._-]+$"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# The API image. Pinned to the versions the test suite runs on, because a demo that stops building the week before
+# submission is a demo that does not happen.
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+pydantic==2.13.5
+# The simulator feeds the engine; the engine itself is the shared library.
+numpy==2.1.3
+scipy==1.14.1
+pyyaml==6.0.2
+# The knowledge graph and the guardrail. networkx is the fallback store, which
+# is what the image runs unless HARMONIC_KG_BACKEND names Neo4j.
+networkx==3.4.2
+jsonschema==4.23.0
+neo4j==5.27.0
+# The PDF report (api/report.py): pure Python, no system libraries.
+reportlab==4.2.5
+# Live sensors over MQTT (api/adapters/mqtt.py).
+paho-mqtt==2.1.0
+# Google Cloud (HARM-S8): Gemini and embeddings on Vertex AI, the event store
+# in Firestore, live sensors over Pub/Sub.
+google-genai==2.25.0
+google-cloud-firestore==2.31.0
+google-cloud-pubsub==2.41.0
+google-cloud-spanner==3.71.0

@@ -1,0 +1,136 @@
+# Harmonic fault profiles for pump P-101.
+#
+# Reference data for the four fault modes: what each one does physically, the
+# features that carry its signature, and the defaults a scenario inherits when
+# it does not say otherwise. The simulator reads the defaults; the signature
+# notes are the contract the KG and the feature set are built against.
+
+machine:
+  id: P-101
+  kind: centrifugal_pump
+  nominal_rpm: 2950
+  vane_count: 6
+  bearing:
+    designation: "6308-style deep groove ball"
+    pitch_diameter_mm: 65.0
+    ball_diameter_mm: 15.0
+    n_balls: 8
+    contact_angle_rad: 0.0
+  # Derived at 2950 rpm, for reference:
+  #   shaft 49.17 Hz | BPFO 151.28 | BPFI 242.05 | BSF 100.85 | FTF 18.91
+  iso_10816:
+    class: II
+    zone_a_mm_s: 1.8
+    zone_b_mm_s: 4.5
+    zone_c_mm_s: 11.2
+    zone_d_mm_s: 28.0
+
+faults:
+  bearing_wear:
+    description: >
+      Outer-race spall. Rolling elements strike the defect once per pass,
+      ringing the housing; the strikes are modulated at shaft rate as each
+      element moves through the loaded zone.
+    signature:
+      primary: envelope spectrum peak at BPFO
+      secondary: [1X sidebands around BPFO, rising broadband floor, bearing temperature rise]
+      distinguishing: >
+        Invisible in the raw spectrum until late; the defect rate appears as
+        modulation, so the envelope is the detector. Temperature lags badly.
+    typical_progression_hours: 8
+    defaults: {severity: 1.0, ramp_hours: 8.0}
+
+  misalignment:
+    description: >
+      Shaft-to-driver misalignment. The coupling is loaded twice per
+      revolution, raising 2X (and 3X) and driving strong axial motion.
+    signature:
+      primary: 2X/1X amplitude ratio above 0.5
+      secondary: [elevated 3X, high axial-to-radial ratio, motor temperature rise]
+      distinguishing: >
+        A high 1X alone is imbalance. It is the RATIO and the axial component
+        that make it misalignment.
+    typical_progression_hours: 0
+    defaults: {severity: 1.0, ramp_hours: 0.0}
+
+  cavitation:
+    description: >
+      Insufficient NPSH: vapour bubbles form at the impeller eye and collapse
+      violently downstream. A shot-noise process, not a periodic one.
+    signature:
+      primary: kurtosis above 4, high crest factor
+      secondary: [raised high-frequency broadband floor, 0.3 Hz discharge pressure oscillation, suction pressure drop]
+      distinguishing: >
+        Most of the energy is above the 10-1000 Hz band ISO 10816 measures, so
+        overall RMS moves little. Impulsiveness is the detector, not loudness.
+    typical_progression_hours: 0
+    defaults: {severity: 0.8, ramp_hours: 0.0}
+
+  seal_leak:
+    description: >
+      Mechanical seal wear letting process fluid escape. A hydraulic fault
+      with almost no mechanical signature.
+    signature:
+      primary: flow drop of ~15% at full severity
+      secondary: [discharge pressure drop, slight bearing temperature rise, current drop]
+      distinguishing: >
+        Nearly silent in vibration. If the engine reports vibration features
+        for a seal leak, something is wrong with the feature extraction.
+    typical_progression_hours: 24
+    defaults: {severity: 1.0, ramp_hours: 24.0}
+
+  # The two other bearing defect locations (HARM-S9-T15). The simulator reads
+  # `physics` below; the four modes above keep their parameters in the code,
+  # unchanged, so their output stays byte-identical for the same seed. Neither
+  # of these is in pump_sim.FAULT_MODES: the production brain does not train on
+  # them. They are in pump_sim.LOCATION_FAULT_MODES, for the candidate brain.
+  bearing_inner_race:
+    description: >
+      Inner-race spall. The defect turns with the shaft, so the rolling
+      elements strike it at BPFI and it passes through the load zone once a
+      revolution: the strikes are amplitude-modulated at shaft speed.
+    signature:
+      primary: envelope spectrum peak at BPFI
+      secondary: [1X side-peaks around BPFI in the envelope, rising broadband floor, bearing temperature rise]
+      distinguishing: >
+        The 1X side-peaks. An outer-race defect sits still in the load zone and
+        its strikes are nearly uniform; an inner-race defect's are not.
+    typical_progression_hours: 8
+    defaults: {severity: 1.0, ramp_hours: 8.0}
+    physics:
+      rate_x_bpfi: 1.0         # strike rate, in multiples of BPFI
+      amplitude: 60.0          # mm/s at full severity, times severity**exponent
+      exponent: 1.5
+      damping: 850.0           # 1/s, the ring-down of each strike
+      ring_hz: 2400.0          # the housing resonance each strike excites
+      modulation_depth: 0.8    # at shaft speed; 0 is none, 1 is full
+      floor: 0.10              # broadband noise, as a fraction of amplitude x severity
+      temp_rise_c: 24.0        # bearing temperature at full severity, times severity**exponent
+      motor_temp_rise_c: 8.0
+      current_rise: 0.045      # fraction of nominal current at full severity
+
+  bearing_rolling_element:
+    description: >
+      Spall on a rolling element. The defect meets the inner and the outer
+      race once each per spin of the ball, so it strikes at twice the ball
+      spin frequency (2xBSF), the two strikes unequal. The cage carries the
+      ball round the load zone, so the strikes are modulated at FTF.
+    signature:
+      primary: envelope spectrum peak at 2xBSF
+      secondary: [FTF side-peaks around 2xBSF, a BSF line from the unequal strikes, bearing temperature rise]
+      distinguishing: >
+        The cage-rate (FTF) modulation, and 2xBSF rather than a race frequency.
+    typical_progression_hours: 8
+    defaults: {severity: 1.0, ramp_hours: 8.0}
+    physics:
+      rate_x_bsf: 2.0          # strike rate, in multiples of BSF
+      amplitude: 50.0
+      exponent: 1.5
+      damping: 850.0
+      ring_hz: 2400.0
+      modulation_depth: 0.7    # at the cage rate (FTF)
+      alternation: 0.3         # inner-race strike 1 + a, outer-race strike 1 - a
+      floor: 0.10
+      temp_rise_c: 20.0
+      motor_temp_rise_c: 7.0
+      current_rise: 0.04

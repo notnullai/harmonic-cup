@@ -1,0 +1,55 @@
+[project]
+name = "harmonic"
+version = "0.2.0"
+description = "Machine health and predictive maintenance"
+requires-python = ">=3.12"
+
+# The base set is what a fresh checkout needs to run everything: the simulator,
+# the knowledge graph on its NetworkX fallback, BM25 retrieval, and the whole
+# test suite. Neo4j, Chroma and Gemini are extras on purpose — the demo has to
+# work on a machine with no Docker and no API key, and a dependency that is
+# only sometimes present is better declared than discovered.
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "networkx>=3.2",
+    "jsonschema>=4.20",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115", "uvicorn[standard]>=0.32", "httpx>=0.27", "reportlab>=4.2",
+       "paho-mqtt>=2.0"]
+neo4j = ["neo4j>=5.20"]
+chroma = ["chromadb>=0.5"]
+gemini = ["google-genai>=1.0"]
+cloud = ["neo4j>=5.20", "chromadb>=0.5", "google-genai>=1.0"]
+gcp = ["google-genai>=1.0", "google-cloud-firestore>=2.19", "google-cloud-pubsub>=2.25"]
+dev = ["pytest>=8", "ruff", "mypy"]
+
+[tool.setuptools]
+# Flat layout: the packages are top-level directories, not under src/.
+packages = ["sim", "kg", "rag", "api"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+ignore = [
+    "E501",    # line length is handled by the formatter, not the linter
+    "B008",    # argparse and FastAPI both rely on calls in defaults
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["RUF007"]   # zip(xs, xs[1:]) reads more clearly than pairwise here
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

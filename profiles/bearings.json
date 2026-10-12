@@ -1,0 +1,23 @@
+{
+ "about": "Bearing catalogue (HARM-S7-T10): designation to the internal geometry the defect frequencies need. Manufacturers do not openly publish ball count and ball diameter, so an entry is here only when its geometry is documented by a public source, named in `source`; the simulated machines' assumed bearings are marked as such. Any other bearing is entered by hand in the wizard.",
+ "bearings": {
+  "6205": {"label": "SKF 6205-2RS JEM deep groove ball (CWRU drive end)",
+           "pitch_mm": 39.04, "ball_mm": 7.94, "n_balls": 9, "contact_angle_deg": 0.0,
+           "source": "Case Western Reserve University Bearing Data Center, 'Bearing information': ball 0.3126 in, pitch 1.537 in; 9 balls = inner-ring 5.4152 + outer-ring 3.5848 defect multiples. https://engineering.case.edu/bearingdatacenter/bearing-information"},
+  "6203": {"label": "SKF 6203-2RS JEM deep groove ball (CWRU fan end)",
+           "pitch_mm": 28.50, "ball_mm": 6.75, "n_balls": 8, "contact_angle_deg": 0.0,
+           "source": "Case Western Reserve University Bearing Data Center, 'Bearing information': ball 0.2656 in, pitch 1.122 in; 8 balls = inner-ring 4.9469 + outer-ring 3.0530 defect multiples. https://engineering.case.edu/bearingdatacenter/bearing-information"},
+  "uer204": {"label": "LDK UER204 deep groove ball (XJTU-SY run-to-failure rig)",
+             "pitch_mm": 34.55, "ball_mm": 7.92, "n_balls": 8, "contact_angle_deg": 0.0,
+             "source": "Wang et al., 'XJTU-SY Rolling Element Bearing Accelerated Life Test Datasets: A Tutorial' (2019), bearing parameters table. https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets"},
+  "za2115": {"label": "Rexnord ZA-2115 double-row roller, per row (IMS rig)",
+             "pitch_mm": 71.50, "ball_mm": 8.41, "n_balls": 16, "contact_angle_deg": 15.17,
+             "source": "IMS bearing data readme (NASA Prognostics Data Repository); Qiu et al., J. Sound Vib. 289 (2006): 16 rollers per row, roller 0.331 in, pitch 2.815 in, contact angle 15.17 deg."},
+  "6308": {"label": "6308 deep groove ball (pump P-101, simulated)",
+           "pitch_mm": 65.0, "ball_mm": 15.0, "n_balls": 8, "contact_angle_deg": 0.0,
+           "source": "Assumed geometry of the simulated pump P-101 (sim/pump_sim.py, profiles/pump_p101.profile); not a manufacturer's figure."},
+  "6207": {"label": "6207 deep groove ball (gearbox GB-201 input, simulated)",
+           "pitch_mm": 46.0, "ball_mm": 11.1, "n_balls": 9, "contact_angle_deg": 0.0,
+           "source": "Assumed geometry of the simulated gearbox GB-201 (sim/gearbox_sim.py, profiles/example_gearbox.profile); not a manufacturer's figure."}
+ }
+}

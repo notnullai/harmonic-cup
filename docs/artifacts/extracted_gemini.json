@@ -1,0 +1,1486 @@
+{
+  "extractor": "gemini",
+  "n_chunks": 65,
+  "n_triples": 152,
+  "n_dropped": 6,
+  "by_relation": {
+    "DESCRIBED_IN": 43,
+    "DOCUMENTED_IN": 32,
+    "CAUSES": 23,
+    "INDICATES": 32,
+    "MITIGATED_BY": 22
+  },
+  "triples": [
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-1.2",
+      "props": {
+        "evidence": "At 1480 rpm its outer-race defect frequency (BPFO) is 84.2 Hz"
+      },
+      "source": "gemini:GB-201-OM-1.2"
+    },
+    {
+      "subject": "gbx.act.change_oil",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-3.1",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "Change the oil every 4000 running hours or yearly, whichever comes first, and after the first 500 hours of a new gear set."
+      },
+      "source": "gemini:GB-201-OM-3.1"
+    },
+    {
+      "subject": "cause.mixed_grease",
+      "relation": "CAUSES",
+      "object": "fm.lubrication_failure",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Mixed thickeners soften, the base oil bleeds out and the bearing runs dry"
+      },
+      "source": "gemini:GB-201-OM-3.1;gemini:P-101-OM-3.2"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-3.2",
+      "props": {
+        "evidence": "wear of the gear teeth"
+      },
+      "source": "gemini:GB-201-OM-3.2"
+    },
+    {
+      "subject": "gbx.fm.tooth_breakage",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-3.2",
+      "props": {
+        "evidence": "a tooth ... breaking up"
+      },
+      "source": "gemini:GB-201-OM-3.2"
+    },
+    {
+      "subject": "gbx.sym.oil_temp.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_wear",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "and a rise in oil temperature."
+      },
+      "source": "gemini:GB-201-OM-3.3;gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.sym.oil_temp.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.input_bearing_outer_race",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "the oil warms"
+      },
+      "source": "gemini:GB-201-OM-3.3;gemini:GB-201-OM-5.7"
+    },
+    {
+      "subject": "gbx.sym.oil_temp.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.shaft_misalignment",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "with a moderate rise in oil temperature"
+      },
+      "source": "gemini:GB-201-OM-3.3;gemini:GB-201-OM-5.6"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-3.3",
+      "props": {
+        "evidence": "wear of the gear teeth"
+      },
+      "source": "gemini:GB-201-OM-3.3"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-3.3",
+      "props": {
+        "evidence": "a failing bearing"
+      },
+      "source": "gemini:GB-201-OM-3.3"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-3.3",
+      "props": {
+        "evidence": "misalignment"
+      },
+      "source": "gemini:GB-201-OM-3.3"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.1",
+      "props": {
+        "evidence": "Check every pinion tooth for pitting, scuffing, spalling and cracks at the root."
+      },
+      "source": "gemini:GB-201-OM-4.1"
+    },
+    {
+      "subject": "gbx.fm.tooth_breakage",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.1",
+      "props": {
+        "evidence": "Check every pinion tooth for pitting, scuffing, spalling and cracks at the root."
+      },
+      "source": "gemini:GB-201-OM-4.1"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.1",
+      "props": {
+        "evidence": "a pattern concentrated at one end of the face indicates misalignment (see 4.4)."
+      },
+      "source": "gemini:GB-201-OM-4.1"
+    },
+    {
+      "subject": "gbx.act.inspect_mesh",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-4.1",
+      "props": {
+        "evidence": "Check every pinion tooth for pitting, scuffing, spalling and cracks at the root. Apply marking compound to three wheel teeth and turn the set through mesh to record the contact pattern;"
+      },
+      "source": "gemini:GB-201-OM-4.1"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.3",
+      "props": {
+        "evidence": "SECTION GB-201-OM-4.3 — Input bearing replacement"
+      },
+      "source": "gemini:GB-201-OM-4.3"
+    },
+    {
+      "subject": "gbx.act.replace_input_bearing",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-4.3",
+      "props": {
+        "evidence": "With the oil drained, remove the input bearing cover and withdraw the shaft. Pull the bearing with a puller acting on the inner ring only, heat the new bearing by induction to 110 °C, and slide it on against the shoulder. Never drive a bearing on with a hammer. Record the fitting date against the bearing position."
+      },
+      "source": "gemini:GB-201-OM-4.3"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.replace_input_bearing",
+      "props": {
+        "evidence": "plan the bearing replacement",
+        "confidence": 1.0
+      },
+      "source": "gemini:GB-201-OM-4.3;gemini:GB-201-OM-5.7"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.4",
+      "props": {
+        "evidence": "SECTION GB-201-OM-4.4 — Shaft alignment"
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.laser_align",
+      "props": {
+        "evidence": "Align with a laser system to within 0.05 mm offset and 0.05 mm per 100 mm angularity, with the gearbox at operating temperature or with the thermal growth allowed for."
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "act.laser_align",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-4.4",
+      "props": {
+        "evidence": "Align with a laser system to within 0.05 mm offset and 0.05 mm per 100 mm angularity, with the gearbox at operating temperature or with the thermal growth allowed for."
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "cause.soft_foot",
+      "relation": "CAUSES",
+      "object": "gbx.fm.shaft_misalignment",
+      "props": {
+        "evidence": "Check for soft foot under every hold-down before aligning."
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.soft_foot_check",
+      "props": {
+        "evidence": "Check for soft foot under every hold-down before aligning."
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "act.soft_foot_check",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-4.4",
+      "props": {
+        "evidence": "Check for soft foot under every hold-down before aligning."
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "cause.thermal_growth",
+      "relation": "CAUSES",
+      "object": "gbx.fm.shaft_misalignment",
+      "props": {
+        "evidence": "with the gearbox at operating temperature or with the thermal growth allowed for."
+      },
+      "source": "gemini:GB-201-OM-4.4"
+    },
+    {
+      "subject": "cause.coupling_hardened",
+      "relation": "CAUSES",
+      "object": "gbx.fm.shaft_misalignment",
+      "props": {
+        "evidence": "A hardened element transmits misalignment forces into the input shaft"
+      },
+      "source": "gemini:GB-201-OM-4.5"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.replace_coupling_element",
+      "props": {
+        "evidence": "replace it whenever the alignment is corrected."
+      },
+      "source": "gemini:GB-201-OM-4.5"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.5",
+      "props": {
+        "evidence": "SECTION GB-201-OM-4.5 — Coupling inspection Inspect the elastomer coupling element for cracks and hardening at every oil change. A hardened element transmits misalignment forces into the input shaft; replace it whenever the alignment is corrected."
+      },
+      "source": "gemini:GB-201-OM-4.5"
+    },
+    {
+      "subject": "act.replace_coupling_element",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-4.5",
+      "props": {
+        "evidence": "replace it whenever the alignment is corrected."
+      },
+      "source": "gemini:GB-201-OM-4.5"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.6",
+      "props": {
+        "evidence": "Backlash above 0.35 mm indicates tooth wear"
+      },
+      "source": "gemini:GB-201-OM-4.6"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.replace_gear_set",
+      "props": {
+        "evidence": "advanced wear calls for gear set replacement (see 4.2).",
+        "confidence": 0.9
+      },
+      "source": "gemini:GB-201-OM-4.6;gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.act.check_backlash",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-4.6",
+      "props": {
+        "evidence": "SECTION GB-201-OM-4.6 — Backlash check Measure backlash with a dial indicator on a wheel tooth while holding the pinion."
+      },
+      "source": "gemini:GB-201-OM-4.6"
+    },
+    {
+      "subject": "gbx.sym.mesh.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_wear",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Distributed wear of the tooth flanks raises the gear mesh amplitude"
+      },
+      "source": "gemini:GB-201-OM-5.2;gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.sym.mesh_2x.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_wear",
+      "props": {
+        "confidence": 0.95,
+        "evidence": "and, more strongly, its second harmonic"
+      },
+      "source": "gemini:GB-201-OM-5.2;gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.2",
+      "props": {
+        "evidence": "Both rise as the tooth profiles wear, and the second harmonic rises faster, because wear distorts the profile from the involute shape."
+      },
+      "source": "gemini:GB-201-OM-5.2"
+    },
+    {
+      "subject": "gbx.sym.sidebands.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_breakage",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "The signal becomes impulsive: kurtosis, crest factor and peak rise, and the mesh sidebands grow strongly while the mesh amplitude itself may change little."
+      },
+      "source": "gemini:GB-201-OM-5.3;gemini:GB-201-OM-5.5"
+    },
+    {
+      "subject": "gbx.fm.tooth_breakage",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.3",
+      "props": {
+        "evidence": "Sidebands that grow quickly, or come to match the mesh amplitude, indicate damage localised on one tooth or eccentricity of the gear."
+      },
+      "source": "gemini:GB-201-OM-5.3"
+    },
+    {
+      "subject": "gbx.sym.sidebands.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_wear",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "with a modest rise in sidebands"
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.change_oil",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Wear that is still in its early stage is managed by oil change and monitoring"
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.act.oil_sample",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-5.4",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "Confirm with oil analysis (see 3.2)"
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.act.check_backlash",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-5.4",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "and backlash (see 4.6)."
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.act.change_oil",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-5.4",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "is managed by oil change and monitoring"
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.act.replace_gear_set",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-5.4",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "calls for gear set replacement (see 4.2)."
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.4",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "SECTION GB-201-OM-5.4 — Tooth wear"
+      },
+      "source": "gemini:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.sym.kurtosis.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_breakage",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "The signal becomes impulsive: kurtosis, crest factor and peak rise, and the mesh sidebands grow strongly while the mesh amplitude itself may change little."
+      },
+      "source": "gemini:GB-201-OM-5.5"
+    },
+    {
+      "subject": "gbx.sym.crest.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_breakage",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "The signal becomes impulsive: kurtosis, crest factor and peak rise, and the mesh sidebands grow strongly while the mesh amplitude itself may change little."
+      },
+      "source": "gemini:GB-201-OM-5.5"
+    },
+    {
+      "subject": "gbx.sym.peak.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.tooth_breakage",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "The signal becomes impulsive: kurtosis, crest factor and peak rise, and the mesh sidebands grow strongly while the mesh amplitude itself may change little."
+      },
+      "source": "gemini:GB-201-OM-5.5"
+    },
+    {
+      "subject": "gbx.fm.tooth_breakage",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.inspect_mesh",
+      "props": {
+        "evidence": "Stop the gearbox at the next opportunity and inspect the teeth"
+      },
+      "source": "gemini:GB-201-OM-5.5"
+    },
+    {
+      "subject": "gbx.fm.tooth_breakage",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.5",
+      "props": {
+        "evidence": "SECTION GB-201-OM-5.5 — Broken or cracked tooth"
+      },
+      "source": "gemini:GB-201-OM-5.5"
+    },
+    {
+      "subject": "sym.1x.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.shaft_misalignment",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "raises the amplitude at shaft speed"
+      },
+      "source": "gemini:GB-201-OM-5.6"
+    },
+    {
+      "subject": "sym.2x.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.shaft_misalignment",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "especially at twice shaft speed"
+      },
+      "source": "gemini:GB-201-OM-5.6"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.soft_foot_check",
+      "props": {
+        "evidence": "Correct with a soft-foot check"
+      },
+      "source": "gemini:GB-201-OM-5.6"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.laser_align",
+      "props": {
+        "evidence": "laser alignment"
+      },
+      "source": "gemini:GB-201-OM-5.6"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.6",
+      "props": {
+        "evidence": "Misalignment of the input shaft"
+      },
+      "source": "gemini:GB-201-OM-5.6"
+    },
+    {
+      "subject": "sym.bpfo.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.input_bearing_outer_race",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Outer-race spalling of the input bearing produces impacts at BPFO"
+      },
+      "source": "gemini:GB-201-OM-5.7"
+    },
+    {
+      "subject": "sym.kurtosis.high",
+      "relation": "INDICATES",
+      "object": "gbx.fm.input_bearing_outer_race",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Kurtosis rises"
+      },
+      "source": "gemini:GB-201-OM-5.7"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "MITIGATED_BY",
+      "object": "gbx.act.oil_sample",
+      "props": {
+        "confidence": 0.8,
+        "evidence": "Confirm by listening and by oil analysis"
+      },
+      "source": "gemini:GB-201-OM-5.7"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.7",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "SECTION GB-201-OM-5.7 — Input bearing outer-race wear"
+      },
+      "source": "gemini:GB-201-OM-5.7"
+    },
+    {
+      "subject": "gbx.sym.oil_temp.high",
+      "relation": "INDICATES",
+      "object": "fm.lubrication_failure",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "A rise with no vibration evidence points first to the oil level and the oil itself (see 3.1)"
+      },
+      "source": "gemini:GB-201-OM-5.8"
+    },
+    {
+      "subject": "act.confirm_reading",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-5.9",
+      "props": {
+        "evidence": "On any WATCH or WARNING, confirm the reading before acting"
+      },
+      "source": "gemini:GB-201-OM-5.9"
+    },
+    {
+      "subject": "gbx.act.oil_sample",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-7.1",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "oil sample result"
+      },
+      "source": "gemini:GB-201-OM-7.1"
+    },
+    {
+      "subject": "gbx.act.check_backlash",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-7.1",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "backlash reading"
+      },
+      "source": "gemini:GB-201-OM-7.1"
+    },
+    {
+      "subject": "gbx.act.laser_align",
+      "relation": "DOCUMENTED_IN",
+      "object": "GB-201-OM-7.1",
+      "props": {
+        "confidence": 1.0,
+        "evidence": "alignment"
+      },
+      "source": "gemini:GB-201-OM-7.1"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-1.4",
+      "props": {
+        "evidence": "LOW_LOAD is the same speed band below 0.5 load, which is the regime most associated with recirculation and cavitation."
+      },
+      "source": "gemini:P-101-OM-1.4"
+    },
+    {
+      "subject": "act.flush_regrease",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-3.1",
+      "props": {
+        "evidence": "Regrease every 2000 running hours with 18 g per bearing at the drive end and 14 g at the non-drive end."
+      },
+      "source": "gemini:P-101-OM-3.1"
+    },
+    {
+      "subject": "fm.lubrication_failure",
+      "relation": "MITIGATED_BY",
+      "object": "act.flush_regrease",
+      "props": {
+        "evidence": "If the grease in service is unknown, flush the cavity completely"
+      },
+      "source": "gemini:P-101-OM-3.2"
+    },
+    {
+      "subject": "fm.lubrication_failure",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-3.2",
+      "props": {
+        "evidence": "Mixed thickeners soften, the base oil bleeds out and the bearing runs dry with no visible change in the fill level."
+      },
+      "source": "gemini:P-101-OM-3.2"
+    },
+    {
+      "subject": "cause.overgreasing",
+      "relation": "CAUSES",
+      "object": "fm.rolling_element_wear",
+      "props": {
+        "evidence": "Persistent over-greasing damages the cage"
+      },
+      "source": "gemini:P-101-OM-3.3"
+    },
+    {
+      "subject": "act.flush_regrease",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-3.4",
+      "props": {
+        "evidence": "SECTION P-101-OM-3.4 — Grease flush procedure Isolate per section 2.1. Remove the relief plug and the fill plug, inject fresh grease at the fill port until clean grease emerges at the relief port, refit both plugs, and run at nominal for thirty minutes with the relief port open. Allow two hours for the bearing temperature to settle before comparing it against the baseline. Budget 45 minutes per be"
+      },
+      "source": "gemini:P-101-OM-3.4"
+    },
+    {
+      "subject": "cause.grease_contamination",
+      "relation": "CAUSES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "evidence": "A leak that reaches the drive-end bearing housing contaminates the grease and becomes a cause of the outer-race wear in section 5.4."
+      },
+      "source": "gemini:P-101-OM-3.5;gemini:P-101-OM-5.4;gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "sym.temp_bearing.high",
+      "relation": "INDICATES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "the bearing temperature follows with a lag of days to weeks."
+      },
+      "source": "gemini:P-101-OM-3.5;gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "sym.rms.high",
+      "relation": "INDICATES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "The overall velocity RMS rises as the defect develops"
+      },
+      "source": "gemini:P-101-OM-3.5;gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-3.5",
+      "props": {
+        "evidence": "Water or process fluid in the grease destroys the load-carrying film and produces outer-race damage within a few hundred running hours."
+      },
+      "source": "gemini:P-101-OM-3.5"
+    },
+    {
+      "subject": "act.replace_bearing",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-3.5",
+      "props": {
+        "evidence": "replacing the bearing without curing the ingress path repeats the failure."
+      },
+      "source": "gemini:P-101-OM-3.5"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "MITIGATED_BY",
+      "object": "act.replace_bearing",
+      "props": {
+        "evidence": "The mitigation is bearing replacement per section 4.2"
+      },
+      "source": "gemini:P-101-OM-3.5;gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "act.inspect_bearing",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.1",
+      "props": {
+        "evidence": "Inspect the bearings whenever the overall vibration at a bearing housing exceeds 4.5 mm/s RMS, when the bearing temperature runs more than 15 °C above the regime baseline, or at 16000 running hours, whichever comes first."
+      },
+      "source": "gemini:P-101-OM-4.1"
+    },
+    {
+      "subject": "act.replace_bearing",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.2",
+      "props": {
+        "evidence": "SECTION P-101-OM-4.2 — Bearing replacement procedure"
+      },
+      "source": "gemini:P-101-OM-4.2"
+    },
+    {
+      "subject": "fm.inner_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.3",
+      "props": {
+        "evidence": "a worn shaft seat lets the inner ring creep, which produces a fretting pattern and a vibration signature that returns within weeks of a bearing change."
+      },
+      "source": "gemini:P-101-OM-4.3"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.3",
+      "props": {
+        "evidence": "A housing bore above tolerance allows the outer ring to turn and polishes the bore."
+      },
+      "source": "gemini:P-101-OM-4.3"
+    },
+    {
+      "subject": "act.laser_align",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.4",
+      "props": {
+        "evidence": "Align cold with a laser alignment system, targeting 0.05 mm parallel offset and 0.05 mm per 100 mm angular at the coupling."
+      },
+      "source": "gemini:P-101-OM-4.4"
+    },
+    {
+      "subject": "act.soft_foot_check",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.4",
+      "props": {
+        "evidence": "Shim under all four motor feet and check for soft foot before correcting the alignment"
+      },
+      "source": "gemini:P-101-OM-4.4"
+    },
+    {
+      "subject": "cause.soft_foot",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {
+        "evidence": "Causes are a settled or soft foot"
+      },
+      "source": "gemini:P-101-OM-4.4;gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.laser_align",
+      "props": {
+        "evidence": "Mitigation is the alignment in section 4.4"
+      },
+      "source": "gemini:P-101-OM-4.4;gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.soft_foot_check",
+      "props": {
+        "evidence": "after the soft-foot check"
+      },
+      "source": "gemini:P-101-OM-4.4;gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "cause.coupling_hardened",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {
+        "evidence": "a coupling element that has hardened"
+      },
+      "source": "gemini:P-101-OM-4.5;gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "sym.2x.high",
+      "relation": "INDICATES",
+      "object": "fm.misalignment",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "above 1.0 indicates it strongly."
+      },
+      "source": "gemini:P-101-OM-4.5;gemini:P-101-OM-5.6;gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.replace_coupling_element",
+      "props": {
+        "evidence": "Replace the element in pairs"
+      },
+      "source": "gemini:P-101-OM-4.5"
+    },
+    {
+      "subject": "act.replace_coupling_element",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.5",
+      "props": {
+        "evidence": "Replace the element in pairs"
+      },
+      "source": "gemini:P-101-OM-4.5"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.5",
+      "props": {
+        "evidence": "A hardened, cracked or powdered element transmits misalignment forces straight into both bearings"
+      },
+      "source": "gemini:P-101-OM-4.5"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.6",
+      "props": {
+        "evidence": "SECTION P-101-OM-4.6 — Mechanical seal replacement"
+      },
+      "source": "gemini:P-101-OM-4.6"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "MITIGATED_BY",
+      "object": "act.replace_seal",
+      "props": {
+        "evidence": "Mitigation is the seal replacement in section 4.6."
+      },
+      "source": "gemini:P-101-OM-4.6;gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "act.replace_seal",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.6",
+      "props": {
+        "evidence": "SECTION P-101-OM-4.6 — Mechanical seal replacement"
+      },
+      "source": "gemini:P-101-OM-4.6"
+    },
+    {
+      "subject": "sym.flow.low",
+      "relation": "INDICATES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "confidence": 0.8,
+        "evidence": "A failing mechanical seal shows first on the process channels rather than on vibration: delivered flow falls by ten to twenty per cent against the regime baseline while discharge pressure falls more slowly, and motor current falls with the load."
+      },
+      "source": "gemini:P-101-OM-4.7;gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "act.inspect_impeller",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.7",
+      "props": {
+        "evidence": "Withdraw the casing cover and inspect the impeller vanes for pitting on the low-pressure side of the leading edge"
+      },
+      "source": "gemini:P-101-OM-4.7"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.7",
+      "props": {
+        "evidence": "inspect the impeller vanes for pitting on the low-pressure side of the leading edge, which is the signature of cavitation damage"
+      },
+      "source": "gemini:P-101-OM-4.7"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.7",
+      "props": {
+        "evidence": "mimics a seal leak on the flow channel alone."
+      },
+      "source": "gemini:P-101-OM-4.7"
+    },
+    {
+      "subject": "act.torque_holddown",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.8",
+      "props": {
+        "evidence": "Check the grout for cracking and the hold-down bolts for torque annually."
+      },
+      "source": "gemini:P-101-OM-4.8"
+    },
+    {
+      "subject": "cause.loose_holddown",
+      "relation": "CAUSES",
+      "object": "fm.looseness",
+      "props": {
+        "evidence": "by checking the hold-down torque in section 4.8."
+      },
+      "source": "gemini:P-101-OM-4.8;gemini:P-101-OM-5.10"
+    },
+    {
+      "subject": "sym.2x.high",
+      "relation": "INDICATES",
+      "object": "fm.looseness",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "A loose hold-down produces a vibration signature at 2X and 3X shaft speed with a strongly directional character, which is easily confused with misalignment and is distinguished by the fact that alignment readings are within tolerance."
+      },
+      "source": "gemini:P-101-OM-4.8"
+    },
+    {
+      "subject": "sym.3x.high",
+      "relation": "INDICATES",
+      "object": "fm.looseness",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "A loose hold-down produces a vibration signature at 2X and 3X shaft speed with a strongly directional character, which is easily confused with misalignment and is distinguished by the fact that alignment readings are within tolerance."
+      },
+      "source": "gemini:P-101-OM-4.8"
+    },
+    {
+      "subject": "fm.looseness",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.8",
+      "props": {
+        "evidence": "A loose hold-down produces a vibration signature at 2X and 3X shaft speed with a strongly directional character, which is easily confused with misalignment and is distinguished by the fact that alignment readings are within tolerance."
+      },
+      "source": "gemini:P-101-OM-4.8"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.2",
+      "props": {
+        "evidence": "For the bearing in section 1.2 at 2950 rpm, the ball-pass frequency of the outer race (BPFO) is 151.3 Hz"
+      },
+      "source": "gemini:P-101-OM-5.2"
+    },
+    {
+      "subject": "fm.inner_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.2",
+      "props": {
+        "evidence": "the ball-pass frequency of the inner race (BPFI) is 291.2 Hz"
+      },
+      "source": "gemini:P-101-OM-5.2"
+    },
+    {
+      "subject": "fm.rolling_element_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.2",
+      "props": {
+        "evidence": "and the ball-spin frequency (BSF) is 118.7 Hz"
+      },
+      "source": "gemini:P-101-OM-5.2"
+    },
+    {
+      "subject": "sym.bpfo.high",
+      "relation": "INDICATES",
+      "object": "fm.lubrication_failure",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "the same peak without sidebands more often indicates a lubrication problem than a spall."
+      },
+      "source": "gemini:P-101-OM-5.3"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.3",
+      "props": {
+        "evidence": "An envelope peak at BPFO with shaft-speed sidebands is the definitive indication of outer-race wear;"
+      },
+      "source": "gemini:P-101-OM-5.3"
+    },
+    {
+      "subject": "fm.lubrication_failure",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.3",
+      "props": {
+        "evidence": "the same peak without sidebands more often indicates a lubrication problem than a spall."
+      },
+      "source": "gemini:P-101-OM-5.3"
+    },
+    {
+      "subject": "sym.bpfo.high",
+      "relation": "INDICATES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Elevated amplitude at BPFO in the envelope spectrum indicates outer-race wear with high confidence."
+      },
+      "source": "gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "cause.lubrication_loss",
+      "relation": "CAUSES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "evidence": "Causes are loss or degradation of lubricant"
+      },
+      "source": "gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "cause.seat_tolerance",
+      "relation": "CAUSES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "evidence": "a shaft or housing seat outside the tolerances in section 4.3."
+      },
+      "source": "gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "MITIGATED_BY",
+      "object": "act.flush_regrease",
+      "props": {
+        "evidence": "preceded where contamination is suspected by the flush in section 3.4."
+      },
+      "source": "gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.4",
+      "props": {
+        "evidence": "SECTION P-101-OM-5.4 — Outer-race wear"
+      },
+      "source": "gemini:P-101-OM-5.4"
+    },
+    {
+      "subject": "sym.bpfi.high",
+      "relation": "INDICATES",
+      "object": "fm.inner_race_wear",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Elevated amplitude at BPFI indicates inner-race wear."
+      },
+      "source": "gemini:P-101-OM-5.5"
+    },
+    {
+      "subject": "cause.shock_load",
+      "relation": "CAUSES",
+      "object": "fm.inner_race_wear",
+      "props": {
+        "evidence": "Inner-race defects usually follow a fitting fault or a shock load rather than lubrication"
+      },
+      "source": "gemini:P-101-OM-5.5"
+    },
+    {
+      "subject": "fm.inner_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.5",
+      "props": {
+        "evidence": "SECTION P-101-OM-5.5 — Inner-race wear"
+      },
+      "source": "gemini:P-101-OM-5.5"
+    },
+    {
+      "subject": "sym.3x.high",
+      "relation": "INDICATES",
+      "object": "fm.misalignment",
+      "props": {
+        "confidence": 0.8,
+        "evidence": "A third harmonic rises with it when the misalignment is angular."
+      },
+      "source": "gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "cause.thermal_growth",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {
+        "evidence": "thermal growth of the motor not allowed for in the cold alignment"
+      },
+      "source": "gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "cause.pipe_strain",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {
+        "evidence": "pipe strain on the casing nozzles"
+      },
+      "source": "gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.6",
+      "props": {
+        "evidence": "SECTION P-101-OM-5.6 — Misalignment"
+      },
+      "source": "gemini:P-101-OM-5.6"
+    },
+    {
+      "subject": "sym.1x.high",
+      "relation": "INDICATES",
+      "object": "fm.imbalance",
+      "props": {
+        "confidence": 0.9,
+        "evidence": "Imbalance raises the first shaft harmonic"
+      },
+      "source": "gemini:P-101-OM-5.7"
+    },
+    {
+      "subject": "cause.impeller_fouling",
+      "relation": "CAUSES",
+      "object": "fm.imbalance",
+      "props": {
+        "evidence": "Causes are product build-up on the impeller"
+      },
+      "source": "gemini:P-101-OM-5.7"
+    },
+    {
+      "subject": "fm.imbalance",
+      "relation": "MITIGATED_BY",
+      "object": "act.balance_impeller",
+      "props": {
+        "evidence": "Mitigation is cleaning or in-situ balancing."
+      },
+      "source": "gemini:P-101-OM-5.7"
+    },
+    {
+      "subject": "fm.imbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.7",
+      "props": {
+        "evidence": "SECTION P-101-OM-5.7 — Imbalance"
+      },
+      "source": "gemini:P-101-OM-5.7"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.8",
+      "props": {
+        "evidence": "Cavitation is a random process, not a periodic one: collapsing vapour bubbles ring the casing and raise a broadband, spiky noise floor."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "sym.kurtosis.high",
+      "relation": "INDICATES",
+      "object": "fm.cavitation",
+      "props": {
+        "confidence": 0.8,
+        "evidence": "The tell is impulsiveness rather than loudness — kurtosis above 4.0 and crest factor above 5.0 — accompanied by an oscillation on the suction pressure at roughly 0.3 Hz and a fall in suction pressure relative to the regime baseline."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "sym.crest.high",
+      "relation": "INDICATES",
+      "object": "fm.cavitation",
+      "props": {
+        "confidence": 0.8,
+        "evidence": "The tell is impulsiveness rather than loudness — kurtosis above 4.0 and crest factor above 5.0 — accompanied by an oscillation on the suction pressure at roughly 0.3 Hz and a fall in suction pressure relative to the regime baseline."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "sym.suction.oscillating",
+      "relation": "INDICATES",
+      "object": "fm.cavitation",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "accompanied by an oscillation on the suction pressure at roughly 0.3 Hz and a fall in suction pressure relative to the regime baseline."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "sym.suction.low",
+      "relation": "INDICATES",
+      "object": "fm.cavitation",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "accompanied by an oscillation on the suction pressure at roughly 0.3 Hz and a fall in suction pressure relative to the regime baseline."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "cause.npsh_insufficient",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {
+        "evidence": "Available NPSH falls as the suction tank level falls... Any of the three can put the machine into cavitation"
+      },
+      "source": "gemini:P-101-OM-5.8;gemini:P-101-OM-6.3"
+    },
+    {
+      "subject": "cause.suction_blockage",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {
+        "evidence": "...as the strainer blocks... Any of the three can put the machine into cavitation"
+      },
+      "source": "gemini:P-101-OM-5.8;gemini:P-101-OM-6.3"
+    },
+    {
+      "subject": "cause.low_flow_operation",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {
+        "evidence": "Operation below the minimum-flow line causes suction and discharge recirculation, which produces a cavitation-like signature on the vibration channels without any loss of NPSH, and damages the impeller in the same way."
+      },
+      "source": "gemini:P-101-OM-5.8;gemini:P-101-OM-6.2"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "MITIGATED_BY",
+      "object": "act.check_strainer",
+      "props": {
+        "evidence": "Mitigation is to restore NPSH: check the strainer, raise the suction level, and throttle the discharge to move the duty point back toward best efficiency."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "MITIGATED_BY",
+      "object": "act.raise_suction_level",
+      "props": {
+        "evidence": "Mitigation is to restore NPSH: check the strainer, raise the suction level, and throttle the discharge to move the duty point back toward best efficiency."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "MITIGATED_BY",
+      "object": "act.throttle_discharge",
+      "props": {
+        "evidence": "Mitigation is to restore NPSH: check the strainer, raise the suction level, and throttle the discharge to move the duty point back toward best efficiency."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "act.check_strainer",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-5.8",
+      "props": {
+        "evidence": "Mitigation is to restore NPSH: check the strainer, raise the suction level, and throttle the discharge to move the duty point back toward best efficiency."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "act.raise_suction_level",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-5.8",
+      "props": {
+        "evidence": "Mitigation is to restore NPSH: check the strainer, raise the suction level, and throttle the discharge to move the duty point back toward best efficiency."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "act.throttle_discharge",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-5.8",
+      "props": {
+        "evidence": "Mitigation is to restore NPSH: check the strainer, raise the suction level, and throttle the discharge to move the duty point back toward best efficiency."
+      },
+      "source": "gemini:P-101-OM-5.8"
+    },
+    {
+      "subject": "sym.discharge.low",
+      "relation": "INDICATES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "A failing mechanical seal shows first on the process channels rather than on vibration: delivered flow falls by ten to twenty per cent against the regime baseline while discharge pressure falls more slowly, and motor current falls with the load."
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "sym.current.low",
+      "relation": "INDICATES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "confidence": 0.7,
+        "evidence": "A failing mechanical seal shows first on the process channels rather than on vibration: delivered flow falls by ten to twenty per cent against the regime baseline while discharge pressure falls more slowly, and motor current falls with the load."
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "cause.seal_face_wear",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "evidence": "Causes are face wear at the end of seal life, dry running during a loss of suction, solids in the pumped fluid scoring the faces, and a shaft sleeve worn by a previous seal."
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "cause.dry_running",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "evidence": "Causes are face wear at the end of seal life, dry running during a loss of suction, solids in the pumped fluid scoring the faces, and a shaft sleeve worn by a previous seal."
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "cause.solids_in_fluid",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "evidence": "Causes are face wear at the end of seal life, dry running during a loss of suction, solids in the pumped fluid scoring the faces, and a shaft sleeve worn by a previous seal."
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "cause.sleeve_wear",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "evidence": "Causes are face wear at the end of seal life, dry running during a loss of suction, solids in the pumped fluid scoring the faces, and a shaft sleeve worn by a previous seal."
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.9",
+      "props": {
+        "evidence": "SECTION P-101-OM-5.9 — Seal leakage"
+      },
+      "source": "gemini:P-101-OM-5.9"
+    },
+    {
+      "subject": "fm.looseness",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.10",
+      "props": {
+        "evidence": "SECTION P-101-OM-5.10 — Looseness"
+      },
+      "source": "gemini:P-101-OM-5.10"
+    },
+    {
+      "subject": "fm.looseness",
+      "relation": "MITIGATED_BY",
+      "object": "act.torque_holddown",
+      "props": {
+        "evidence": "by checking the hold-down torque in section 4.8."
+      },
+      "source": "gemini:P-101-OM-5.10"
+    },
+    {
+      "subject": "act.replace_bearing",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-5.11",
+      "props": {
+        "evidence": "Re-baseline after any work that changes the machine's mechanical state, including bearing replacement and alignment."
+      },
+      "source": "gemini:P-101-OM-5.11"
+    },
+    {
+      "subject": "act.laser_align",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-5.11",
+      "props": {
+        "evidence": "Re-baseline after any work that changes the machine's mechanical state, including bearing replacement and alignment."
+      },
+      "source": "gemini:P-101-OM-5.11"
+    },
+    {
+      "subject": "act.confirm_reading",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-5.12",
+      "props": {
+        "evidence": "confirm the reading with a second measurement at the same duty point before acting"
+      },
+      "source": "gemini:P-101-OM-5.12"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-6.2",
+      "props": {
+        "evidence": "Operation below the minimum-flow line causes suction and discharge recirculation, which produces a cavitation-like signature on the vibration channels without any loss of NPSH, and damages the impeller in the same way."
+      },
+      "source": "gemini:P-101-OM-6.2"
+    },
+    {
+      "subject": "cause.high_fluid_temp",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {
+        "evidence": "...and as the fluid temperature rises toward its vapour pressure. Any of the three can put the machine into cavitation"
+      },
+      "source": "gemini:P-101-OM-6.3"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-6.3",
+      "props": {
+        "evidence": "SECTION P-101-OM-6.3 — NPSH ... Any of the three can put the machine into cavitation"
+      },
+      "source": "gemini:P-101-OM-6.3"
+    }
+  ],
+  "dropped": [
+    {
+      "chunk": "GB-201-OM-3.2",
+      "triple": [
+        "act.oil_sample",
+        "DOCUMENTED_IN",
+        "GB-201-OM-3.2"
+      ],
+      "reason": "unknown subject act.oil_sample"
+    },
+    {
+      "chunk": "GB-201-OM-4.2",
+      "triple": [
+        "act.replace_gear_set",
+        "DOCUMENTED_IN",
+        "GB-201-OM-4.2"
+      ],
+      "reason": "unknown subject act.replace_gear_set"
+    },
+    {
+      "chunk": "GB-201-OM-4.4",
+      "triple": [
+        "gbx.fm.shaft_misalignment",
+        "CAUSES",
+        "gbx.fm.input_bearing_outer_race"
+      ],
+      "reason": "FailureMode-[:CAUSES]->FailureMode is not in the schema; CAUSES allows ['Cause->FailureMode']"
+    },
+    {
+      "chunk": "GB-201-OM-4.4",
+      "triple": [
+        "gbx.fm.shaft_misalignment",
+        "CAUSES",
+        "gbx.fm.tooth_wear"
+      ],
+      "reason": "FailureMode-[:CAUSES]->FailureMode is not in the schema; CAUSES allows ['Cause->FailureMode']"
+    },
+    {
+      "chunk": "GB-201-OM-4.5",
+      "triple": [
+        "cause.coupling_hardened",
+        "DESCRIBED_IN",
+        "GB-201-OM-4.5"
+      ],
+      "reason": "Cause-[:DESCRIBED_IN]->ManualSection is not in the schema; DESCRIBED_IN allows ['FailureMode->ManualSection']"
+    },
+    {
+      "chunk": "GB-201-OM-7.1",
+      "triple": [
+        "act.change_oil",
+        "DOCUMENTED_IN",
+        "GB-201-OM-7.1"
+      ],
+      "reason": "unknown subject act.change_oil"
+    }
+  ]
+}

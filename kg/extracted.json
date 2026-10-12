@@ -1,0 +1,656 @@
+{
+  "extractor": "rules",
+  "n_chunks": 119,
+  "n_triples": 90,
+  "n_dropped": 0,
+  "by_relation": {
+    "DESCRIBED_IN": 59,
+    "CAUSES": 14,
+    "DOCUMENTED_IN": 5,
+    "INDICATES": 5,
+    "MITIGATED_BY": 7
+  },
+  "triples": [
+    {
+      "subject": "fan.fm.wheel_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-4.1",
+      "props": {},
+      "source": "rules:F-401-OM-4.1"
+    },
+    {
+      "subject": "fan.fm.blade_damage",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-4.2",
+      "props": {},
+      "source": "rules:F-401-OM-4.2"
+    },
+    {
+      "subject": "fan.fm.wheel_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-4.3",
+      "props": {},
+      "source": "rules:F-401-OM-4.3"
+    },
+    {
+      "subject": "fan.fm.mechanical_looseness",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-4.5",
+      "props": {},
+      "source": "rules:F-401-OM-4.5"
+    },
+    {
+      "subject": "fan.fm.blade_damage",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.2",
+      "props": {},
+      "source": "rules:F-401-OM-5.2"
+    },
+    {
+      "subject": "fan.fm.wheel_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.3",
+      "props": {},
+      "source": "rules:F-401-OM-5.3"
+    },
+    {
+      "subject": "fan.fm.blade_damage",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.4",
+      "props": {},
+      "source": "rules:F-401-OM-5.4"
+    },
+    {
+      "subject": "fan.fm.mechanical_looseness",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.5",
+      "props": {},
+      "source": "rules:F-401-OM-5.5"
+    },
+    {
+      "subject": "fan.fm.bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.6",
+      "props": {},
+      "source": "rules:F-401-OM-5.6"
+    },
+    {
+      "subject": "fan.fm.blade_damage",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.7",
+      "props": {},
+      "source": "rules:F-401-OM-5.7"
+    },
+    {
+      "subject": "fan.fm.bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "F-401-OM-5.8",
+      "props": {},
+      "source": "rules:F-401-OM-5.8"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-1.2",
+      "props": {},
+      "source": "rules:GB-201-OM-1.2"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-3.3",
+      "props": {},
+      "source": "rules:GB-201-OM-3.3"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.1",
+      "props": {},
+      "source": "rules:GB-201-OM-4.1"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.1",
+      "props": {},
+      "source": "rules:GB-201-OM-4.1"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.4",
+      "props": {},
+      "source": "rules:GB-201-OM-4.4"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.5",
+      "props": {},
+      "source": "rules:GB-201-OM-4.5"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-4.6",
+      "props": {},
+      "source": "rules:GB-201-OM-4.6"
+    },
+    {
+      "subject": "gbx.fm.tooth_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.4",
+      "props": {},
+      "source": "rules:GB-201-OM-5.4"
+    },
+    {
+      "subject": "gbx.fm.tooth_breakage",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.5",
+      "props": {},
+      "source": "rules:GB-201-OM-5.5"
+    },
+    {
+      "subject": "gbx.fm.shaft_misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.6",
+      "props": {},
+      "source": "rules:GB-201-OM-5.6"
+    },
+    {
+      "subject": "gbx.fm.input_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "GB-201-OM-5.7",
+      "props": {},
+      "source": "rules:GB-201-OM-5.7"
+    },
+    {
+      "subject": "mtr.fm.rotor_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-3.1",
+      "props": {},
+      "source": "rules:M-301-OM-3.1"
+    },
+    {
+      "subject": "mtr.fm.stator_winding",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-3.1",
+      "props": {},
+      "source": "rules:M-301-OM-3.1"
+    },
+    {
+      "subject": "mtr.fm.broken_rotor_bar",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-4.3",
+      "props": {},
+      "source": "rules:M-301-OM-4.3"
+    },
+    {
+      "subject": "mtr.fm.rotor_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-4.4",
+      "props": {},
+      "source": "rules:M-301-OM-4.4"
+    },
+    {
+      "subject": "mtr.fm.stator_winding",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-4.6",
+      "props": {},
+      "source": "rules:M-301-OM-4.6"
+    },
+    {
+      "subject": "mtr.fm.broken_rotor_bar",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.4",
+      "props": {},
+      "source": "rules:M-301-OM-5.4"
+    },
+    {
+      "subject": "mtr.fm.rotor_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.4",
+      "props": {},
+      "source": "rules:M-301-OM-5.4"
+    },
+    {
+      "subject": "mtr.fm.stator_winding",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.5",
+      "props": {},
+      "source": "rules:M-301-OM-5.5"
+    },
+    {
+      "subject": "mtr.fm.rotor_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.5",
+      "props": {},
+      "source": "rules:M-301-OM-5.5"
+    },
+    {
+      "subject": "mtr.fm.rotor_unbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.6",
+      "props": {},
+      "source": "rules:M-301-OM-5.6"
+    },
+    {
+      "subject": "mtr.fm.de_bearing_outer_race",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.7",
+      "props": {},
+      "source": "rules:M-301-OM-5.7"
+    },
+    {
+      "subject": "mtr.fm.broken_rotor_bar",
+      "relation": "DESCRIBED_IN",
+      "object": "M-301-OM-5.8",
+      "props": {},
+      "source": "rules:M-301-OM-5.8"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-1.4",
+      "props": {},
+      "source": "rules:P-101-OM-1.4"
+    },
+    {
+      "subject": "fm.lubrication_failure",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-3.2",
+      "props": {},
+      "source": "rules:P-101-OM-3.2"
+    },
+    {
+      "subject": "cause.grease_contamination",
+      "relation": "CAUSES",
+      "object": "fm.outer_race_wear",
+      "props": {},
+      "source": "rules:P-101-OM-3.5;rules:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-3.5",
+      "props": {},
+      "source": "rules:P-101-OM-3.5"
+    },
+    {
+      "subject": "act.laser_align",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.4",
+      "props": {},
+      "source": "rules:P-101-OM-4.2"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.5",
+      "props": {},
+      "source": "rules:P-101-OM-4.5"
+    },
+    {
+      "subject": "sym.flow.low",
+      "relation": "INDICATES",
+      "object": "fm.seal_leakage",
+      "props": {
+        "confidence": 0.55
+      },
+      "source": "rules:P-101-OM-4.7"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.7",
+      "props": {},
+      "source": "rules:P-101-OM-4.7"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.7",
+      "props": {},
+      "source": "rules:P-101-OM-4.7"
+    },
+    {
+      "subject": "sym.2x.high",
+      "relation": "INDICATES",
+      "object": "fm.misalignment",
+      "props": {
+        "confidence": 0.85
+      },
+      "source": "rules:P-101-OM-4.8;rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "sym.3x.high",
+      "relation": "INDICATES",
+      "object": "fm.misalignment",
+      "props": {
+        "confidence": 0.85
+      },
+      "source": "rules:P-101-OM-4.8"
+    },
+    {
+      "subject": "cause.loose_holddown",
+      "relation": "CAUSES",
+      "object": "fm.looseness",
+      "props": {},
+      "source": "rules:P-101-OM-4.8"
+    },
+    {
+      "subject": "cause.loose_holddown",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {},
+      "source": "rules:P-101-OM-4.8"
+    },
+    {
+      "subject": "fm.looseness",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.8",
+      "props": {},
+      "source": "rules:P-101-OM-4.8"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-4.8",
+      "props": {},
+      "source": "rules:P-101-OM-4.8"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.2",
+      "props": {},
+      "source": "rules:P-101-OM-5.2"
+    },
+    {
+      "subject": "fm.inner_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.2",
+      "props": {},
+      "source": "rules:P-101-OM-5.2"
+    },
+    {
+      "subject": "sym.bpfo.high",
+      "relation": "INDICATES",
+      "object": "fm.outer_race_wear",
+      "props": {
+        "confidence": 0.85
+      },
+      "source": "rules:P-101-OM-5.3;rules:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.rolling_element_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.3",
+      "props": {},
+      "source": "rules:P-101-OM-5.3"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.3",
+      "props": {},
+      "source": "rules:P-101-OM-5.3"
+    },
+    {
+      "subject": "fm.lubrication_failure",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.3",
+      "props": {},
+      "source": "rules:P-101-OM-5.3"
+    },
+    {
+      "subject": "cause.lubrication_loss",
+      "relation": "CAUSES",
+      "object": "fm.outer_race_wear",
+      "props": {},
+      "source": "rules:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "MITIGATED_BY",
+      "object": "act.flush_regrease",
+      "props": {},
+      "source": "rules:P-101-OM-5.4"
+    },
+    {
+      "subject": "act.flush_regrease",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-3.4",
+      "props": {},
+      "source": "rules:P-101-OM-5.4"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.4",
+      "props": {},
+      "source": "rules:P-101-OM-5.4"
+    },
+    {
+      "subject": "sym.bpfi.high",
+      "relation": "INDICATES",
+      "object": "fm.inner_race_wear",
+      "props": {
+        "confidence": 0.55
+      },
+      "source": "rules:P-101-OM-5.5"
+    },
+    {
+      "subject": "fm.inner_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.5",
+      "props": {},
+      "source": "rules:P-101-OM-5.5"
+    },
+    {
+      "subject": "cause.soft_foot",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "cause.thermal_growth",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "cause.pipe_strain",
+      "relation": "CAUSES",
+      "object": "fm.misalignment",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.soft_foot_check",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "MITIGATED_BY",
+      "object": "act.replace_coupling_element",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "act.replace_coupling_element",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.5",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "act.soft_foot_check",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.4",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.6",
+      "props": {},
+      "source": "rules:P-101-OM-5.6"
+    },
+    {
+      "subject": "cause.impeller_fouling",
+      "relation": "CAUSES",
+      "object": "fm.imbalance",
+      "props": {},
+      "source": "rules:P-101-OM-5.7"
+    },
+    {
+      "subject": "fm.imbalance",
+      "relation": "MITIGATED_BY",
+      "object": "act.balance_impeller",
+      "props": {},
+      "source": "rules:P-101-OM-5.7"
+    },
+    {
+      "subject": "fm.imbalance",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.7",
+      "props": {},
+      "source": "rules:P-101-OM-5.7"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.7",
+      "props": {},
+      "source": "rules:P-101-OM-5.7"
+    },
+    {
+      "subject": "cause.suction_blockage",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {},
+      "source": "rules:P-101-OM-5.8"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "MITIGATED_BY",
+      "object": "act.check_strainer",
+      "props": {},
+      "source": "rules:P-101-OM-5.8"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "MITIGATED_BY",
+      "object": "act.throttle_discharge",
+      "props": {},
+      "source": "rules:P-101-OM-5.8"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.8",
+      "props": {},
+      "source": "rules:P-101-OM-5.8"
+    },
+    {
+      "subject": "cause.seal_face_wear",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "cause.dry_running",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "cause.sleeve_wear",
+      "relation": "CAUSES",
+      "object": "fm.seal_leakage",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "MITIGATED_BY",
+      "object": "act.replace_seal",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "act.replace_seal",
+      "relation": "DOCUMENTED_IN",
+      "object": "P-101-OM-4.6",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "fm.seal_leakage",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.9",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "fm.outer_race_wear",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.9",
+      "props": {},
+      "source": "rules:P-101-OM-5.9"
+    },
+    {
+      "subject": "fm.looseness",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.10",
+      "props": {},
+      "source": "rules:P-101-OM-5.10"
+    },
+    {
+      "subject": "fm.misalignment",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-5.10",
+      "props": {},
+      "source": "rules:P-101-OM-5.10"
+    },
+    {
+      "subject": "cause.low_flow_operation",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {},
+      "source": "rules:P-101-OM-6.2"
+    },
+    {
+      "subject": "cause.npsh_insufficient",
+      "relation": "CAUSES",
+      "object": "fm.cavitation",
+      "props": {},
+      "source": "rules:P-101-OM-6.2"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-6.2",
+      "props": {},
+      "source": "rules:P-101-OM-6.2"
+    },
+    {
+      "subject": "fm.cavitation",
+      "relation": "DESCRIBED_IN",
+      "object": "P-101-OM-6.3",
+      "props": {},
+      "source": "rules:P-101-OM-6.3"
+    }
+  ],
+  "dropped": []
+}

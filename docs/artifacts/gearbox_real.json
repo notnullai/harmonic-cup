@@ -1,0 +1,184 @@
+{
+ "sample_rate_hz_inferred": 12939,
+ "teeth_inferred": 32,
+ "baseline": {
+  "readings": 469,
+  "false_alarms": 0,
+  "checked": 410
+ },
+ "healthy_holdout": {
+  "10": {
+   "readings": 87,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "30": {
+   "readings": 100,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "50": {
+   "readings": 105,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "70": {
+   "readings": 96,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "90": {
+   "readings": 101,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  }
+ },
+ "broken_tooth": {
+  "0": {
+   "readings": 83,
+   "alarmed": 69,
+   "first_alarm": 14,
+   "engine_lead": {
+    "tooth_wear": 69
+   },
+   "diagnosis": "gbx.fm.tooth_wear",
+   "features": [
+    "HARMONIC_FEAT_VIB_ORDER:mesh_2x",
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_BPFO"
+   ],
+   "unrecognised": 0
+  },
+  "20": {
+   "readings": 108,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "40": {
+   "readings": 89,
+   "alarmed": 14,
+   "first_alarm": 75,
+   "engine_lead": {
+    "tooth_wear": 14
+   },
+   "diagnosis": "gbx.fm.tooth_wear",
+   "features": [
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_ORDER:gear_mesh",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage"
+   ],
+   "unrecognised": 0
+  },
+  "60": {
+   "readings": 90,
+   "alarmed": 64,
+   "first_alarm": 26,
+   "engine_lead": {
+    "tooth_wear": 64
+   },
+   "diagnosis": "gbx.fm.input_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_ORDER:gear_mesh",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage",
+    "HARMONIC_FEAT_VIB_KURTOSIS"
+   ],
+   "unrecognised": 0
+  },
+  "80": {
+   "readings": 104,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "10": {
+   "readings": 106,
+   "alarmed": 94,
+   "first_alarm": 12,
+   "engine_lead": {
+    "tooth_wear": 94
+   },
+   "diagnosis": "gbx.fm.tooth_wear",
+   "features": [
+    "HARMONIC_FEAT_VIB_BPFO",
+    "HARMONIC_FEAT_VIB_ORDER:mesh_2x",
+    "HARMONIC_FEAT_VIB_CREST"
+   ],
+   "unrecognised": 0
+  },
+  "30": {
+   "readings": 84,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  },
+  "50": {
+   "readings": 89,
+   "alarmed": 79,
+   "first_alarm": 10,
+   "engine_lead": {
+    "tooth_wear": 79
+   },
+   "diagnosis": "gbx.fm.tooth_breakage",
+   "features": [
+    "HARMONIC_FEAT_VIB_ORDER:gear_mesh",
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_ORDER:mesh_sb"
+   ],
+   "unrecognised": 0
+  },
+  "70": {
+   "readings": 95,
+   "alarmed": 32,
+   "first_alarm": 15,
+   "engine_lead": {
+    "tooth_wear": 32
+   },
+   "diagnosis": "gbx.fm.input_bearing_outer_race",
+   "features": [
+    "HARMONIC_FEAT_VIB_ORDER:gear_mesh",
+    "HARMONIC_FEAT_VIB_KURTOSIS",
+    "HARMONIC_FEAT_VIB_ENV_ORDER:cage"
+   ],
+   "unrecognised": 0
+  },
+  "90": {
+   "readings": 100,
+   "alarmed": 0,
+   "first_alarm": null,
+   "engine_lead": {},
+   "diagnosis": null,
+   "features": [],
+   "unrecognised": 0
+  }
+ }
+}

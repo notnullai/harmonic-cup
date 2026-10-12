@@ -1,0 +1,27 @@
+name: run_to_failure
+description: >
+  The demo scenario (SPEC 9.3). An outer-race bearing spall on pump P-101
+  grows from nothing to failure. Time is compressed 300x, so one second of
+  signal covers five minutes of machine time and the whole ten-hour
+  degradation runs in two minutes.
+
+  The engine should walk the machine up the ISO zones as the spall grows:
+  quiet to WATCH as BPFO emerges in the envelope, WARNING as the broadband
+  floor and bearing temperature follow, CRITICAL near the end.
+
+seed: 20261018
+duration_s: 120        # signal seconds
+dt: 1.0
+time_scale: 300.0      # 1 s of signal = 5 min of machine time -> 10 h total
+
+faults:
+  - mode: bearing_wear
+    severity: 1.0
+    onset_s: 9000       # machine time: 2.5 h, i.e. wall second 30
+    ramp_hours: 7.5     # reaches full severity at wall second 120
+
+expect:
+  - {state: OK,       by_wall_s: 25}
+  - {state: WATCH,    by_wall_s: 60,  fault: bearing_wear}
+  - {state: WARNING,  by_wall_s: 90,  fault: bearing_wear}
+  - {state: CRITICAL, by_wall_s: 120, fault: bearing_wear}

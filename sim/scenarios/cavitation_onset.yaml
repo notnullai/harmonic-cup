@@ -1,0 +1,16 @@
+name: cavitation_onset
+description: >
+  Cavitation appearing abruptly when a suction valve is throttled, five
+  minutes in. Unlike bearing wear this has no ramp: it is present or it is
+  not, so it exercises the fast-detection path (target under 5 s).
+seed: 777
+duration_s: 600
+dt: 1.0
+time_scale: 1.0
+faults:
+  - mode: cavitation
+    severity: 0.8
+    onset_s: 300
+expect:
+  - {state: OK,      by_wall_s: 295}
+  - {state: WARNING, by_wall_s: 305, fault: cavitation}

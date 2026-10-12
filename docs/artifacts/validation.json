@@ -1,0 +1,202 @@
+{
+  "measured": "2026-09-29 00:11:13",
+  "accuracy": {
+    "datasets": 12,
+    "frames_flagged": 611,
+    "top1_accuracy": 1.0,
+    "target": 0.8,
+    "pass": true,
+    "per_dataset": [
+      {
+        "mode": "bearing_wear",
+        "severity": 0.35,
+        "expected": "fm.outer_race_wear",
+        "frames_flagged": 50,
+        "correct": 50,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.outer_race_wear": 50
+        }
+      },
+      {
+        "mode": "bearing_wear",
+        "severity": 0.7,
+        "expected": "fm.outer_race_wear",
+        "frames_flagged": 52,
+        "correct": 52,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.outer_race_wear": 52
+        }
+      },
+      {
+        "mode": "bearing_wear",
+        "severity": 1.0,
+        "expected": "fm.outer_race_wear",
+        "frames_flagged": 52,
+        "correct": 52,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.outer_race_wear": 52
+        }
+      },
+      {
+        "mode": "misalignment",
+        "severity": 0.35,
+        "expected": "fm.misalignment",
+        "frames_flagged": 50,
+        "correct": 50,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.misalignment": 50
+        }
+      },
+      {
+        "mode": "misalignment",
+        "severity": 0.7,
+        "expected": "fm.misalignment",
+        "frames_flagged": 52,
+        "correct": 52,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.misalignment": 52
+        }
+      },
+      {
+        "mode": "misalignment",
+        "severity": 1.0,
+        "expected": "fm.misalignment",
+        "frames_flagged": 52,
+        "correct": 52,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.misalignment": 52
+        }
+      },
+      {
+        "mode": "cavitation",
+        "severity": 0.35,
+        "expected": "fm.cavitation",
+        "frames_flagged": 52,
+        "correct": 52,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.cavitation": 52
+        }
+      },
+      {
+        "mode": "cavitation",
+        "severity": 0.7,
+        "expected": "fm.cavitation",
+        "frames_flagged": 53,
+        "correct": 53,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.cavitation": 53
+        }
+      },
+      {
+        "mode": "cavitation",
+        "severity": 1.0,
+        "expected": "fm.cavitation",
+        "frames_flagged": 53,
+        "correct": 53,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.cavitation": 53
+        }
+      },
+      {
+        "mode": "seal_leak",
+        "severity": 0.35,
+        "expected": "fm.seal_leakage",
+        "frames_flagged": 46,
+        "correct": 46,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.seal_leakage": 46
+        }
+      },
+      {
+        "mode": "seal_leak",
+        "severity": 0.7,
+        "expected": "fm.seal_leakage",
+        "frames_flagged": 49,
+        "correct": 49,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.seal_leakage": 49
+        }
+      },
+      {
+        "mode": "seal_leak",
+        "severity": 1.0,
+        "expected": "fm.seal_leakage",
+        "frames_flagged": 50,
+        "correct": 50,
+        "accuracy": 1.0,
+        "predictions": {
+          "fm.seal_leakage": 50
+        }
+      }
+    ],
+    "per_mode": {
+      "fm.cavitation": {
+        "tp": 158,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "fm.misalignment": {
+        "tp": 154,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "fm.outer_race_wear": {
+        "tp": 154,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "fm.seal_leakage": {
+        "tp": 145,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "confusion": {
+      "fm.cavitation->fm.cavitation": 158,
+      "fm.misalignment->fm.misalignment": 154,
+      "fm.outer_race_wear->fm.outer_race_wear": 154,
+      "fm.seal_leakage->fm.seal_leakage": 145
+    }
+  },
+  "soak": {
+    "ticks": 1800,
+    "warm_ticks": 1623,
+    "minutes": 30.0,
+    "regimes": {
+      "NOMINAL": 600,
+      "HIGH_LOAD": 600,
+      "LOW_LOAD": 600
+    },
+    "states": {
+      "OK": 1800
+    },
+    "warning_or_above": 0,
+    "watch": 0,
+    "worst_vibration_mm_s": 0.5254,
+    "target": 0,
+    "pass": true
+  }
+}

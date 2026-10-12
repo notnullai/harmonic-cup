@@ -1,0 +1,2019 @@
+{
+ "family": "pump",
+ "about": "Centrifugal pump P-101 and the IMS bearing rig, and the vocabulary every family shares: generic symptoms, causes, actions and the ISO standards.",
+ "manual": "P-101-OM",
+ "classes": {
+  "bearing_wear": "fm.outer_race_wear",
+  "misalignment": "fm.misalignment",
+  "cavitation": "fm.cavitation",
+  "seal_leak": "fm.seal_leakage"
+ },
+ "aliases": {
+  "fm.outer_race_wear": [
+   "outer-race wear",
+   "outer race wear",
+   "outer race damage",
+   "outer-race damage",
+   "outer race spalling",
+   "outer race"
+  ],
+  "fm.inner_race_wear": [
+   "inner-race wear",
+   "inner race wear",
+   "inner-race defect",
+   "inner race defects",
+   "inner race"
+  ],
+  "fm.rolling_element_wear": [
+   "rolling-element defect",
+   "rolling element defect",
+   "cage damage",
+   "rolling-element defects"
+  ],
+  "fm.misalignment": [
+   "misalignment",
+   "misaligned",
+   "angular misalignment",
+   "parallel misalignment"
+  ],
+  "fm.imbalance": [
+   "imbalance",
+   "unbalance"
+  ],
+  "fm.cavitation": [
+   "cavitation",
+   "cavitating"
+  ],
+  "fm.seal_leakage": [
+   "seal leakage",
+   "seal leak",
+   "failing mechanical seal",
+   "mechanical seal leakage"
+  ],
+  "fm.looseness": [
+   "mechanical looseness",
+   "looseness",
+   "loose hold-down"
+  ],
+  "fm.lubrication_failure": [
+   "lubrication problem",
+   "lubrication failure",
+   "bearing runs dry",
+   "loss of the lubricant film"
+  ],
+  "sym.bpfo.high": [
+   "elevated amplitude at bpfo",
+   "amplitude at bpfo",
+   "peak at bpfo",
+   "envelope peak at bpfo",
+   "bpfo"
+  ],
+  "sym.bpfi.high": [
+   "elevated amplitude at bpfi",
+   "amplitude at bpfi",
+   "bpfi"
+  ],
+  "sym.bsf.high": [
+   "ball-spin frequency",
+   "ball spin frequency",
+   "bsf"
+  ],
+  "sym.rms.high": [
+   "overall vibration",
+   "overall velocity rms",
+   "overall velocity",
+   "velocity rms",
+   "overall level"
+  ],
+  "sym.peak.high": [
+   "peak vibration"
+  ],
+  "sym.kurtosis.high": [
+   "kurtosis above 4.0",
+   "kurtosis"
+  ],
+  "sym.crest.high": [
+   "crest factor above 5.0",
+   "crest factor"
+  ],
+  "sym.1x.high": [
+   "first shaft harmonic",
+   "1x vibration",
+   "raised 1x",
+   "high 1x"
+  ],
+  "sym.2x.high": [
+   "second shaft harmonic",
+   "2x-to-1x ratio",
+   "2x vibration",
+   "2x component",
+   "2x"
+  ],
+  "sym.3x.high": [
+   "third shaft harmonic",
+   "third harmonic",
+   "3x"
+  ],
+  "sym.temp_bearing.high": [
+   "bearing temperature",
+   "bearing housing temperature"
+  ],
+  "sym.temp_motor.high": [
+   "motor winding temperature"
+  ],
+  "sym.suction.oscillating": [
+   "oscillation on the suction pressure",
+   "suction pressure oscillation"
+  ],
+  "sym.suction.low": [
+   "fall in suction pressure",
+   "suction pressure falls"
+  ],
+  "sym.flow.low": [
+   "delivered flow falls",
+   "flow falls",
+   "lowers delivered flow",
+   "delivered flow"
+  ],
+  "sym.discharge.low": [
+   "discharge pressure falls"
+  ],
+  "sym.current.low": [
+   "motor current falls",
+   "motor current"
+  ],
+  "cause.lubrication_loss": [
+   "loss or degradation of lubricant",
+   "loss or degradation of the bearing grease",
+   "degradation of lubricant"
+  ],
+  "cause.grease_contamination": [
+   "contamination of the grease",
+   "contaminated grease",
+   "water or process fluid in the grease",
+   "lubricant contamination"
+  ],
+  "cause.overgreasing": [
+   "over-greasing",
+   "over-greased bearing",
+   "excess grease"
+  ],
+  "cause.mixed_grease": [
+   "mixed thickeners",
+   "incompatible grease"
+  ],
+  "cause.seat_tolerance": [
+   "shaft or housing seat outside the tolerances",
+   "worn shaft seat",
+   "housing bore above tolerance",
+   "fitting fault"
+  ],
+  "cause.shock_load": [
+   "shock load"
+  ],
+  "cause.soft_foot": [
+   "soft foot",
+   "settled or soft foot"
+  ],
+  "cause.thermal_growth": [
+   "thermal growth of the motor",
+   "thermal growth"
+  ],
+  "cause.pipe_strain": [
+   "pipe strain"
+  ],
+  "cause.coupling_hardened": [
+   "coupling element that has hardened",
+   "hardened, cracked or powdered element",
+   "hardened coupling element"
+  ],
+  "cause.npsh_insufficient": [
+   "insufficient npsh available",
+   "insufficient npsh",
+   "loss of npsh"
+  ],
+  "cause.suction_blockage": [
+   "blocked or partly closed suction strainer",
+   "blocked strainer"
+  ],
+  "cause.low_flow_operation": [
+   "operation far below the best efficiency point",
+   "operation below the minimum-flow line",
+   "below the minimum-flow line"
+  ],
+  "cause.high_fluid_temp": [
+   "fluid temperature rises"
+  ],
+  "cause.seal_face_wear": [
+   "face wear at the end of seal life",
+   "face wear"
+  ],
+  "cause.dry_running": [
+   "dry running"
+  ],
+  "cause.solids_in_fluid": [
+   "solids in the pumped fluid"
+  ],
+  "cause.sleeve_wear": [
+   "shaft sleeve worn by a previous seal",
+   "shaft sleeve"
+  ],
+  "cause.impeller_fouling": [
+   "product build-up on the impeller",
+   "erosion of one vane",
+   "lost balance weight"
+  ],
+  "cause.wear_ring_wear": [
+   "worn wear rings",
+   "wear-ring clearance"
+  ],
+  "cause.loose_holddown": [
+   "loose hold-down",
+   "hold-down bolts"
+  ],
+  "act.replace_bearing": [
+   "bearing replacement",
+   "replace the bearing",
+   "replacing the bearing",
+   "bearing change"
+  ],
+  "act.inspect_bearing": [
+   "inspect the bearings",
+   "bearing inspection"
+  ],
+  "act.flush_regrease": [
+   "flush the cavity",
+   "grease flush",
+   "flush in section 3.4",
+   "regrease"
+  ],
+  "act.check_seats": [
+   "check both before fitting",
+   "fitting tolerances"
+  ],
+  "act.laser_align": [
+   "laser alignment",
+   "align cold",
+   "realign",
+   "shaft alignment"
+  ],
+  "act.soft_foot_check": [
+   "check for soft foot",
+   "soft-foot check"
+  ],
+  "act.replace_coupling_element": [
+   "replace the element",
+   "coupling inspection"
+  ],
+  "act.relieve_pipe_strain": [
+   "re-support the casing nozzles"
+  ],
+  "act.replace_seal": [
+   "mechanical seal replacement",
+   "seal replacement",
+   "replace the seal"
+  ],
+  "act.check_strainer": [
+   "check the strainer",
+   "clear the suction strainer"
+  ],
+  "act.raise_suction_level": [
+   "raise the suction level",
+   "raise the suction tank level"
+  ],
+  "act.throttle_discharge": [
+   "throttle the discharge"
+  ],
+  "act.inspect_impeller": [
+   "impeller inspection",
+   "inspect the impeller"
+  ],
+  "act.balance_impeller": [
+   "in-situ balancing",
+   "balancing"
+  ],
+  "act.torque_holddown": [
+   "hold-down bolts for torque",
+   "re-torque"
+  ],
+  "act.confirm_reading": [
+   "confirm the reading with a second measurement"
+  ]
+ },
+ "nodes": {
+  "Equipment": [
+   {
+    "id": "P-101",
+    "model": "centrifugal_pump_end_suction",
+    "serial": "P101-2021-0447",
+    "nominal_rpm": 2950,
+    "iso_class": "III"
+   },
+   {
+    "id": "IMS-RIG",
+    "model": "bearing_test_rig_rexnord_za2115",
+    "serial": "IMS test 2",
+    "nominal_rpm": 2000,
+    "iso_class": "none"
+   }
+  ],
+  "Component": [
+   {
+    "id": "P-101.bearing.DE",
+    "kind": "bearing",
+    "position": "drive_end"
+   },
+   {
+    "id": "P-101.bearing.NDE",
+    "kind": "bearing",
+    "position": "non_drive_end"
+   },
+   {
+    "id": "P-101.impeller",
+    "kind": "impeller",
+    "position": "wet_end"
+   },
+   {
+    "id": "P-101.seal",
+    "kind": "seal",
+    "position": "drive_end"
+   },
+   {
+    "id": "P-101.coupling",
+    "kind": "coupling",
+    "position": "drive_end"
+   },
+   {
+    "id": "P-101.motor",
+    "kind": "motor",
+    "position": "driver"
+   },
+   {
+    "id": "P-101.foundation",
+    "kind": "foundation",
+    "position": "base"
+   },
+   {
+    "id": "IMS-RIG.bearing.1",
+    "kind": "bearing",
+    "position": "bearing_1"
+   },
+   {
+    "id": "IMS-RIG.shaft",
+    "kind": "shaft",
+    "position": "shaft"
+   },
+   {
+    "id": "IMS-RIG.foundation",
+    "kind": "foundation",
+    "position": "bed"
+   }
+  ],
+  "Sensor": [
+   {
+    "id": "P-101.vib.DE.rms",
+    "kind": "HARMONIC_FEAT_VIB_RMS",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.peak",
+    "kind": "HARMONIC_FEAT_VIB_PEAK",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.kurtosis",
+    "kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.crest",
+    "kind": "HARMONIC_FEAT_VIB_CREST",
+    "unit": "-",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.1x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.2x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.3x",
+    "kind": "HARMONIC_FEAT_VIB_HARM_3X",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.bpfo",
+    "kind": "HARMONIC_FEAT_VIB_BPFO",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.bpfi",
+    "kind": "HARMONIC_FEAT_VIB_BPFI",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.vib.DE.bsf",
+    "kind": "HARMONIC_FEAT_VIB_BSF",
+    "unit": "mm/s",
+    "sample_rate_hz": 25600,
+    "axis": "radial"
+   },
+   {
+    "id": "P-101.temp.bearing.DE",
+    "kind": "HARMONIC_FEAT_TEMP_BEARING",
+    "unit": "degC",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "P-101.temp.motor",
+    "kind": "HARMONIC_FEAT_TEMP_MOTOR",
+    "unit": "degC",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "P-101.press.discharge",
+    "kind": "HARMONIC_FEAT_PRESS_DISCHARGE",
+    "unit": "bar",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "P-101.press.suction",
+    "kind": "HARMONIC_FEAT_PRESS_SUCTION",
+    "unit": "bar",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "P-101.flow",
+    "kind": "HARMONIC_FEAT_FLOW",
+    "unit": "m3/h",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   },
+   {
+    "id": "P-101.current",
+    "kind": "HARMONIC_FEAT_CURRENT",
+    "unit": "A",
+    "sample_rate_hz": 1,
+    "axis": "-"
+   }
+  ],
+  "Symptom": [
+   {
+    "id": "sym.bpfo.high",
+    "description": "Elevated envelope amplitude at the outer-race ball-pass frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_BPFO",
+    "direction": "up"
+   },
+   {
+    "id": "sym.bpfi.high",
+    "description": "Elevated envelope amplitude at the inner-race ball-pass frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_BPFI",
+    "direction": "up"
+   },
+   {
+    "id": "sym.bsf.high",
+    "description": "Elevated envelope amplitude at the ball-spin frequency",
+    "feature_kind": "HARMONIC_FEAT_VIB_BSF",
+    "direction": "up"
+   },
+   {
+    "id": "sym.rms.high",
+    "description": "Overall vibration velocity above the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_VIB_RMS",
+    "direction": "up"
+   },
+   {
+    "id": "sym.peak.high",
+    "description": "Raised peak vibration velocity with impulsive character",
+    "feature_kind": "HARMONIC_FEAT_VIB_PEAK",
+    "direction": "up"
+   },
+   {
+    "id": "sym.kurtosis.high",
+    "description": "Kurtosis above 4.0, indicating an impulsive signal",
+    "feature_kind": "HARMONIC_FEAT_VIB_KURTOSIS",
+    "direction": "up"
+   },
+   {
+    "id": "sym.crest.high",
+    "description": "Crest factor above 5.0, indicating short high-amplitude events",
+    "feature_kind": "HARMONIC_FEAT_VIB_CREST",
+    "direction": "up"
+   },
+   {
+    "id": "sym.1x.high",
+    "description": "Raised amplitude at shaft running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_1X",
+    "direction": "up"
+   },
+   {
+    "id": "sym.2x.high",
+    "description": "Raised amplitude at twice shaft running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_2X",
+    "direction": "up"
+   },
+   {
+    "id": "sym.3x.high",
+    "description": "Raised amplitude at three times shaft running speed",
+    "feature_kind": "HARMONIC_FEAT_VIB_HARM_3X",
+    "direction": "up"
+   },
+   {
+    "id": "sym.temp_bearing.high",
+    "description": "Bearing housing temperature above the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_TEMP_BEARING",
+    "direction": "up"
+   },
+   {
+    "id": "sym.temp_motor.high",
+    "description": "Motor winding temperature above the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_TEMP_MOTOR",
+    "direction": "up"
+   },
+   {
+    "id": "sym.suction.oscillating",
+    "description": "Suction pressure oscillating at roughly 0.3 Hz",
+    "feature_kind": "HARMONIC_FEAT_PRESS_SUCTION",
+    "direction": "oscillating"
+   },
+   {
+    "id": "sym.suction.low",
+    "description": "Suction pressure below the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_PRESS_SUCTION",
+    "direction": "down"
+   },
+   {
+    "id": "sym.flow.low",
+    "description": "Delivered flow below the regime baseline at constant speed",
+    "feature_kind": "HARMONIC_FEAT_FLOW",
+    "direction": "down"
+   },
+   {
+    "id": "sym.discharge.low",
+    "description": "Discharge pressure below the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_PRESS_DISCHARGE",
+    "direction": "down"
+   },
+   {
+    "id": "sym.current.low",
+    "description": "Motor current below the regime baseline",
+    "feature_kind": "HARMONIC_FEAT_CURRENT",
+    "direction": "down"
+   }
+  ],
+  "FailureMode": [
+   {
+    "id": "fm.outer_race_wear",
+    "description": "Outer race spalling in the drive-end bearing",
+    "iso_code": "ISO 15243 5.2",
+    "severity": 4
+   },
+   {
+    "id": "fm.inner_race_wear",
+    "description": "Inner race spalling in the drive-end bearing",
+    "iso_code": "ISO 15243 5.2",
+    "severity": 4
+   },
+   {
+    "id": "fm.rolling_element_wear",
+    "description": "Rolling element and cage damage",
+    "iso_code": "ISO 15243 5.3",
+    "severity": 3
+   },
+   {
+    "id": "fm.misalignment",
+    "description": "Shaft misalignment between pump and motor",
+    "iso_code": "ISO 10816-1",
+    "severity": 3
+   },
+   {
+    "id": "fm.imbalance",
+    "description": "Rotor imbalance",
+    "iso_code": "ISO 21940",
+    "severity": 2
+   },
+   {
+    "id": "fm.cavitation",
+    "description": "Cavitation from insufficient net positive suction head",
+    "iso_code": "ISO 9906",
+    "severity": 4
+   },
+   {
+    "id": "fm.seal_leakage",
+    "description": "Mechanical seal leakage at the drive end",
+    "iso_code": "API 682",
+    "severity": 3
+   },
+   {
+    "id": "fm.looseness",
+    "description": "Mechanical looseness at the foundation or hold-down",
+    "iso_code": "ISO 10816-1",
+    "severity": 3
+   },
+   {
+    "id": "fm.lubrication_failure",
+    "description": "Loss of the bearing lubricant film",
+    "iso_code": "ISO 15243 5.1",
+    "severity": 4
+   }
+  ],
+  "Cause": [
+   {
+    "id": "cause.lubrication_loss",
+    "description": "Loss or degradation of the bearing grease",
+    "category": "lubrication"
+   },
+   {
+    "id": "cause.grease_contamination",
+    "description": "Water or process fluid in the bearing grease",
+    "category": "contamination"
+   },
+   {
+    "id": "cause.overgreasing",
+    "description": "Excess grease causing the bearing to churn",
+    "category": "lubrication"
+   },
+   {
+    "id": "cause.mixed_grease",
+    "description": "Incompatible grease thickeners mixed in service",
+    "category": "lubrication"
+   },
+   {
+    "id": "cause.seat_tolerance",
+    "description": "Shaft or housing seat outside the fitting tolerance",
+    "category": "installation"
+   },
+   {
+    "id": "cause.shock_load",
+    "description": "Shock load or impact during handling or start",
+    "category": "installation"
+   },
+   {
+    "id": "cause.soft_foot",
+    "description": "Soft foot under a motor hold-down",
+    "category": "installation"
+   },
+   {
+    "id": "cause.thermal_growth",
+    "description": "Thermal growth of the motor not allowed for in the cold alignment",
+    "category": "installation"
+   },
+   {
+    "id": "cause.pipe_strain",
+    "description": "Pipe strain on the casing nozzles",
+    "category": "installation"
+   },
+   {
+    "id": "cause.coupling_hardened",
+    "description": "Hardened or cracked coupling element",
+    "category": "wear"
+   },
+   {
+    "id": "cause.npsh_insufficient",
+    "description": "Net positive suction head available below the pump requirement",
+    "category": "process"
+   },
+   {
+    "id": "cause.suction_blockage",
+    "description": "Blocked or partly closed suction strainer",
+    "category": "process"
+   },
+   {
+    "id": "cause.low_flow_operation",
+    "description": "Operation below the minimum-flow line",
+    "category": "process"
+   },
+   {
+    "id": "cause.high_fluid_temp",
+    "description": "Fluid temperature raised toward its vapour pressure",
+    "category": "process"
+   },
+   {
+    "id": "cause.seal_face_wear",
+    "description": "Mechanical seal faces worn to the end of their life",
+    "category": "wear"
+   },
+   {
+    "id": "cause.dry_running",
+    "description": "Dry running during a loss of suction",
+    "category": "process"
+   },
+   {
+    "id": "cause.solids_in_fluid",
+    "description": "Solids in the pumped fluid scoring the seal faces",
+    "category": "contamination"
+   },
+   {
+    "id": "cause.sleeve_wear",
+    "description": "Shaft sleeve scored by a previous seal",
+    "category": "wear"
+   },
+   {
+    "id": "cause.impeller_fouling",
+    "description": "Product build-up or vane erosion on the impeller",
+    "category": "wear"
+   },
+   {
+    "id": "cause.wear_ring_wear",
+    "description": "Wear-ring clearance beyond the replacement limit",
+    "category": "wear"
+   },
+   {
+    "id": "cause.loose_holddown",
+    "description": "Hold-down bolts below torque or cracked grout",
+    "category": "installation"
+   }
+  ],
+  "Action": [
+   {
+    "id": "act.replace_bearing",
+    "description": "Replace the drive-end bearing",
+    "tool": "bearing puller, induction heater",
+    "duration_min": 180,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.inspect_bearing",
+    "description": "Inspect the bearing by stethoscope and temperature against baseline",
+    "tool": "stethoscope, infrared thermometer",
+    "duration_min": 30,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.flush_regrease",
+    "description": "Flush the bearing cavity and regrease with the specified grease",
+    "tool": "grease gun, relief plug spanner",
+    "duration_min": 45,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.check_seats",
+    "description": "Measure the shaft and housing seats against the fitting tolerances",
+    "tool": "micrometer, bore gauge",
+    "duration_min": 60,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "act.laser_align",
+    "description": "Laser align the pump and motor shafts cold, then recheck hot",
+    "tool": "laser alignment system, shim pack",
+    "duration_min": 120,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.soft_foot_check",
+    "description": "Check and correct soft foot before adjusting the alignment",
+    "tool": "dial indicator, feeler gauge",
+    "duration_min": 45,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.replace_coupling_element",
+    "description": "Replace the jaw coupling elastomer in matched pairs",
+    "tool": "coupling puller",
+    "duration_min": 60,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.relieve_pipe_strain",
+    "description": "Release and re-support the casing nozzles to remove pipe strain",
+    "tool": "dial indicator, pipe supports",
+    "duration_min": 180,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "act.replace_seal",
+    "description": "Replace the mechanical seal and inspect the shaft sleeve",
+    "tool": "seal fitting kit, torque wrench",
+    "duration_min": 120,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.check_strainer",
+    "description": "Inspect and clear the suction strainer",
+    "tool": "hand tools",
+    "duration_min": 45,
+    "skill_level": "operator"
+   },
+   {
+    "id": "act.raise_suction_level",
+    "description": "Raise the suction tank level to restore available NPSH",
+    "tool": "none",
+    "duration_min": 15,
+    "skill_level": "operator"
+   },
+   {
+    "id": "act.throttle_discharge",
+    "description": "Throttle the discharge to move the duty point toward best efficiency",
+    "tool": "none",
+    "duration_min": 10,
+    "skill_level": "operator"
+   },
+   {
+    "id": "act.inspect_impeller",
+    "description": "Withdraw the casing cover and inspect the impeller and wear rings",
+    "tool": "lifting gear, vernier",
+    "duration_min": 240,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "act.balance_impeller",
+    "description": "Clean and in-situ balance the impeller",
+    "tool": "balancing instrument",
+    "duration_min": 180,
+    "skill_level": "specialist"
+   },
+   {
+    "id": "act.torque_holddown",
+    "description": "Check the grout and re-torque the hold-down bolts",
+    "tool": "torque wrench",
+    "duration_min": 60,
+    "skill_level": "technician"
+   },
+   {
+    "id": "act.confirm_reading",
+    "description": "Confirm the reading with a second measurement at the same duty point",
+    "tool": "portable vibration meter",
+    "duration_min": 20,
+    "skill_level": "technician"
+   }
+  ],
+  "Standard": [
+   {
+    "id": "iso-10816-1",
+    "name": "ISO 10816-1",
+    "clause": "Class III, rigid foundation"
+   },
+   {
+    "id": "iso-15243",
+    "name": "ISO 15243",
+    "clause": "Rolling bearing damage modes"
+   },
+   {
+    "id": "iso-9906",
+    "name": "ISO 9906",
+    "clause": "Hydraulic performance tests"
+   },
+   {
+    "id": "api-682",
+    "name": "API 682",
+    "clause": "Shaft sealing systems"
+   }
+  ]
+ },
+ "relations": {
+  "HAS_COMPONENT": [
+   [
+    "P-101",
+    "P-101.bearing.DE"
+   ],
+   [
+    "P-101",
+    "P-101.bearing.NDE"
+   ],
+   [
+    "P-101",
+    "P-101.impeller"
+   ],
+   [
+    "P-101",
+    "P-101.seal"
+   ],
+   [
+    "P-101",
+    "P-101.coupling"
+   ],
+   [
+    "P-101",
+    "P-101.motor"
+   ],
+   [
+    "P-101",
+    "P-101.foundation"
+   ],
+   [
+    "IMS-RIG",
+    "IMS-RIG.bearing.1"
+   ],
+   [
+    "IMS-RIG",
+    "IMS-RIG.shaft"
+   ],
+   [
+    "IMS-RIG",
+    "IMS-RIG.foundation"
+   ]
+  ],
+  "MONITORED_BY": [
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.rms"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.peak"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.kurtosis"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.crest"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.1x"
+   ],
+   [
+    "P-101.coupling",
+    "P-101.vib.DE.2x"
+   ],
+   [
+    "P-101.coupling",
+    "P-101.vib.DE.3x"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.bpfo"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.bpfi"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.vib.DE.bsf"
+   ],
+   [
+    "P-101.bearing.DE",
+    "P-101.temp.bearing.DE"
+   ],
+   [
+    "P-101.motor",
+    "P-101.temp.motor"
+   ],
+   [
+    "P-101.impeller",
+    "P-101.press.discharge"
+   ],
+   [
+    "P-101.impeller",
+    "P-101.press.suction"
+   ],
+   [
+    "P-101.impeller",
+    "P-101.flow"
+   ],
+   [
+    "P-101.motor",
+    "P-101.current"
+   ]
+  ],
+  "DETECTS": [
+   [
+    "P-101.vib.DE.bpfo",
+    "sym.bpfo.high"
+   ],
+   [
+    "P-101.vib.DE.bpfi",
+    "sym.bpfi.high"
+   ],
+   [
+    "P-101.vib.DE.bsf",
+    "sym.bsf.high"
+   ],
+   [
+    "P-101.vib.DE.rms",
+    "sym.rms.high"
+   ],
+   [
+    "P-101.vib.DE.peak",
+    "sym.peak.high"
+   ],
+   [
+    "P-101.vib.DE.kurtosis",
+    "sym.kurtosis.high"
+   ],
+   [
+    "P-101.vib.DE.crest",
+    "sym.crest.high"
+   ],
+   [
+    "P-101.vib.DE.1x",
+    "sym.1x.high"
+   ],
+   [
+    "P-101.vib.DE.2x",
+    "sym.2x.high"
+   ],
+   [
+    "P-101.vib.DE.3x",
+    "sym.3x.high"
+   ],
+   [
+    "P-101.temp.bearing.DE",
+    "sym.temp_bearing.high"
+   ],
+   [
+    "P-101.temp.motor",
+    "sym.temp_motor.high"
+   ],
+   [
+    "P-101.press.suction",
+    "sym.suction.oscillating"
+   ],
+   [
+    "P-101.press.suction",
+    "sym.suction.low"
+   ],
+   [
+    "P-101.flow",
+    "sym.flow.low"
+   ],
+   [
+    "P-101.press.discharge",
+    "sym.discharge.low"
+   ],
+   [
+    "P-101.current",
+    "sym.current.low"
+   ]
+  ],
+  "INDICATES": [
+   [
+    "sym.bpfo.high",
+    "fm.outer_race_wear",
+    {
+     "confidence": 0.9
+    }
+   ],
+   [
+    "sym.bpfo.high",
+    "fm.lubrication_failure",
+    {
+     "confidence": 0.35
+    }
+   ],
+   [
+    "sym.bpfi.high",
+    "fm.inner_race_wear",
+    {
+     "confidence": 0.88
+    }
+   ],
+   [
+    "sym.bsf.high",
+    "fm.rolling_element_wear",
+    {
+     "confidence": 0.85
+    }
+   ],
+   [
+    "sym.rms.high",
+    "fm.outer_race_wear",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "sym.rms.high",
+    "fm.misalignment",
+    {
+     "confidence": 0.25
+    }
+   ],
+   [
+    "sym.rms.high",
+    "fm.imbalance",
+    {
+     "confidence": 0.25
+    }
+   ],
+   [
+    "sym.rms.high",
+    "fm.looseness",
+    {
+     "confidence": 0.2
+    }
+   ],
+   [
+    "sym.peak.high",
+    "fm.outer_race_wear",
+    {
+     "confidence": 0.35
+    }
+   ],
+   [
+    "sym.peak.high",
+    "fm.cavitation",
+    {
+     "confidence": 0.4
+    }
+   ],
+   [
+    "sym.temp_bearing.high",
+    "fm.lubrication_failure",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "sym.temp_bearing.high",
+    "fm.outer_race_wear",
+    {
+     "confidence": 0.45
+    }
+   ],
+   [
+    "sym.temp_motor.high",
+    "fm.misalignment",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "sym.2x.high",
+    "fm.misalignment",
+    {
+     "confidence": 0.8
+    }
+   ],
+   [
+    "sym.2x.high",
+    "fm.looseness",
+    {
+     "confidence": 0.35
+    }
+   ],
+   [
+    "sym.3x.high",
+    "fm.misalignment",
+    {
+     "confidence": 0.6
+    }
+   ],
+   [
+    "sym.3x.high",
+    "fm.looseness",
+    {
+     "confidence": 0.45
+    }
+   ],
+   [
+    "sym.1x.high",
+    "fm.imbalance",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "sym.1x.high",
+    "fm.misalignment",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "sym.kurtosis.high",
+    "fm.cavitation",
+    {
+     "confidence": 0.8
+    }
+   ],
+   [
+    "sym.kurtosis.high",
+    "fm.outer_race_wear",
+    {
+     "confidence": 0.4
+    }
+   ],
+   [
+    "sym.crest.high",
+    "fm.cavitation",
+    {
+     "confidence": 0.75
+    }
+   ],
+   [
+    "sym.crest.high",
+    "fm.outer_race_wear",
+    {
+     "confidence": 0.35
+    }
+   ],
+   [
+    "sym.suction.oscillating",
+    "fm.cavitation",
+    {
+     "confidence": 0.85
+    }
+   ],
+   [
+    "sym.suction.low",
+    "fm.cavitation",
+    {
+     "confidence": 0.55
+    }
+   ],
+   [
+    "sym.flow.low",
+    "fm.seal_leakage",
+    {
+     "confidence": 0.7
+    }
+   ],
+   [
+    "sym.flow.low",
+    "fm.cavitation",
+    {
+     "confidence": 0.3
+    }
+   ],
+   [
+    "sym.discharge.low",
+    "fm.seal_leakage",
+    {
+     "confidence": 0.5
+    }
+   ],
+   [
+    "sym.current.low",
+    "fm.seal_leakage",
+    {
+     "confidence": 0.45
+    }
+   ]
+  ],
+  "CAUSES": [
+   [
+    "cause.lubrication_loss",
+    "fm.outer_race_wear",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "cause.lubrication_loss",
+    "fm.lubrication_failure",
+    {
+     "likelihood": 0.9
+    }
+   ],
+   [
+    "cause.grease_contamination",
+    "fm.outer_race_wear",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "cause.grease_contamination",
+    "fm.lubrication_failure",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "cause.overgreasing",
+    "fm.lubrication_failure",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.overgreasing",
+    "fm.rolling_element_wear",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "cause.mixed_grease",
+    "fm.lubrication_failure",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.seat_tolerance",
+    "fm.outer_race_wear",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "cause.seat_tolerance",
+    "fm.inner_race_wear",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.shock_load",
+    "fm.inner_race_wear",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.soft_foot",
+    "fm.misalignment",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "cause.thermal_growth",
+    "fm.misalignment",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "cause.pipe_strain",
+    "fm.misalignment",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.coupling_hardened",
+    "fm.misalignment",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "cause.loose_holddown",
+    "fm.looseness",
+    {
+     "likelihood": 0.9
+    }
+   ],
+   [
+    "cause.npsh_insufficient",
+    "fm.cavitation",
+    {
+     "likelihood": 0.9
+    }
+   ],
+   [
+    "cause.suction_blockage",
+    "fm.cavitation",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "cause.low_flow_operation",
+    "fm.cavitation",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.high_fluid_temp",
+    "fm.cavitation",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "cause.seal_face_wear",
+    "fm.seal_leakage",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "cause.dry_running",
+    "fm.seal_leakage",
+    {
+     "likelihood": 0.7
+    }
+   ],
+   [
+    "cause.solids_in_fluid",
+    "fm.seal_leakage",
+    {
+     "likelihood": 0.6
+    }
+   ],
+   [
+    "cause.sleeve_wear",
+    "fm.seal_leakage",
+    {
+     "likelihood": 0.5
+    }
+   ],
+   [
+    "cause.impeller_fouling",
+    "fm.imbalance",
+    {
+     "likelihood": 0.8
+    }
+   ],
+   [
+    "cause.wear_ring_wear",
+    "fm.seal_leakage",
+    {
+     "likelihood": 0.3
+    }
+   ]
+  ],
+  "MITIGATED_BY": [
+   [
+    "fm.outer_race_wear",
+    "act.confirm_reading",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.outer_race_wear",
+    "act.inspect_bearing",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.outer_race_wear",
+    "act.replace_bearing",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fm.outer_race_wear",
+    "act.check_seats",
+    {
+     "priority": 4
+    }
+   ],
+   [
+    "fm.inner_race_wear",
+    "act.inspect_bearing",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.inner_race_wear",
+    "act.replace_bearing",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.inner_race_wear",
+    "act.check_seats",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fm.rolling_element_wear",
+    "act.inspect_bearing",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.rolling_element_wear",
+    "act.replace_bearing",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.lubrication_failure",
+    "act.flush_regrease",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.lubrication_failure",
+    "act.inspect_bearing",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.misalignment",
+    "act.soft_foot_check",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.misalignment",
+    "act.replace_coupling_element",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.misalignment",
+    "act.laser_align",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fm.misalignment",
+    "act.relieve_pipe_strain",
+    {
+     "priority": 4
+    }
+   ],
+   [
+    "fm.imbalance",
+    "act.inspect_impeller",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.imbalance",
+    "act.balance_impeller",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.cavitation",
+    "act.check_strainer",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.cavitation",
+    "act.raise_suction_level",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.cavitation",
+    "act.throttle_discharge",
+    {
+     "priority": 3
+    }
+   ],
+   [
+    "fm.cavitation",
+    "act.inspect_impeller",
+    {
+     "priority": 4
+    }
+   ],
+   [
+    "fm.seal_leakage",
+    "act.replace_seal",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.seal_leakage",
+    "act.inspect_impeller",
+    {
+     "priority": 2
+    }
+   ],
+   [
+    "fm.looseness",
+    "act.torque_holddown",
+    {
+     "priority": 1
+    }
+   ],
+   [
+    "fm.looseness",
+    "act.laser_align",
+    {
+     "priority": 2
+    }
+   ]
+  ],
+  "DOCUMENTED_IN": [
+   [
+    "act.replace_bearing",
+    "P-101-OM-4.2"
+   ],
+   [
+    "act.inspect_bearing",
+    "P-101-OM-4.1"
+   ],
+   [
+    "act.flush_regrease",
+    "P-101-OM-3.4"
+   ],
+   [
+    "act.check_seats",
+    "P-101-OM-4.3"
+   ],
+   [
+    "act.laser_align",
+    "P-101-OM-4.4"
+   ],
+   [
+    "act.soft_foot_check",
+    "P-101-OM-4.4"
+   ],
+   [
+    "act.replace_coupling_element",
+    "P-101-OM-4.5"
+   ],
+   [
+    "act.relieve_pipe_strain",
+    "P-101-OM-5.6"
+   ],
+   [
+    "act.replace_seal",
+    "P-101-OM-4.6"
+   ],
+   [
+    "act.check_strainer",
+    "P-101-OM-6.3"
+   ],
+   [
+    "act.raise_suction_level",
+    "P-101-OM-6.3"
+   ],
+   [
+    "act.throttle_discharge",
+    "P-101-OM-5.8"
+   ],
+   [
+    "act.inspect_impeller",
+    "P-101-OM-4.7"
+   ],
+   [
+    "act.balance_impeller",
+    "P-101-OM-5.7"
+   ],
+   [
+    "act.torque_holddown",
+    "P-101-OM-4.8"
+   ],
+   [
+    "act.confirm_reading",
+    "P-101-OM-5.12"
+   ],
+   [
+    "cause.grease_contamination",
+    "P-101-OM-3.5"
+   ],
+   [
+    "cause.mixed_grease",
+    "P-101-OM-3.2"
+   ],
+   [
+    "cause.overgreasing",
+    "P-101-OM-3.3"
+   ],
+   [
+    "cause.lubrication_loss",
+    "P-101-OM-3.1"
+   ],
+   [
+    "cause.seat_tolerance",
+    "P-101-OM-4.3"
+   ],
+   [
+    "cause.soft_foot",
+    "P-101-OM-4.4"
+   ],
+   [
+    "cause.coupling_hardened",
+    "P-101-OM-4.5"
+   ],
+   [
+    "cause.npsh_insufficient",
+    "P-101-OM-6.3"
+   ],
+   [
+    "cause.low_flow_operation",
+    "P-101-OM-6.2"
+   ],
+   [
+    "cause.loose_holddown",
+    "P-101-OM-4.8"
+   ],
+   [
+    "cause.wear_ring_wear",
+    "P-101-OM-4.7"
+   ],
+   [
+    "sym.bpfo.high",
+    "P-101-OM-5.3"
+   ],
+   [
+    "sym.bpfi.high",
+    "P-101-OM-5.5"
+   ],
+   [
+    "sym.bsf.high",
+    "P-101-OM-5.2"
+   ],
+   [
+    "sym.rms.high",
+    "P-101-OM-5.1"
+   ],
+   [
+    "sym.2x.high",
+    "P-101-OM-5.6"
+   ],
+   [
+    "sym.3x.high",
+    "P-101-OM-5.6"
+   ],
+   [
+    "sym.1x.high",
+    "P-101-OM-5.7"
+   ],
+   [
+    "sym.kurtosis.high",
+    "P-101-OM-5.8"
+   ],
+   [
+    "sym.crest.high",
+    "P-101-OM-5.8"
+   ],
+   [
+    "sym.suction.oscillating",
+    "P-101-OM-5.8"
+   ],
+   [
+    "sym.flow.low",
+    "P-101-OM-5.9"
+   ],
+   [
+    "sym.temp_bearing.high",
+    "P-101-OM-4.1"
+   ]
+  ],
+  "SAFEGUARDED_BY": [
+   [
+    "act.replace_bearing",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.replace_bearing",
+    "P-101-OM-2.2"
+   ],
+   [
+    "act.replace_bearing",
+    "P-101-OM-2.3"
+   ],
+   [
+    "act.replace_bearing",
+    "P-101-OM-2.4"
+   ],
+   [
+    "act.inspect_bearing",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.inspect_bearing",
+    "P-101-OM-2.3"
+   ],
+   [
+    "act.flush_regrease",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.flush_regrease",
+    "P-101-OM-2.3"
+   ],
+   [
+    "act.check_seats",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.laser_align",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.laser_align",
+    "P-101-OM-2.3"
+   ],
+   [
+    "act.soft_foot_check",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.replace_coupling_element",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.replace_coupling_element",
+    "P-101-OM-2.3"
+   ],
+   [
+    "act.relieve_pipe_strain",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.relieve_pipe_strain",
+    "P-101-OM-2.2"
+   ],
+   [
+    "act.replace_seal",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.replace_seal",
+    "P-101-OM-2.2"
+   ],
+   [
+    "act.check_strainer",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.check_strainer",
+    "P-101-OM-2.2"
+   ],
+   [
+    "act.inspect_impeller",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.inspect_impeller",
+    "P-101-OM-2.2"
+   ],
+   [
+    "act.inspect_impeller",
+    "P-101-OM-2.4"
+   ],
+   [
+    "act.balance_impeller",
+    "P-101-OM-2.1"
+   ],
+   [
+    "act.balance_impeller",
+    "P-101-OM-2.4"
+   ],
+   [
+    "act.torque_holddown",
+    "P-101-OM-2.1"
+   ]
+  ],
+  "DESCRIBED_IN": [
+   [
+    "fm.outer_race_wear",
+    "P-101-OM-5.4"
+   ],
+   [
+    "fm.outer_race_wear",
+    "P-101-OM-5.3"
+   ],
+   [
+    "fm.inner_race_wear",
+    "P-101-OM-5.5"
+   ],
+   [
+    "fm.rolling_element_wear",
+    "P-101-OM-5.3"
+   ],
+   [
+    "fm.misalignment",
+    "P-101-OM-5.6"
+   ],
+   [
+    "fm.imbalance",
+    "P-101-OM-5.7"
+   ],
+   [
+    "fm.cavitation",
+    "P-101-OM-5.8"
+   ],
+   [
+    "fm.cavitation",
+    "P-101-OM-6.2"
+   ],
+   [
+    "fm.seal_leakage",
+    "P-101-OM-5.9"
+   ],
+   [
+    "fm.looseness",
+    "P-101-OM-5.10"
+   ],
+   [
+    "fm.lubrication_failure",
+    "P-101-OM-3.1"
+   ],
+   [
+    "fm.lubrication_failure",
+    "P-101-OM-3.3"
+   ]
+  ],
+  "GOVERNED_BY": [
+   [
+    "fm.outer_race_wear",
+    "iso-15243"
+   ],
+   [
+    "fm.inner_race_wear",
+    "iso-15243"
+   ],
+   [
+    "fm.rolling_element_wear",
+    "iso-15243"
+   ],
+   [
+    "fm.misalignment",
+    "iso-10816-1"
+   ],
+   [
+    "fm.imbalance",
+    "iso-10816-1"
+   ],
+   [
+    "fm.looseness",
+    "iso-10816-1"
+   ],
+   [
+    "fm.lubrication_failure",
+    "iso-15243"
+   ],
+   [
+    "fm.cavitation",
+    "iso-9906"
+   ],
+   [
+    "fm.seal_leakage",
+    "api-682"
+   ]
+  ],
+  "AFFECTS": [
+   [
+    "fm.outer_race_wear",
+    "P-101.bearing.DE"
+   ],
+   [
+    "fm.inner_race_wear",
+    "P-101.bearing.DE"
+   ],
+   [
+    "fm.rolling_element_wear",
+    "P-101.bearing.DE"
+   ],
+   [
+    "fm.lubrication_failure",
+    "P-101.bearing.DE"
+   ],
+   [
+    "fm.misalignment",
+    "P-101.coupling"
+   ],
+   [
+    "fm.imbalance",
+    "P-101.impeller"
+   ],
+   [
+    "fm.cavitation",
+    "P-101.impeller"
+   ],
+   [
+    "fm.seal_leakage",
+    "P-101.seal"
+   ],
+   [
+    "fm.looseness",
+    "P-101.foundation"
+   ]
+  ]
+ }
+}
